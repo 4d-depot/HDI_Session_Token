@@ -4,7 +4,7 @@
 
 If (Session:C1714.storage.status#Null:C1517)
 	
-	If (Session:C1714.storage.status.step="Waiting for validation email")
+	If (Session:C1714.storage.status.step="Waiting for validation email 1")
 		
 		$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
 		$user.validateEmail()
@@ -12,6 +12,13 @@ If (Session:C1714.storage.status#Null:C1517)
 		WEB SEND TEXT:C677("Welcome "+Session:C1714.storage.status.fullname+"<br>"\
 			+"Your email "+Session:C1714.storage.status.email+" has been validated")
 		
+		Use (Session:C1714.storage)
+			Session:C1714.storage.status:=Null:C1517
+		End use 
+		
 	End if 
 	
+Else 
+	WEB SEND TEXT:C677("Validation failed")
 End if 
+

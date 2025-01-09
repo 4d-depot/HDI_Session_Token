@@ -4,7 +4,17 @@ Case of
 		
 		InitInfo
 		
+		Form:C1466.info:={firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}
+		
+		Form:C1466.noLife:=1
+		
 		Form:C1466.createAccountURL:="http://127.0.0.1/rest/Users/create"
+		
+		Form:C1466.createAccountURL2:="http://127.0.0.1/rest/Users/create2"
+		
+		Form:C1466.webAreaURL2:=""
+		
+		OBJECT SET ENABLED:C1123(*; "CreateAccount"; ((Form:C1466.life10=1) || (Form:C1466.noLife=1)))
 		
 		
 	: (Form event code:C388=On Close Box:K2:21)
