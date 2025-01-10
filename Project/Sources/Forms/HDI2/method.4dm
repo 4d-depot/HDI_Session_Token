@@ -6,6 +6,8 @@ Case of
 		
 		Form:C1466.info:={firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}
 		
+		Form:C1466.info2:={firstname: "John"; lastname: "Brown"; email: "john.brown@acme.com"}
+		
 		Form:C1466.noLife:=1
 		
 		Form:C1466.createAccountURL:="http://127.0.0.1/rest/Users/create"

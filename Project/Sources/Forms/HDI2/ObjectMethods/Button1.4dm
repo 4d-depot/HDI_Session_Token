@@ -7,7 +7,7 @@ var $request : Object
 //$headers:={}
 //$headers:=buildHeaders
 
-$requestObj:={method: HTTP POST method:K71:2; body: [{firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}]}
+$requestObj:={method: HTTP POST method:K71:2; body: [Form:C1466.info2]}
 //$requestObj:={method: HTTP POST method; body: [{firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}]; headers: $headers}
 
 $request:=4D:C1709.HTTPRequest.new(Form:C1466.createAccountURL2; $requestObj).wait()

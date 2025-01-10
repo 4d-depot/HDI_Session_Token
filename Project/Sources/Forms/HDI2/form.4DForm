@@ -38,26 +38,6 @@
 					"events": [
 						"onClick"
 					]
-				},
-				"BtnOK": {
-					"type": "button",
-					"top": 600,
-					"left": 838,
-					"width": 102,
-					"height": 20,
-					"sizingX": "move",
-					"sizingY": "move",
-					"tooltip": {
-						"$ref": "/SOURCES/tips.json#/OK"
-					},
-					"shortcutKey": "[Enter]",
-					"text": "OK",
-					"class": "Buttons_13",
-					"defaultButton": true,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/BtnOK.4dm"
 				}
 			}
 		},
@@ -97,19 +77,20 @@
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "dotted",
+					"borderStyle": "none",
 					"dataSource": "Form:C1466.validateLink",
 					"styledText": true,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Input6.4dm"
+					"method": "ObjectMethods/Input6.4dm",
+					"textDecoration": "underline"
 				},
 				"CreateAccount": {
 					"type": "button",
 					"text": "Create account",
-					"top": 454,
-					"left": 132,
+					"top": 474,
+					"left": 101,
 					"width": 150,
 					"height": 20,
 					"events": [
@@ -120,8 +101,8 @@
 				},
 				"Input7": {
 					"type": "input",
-					"left": 136,
-					"top": 482,
+					"left": 105,
+					"top": 502,
 					"width": 300,
 					"height": 20,
 					"dataSource": "Form:C1466.createAccountURL",
@@ -142,14 +123,14 @@
 					"height": 20,
 					"textAlign": "left",
 					"fontWeight": "bold",
-					"fontSize": 16,
+					"fontSize": 18,
 					"stroke": "#6495ed"
 				},
 				"Text25": {
 					"type": "text",
 					"text": "Click on a validation link",
-					"top": 224,
-					"left": 428,
+					"top": 205,
+					"left": 439,
 					"width": 250,
 					"height": 20,
 					"fontSize": 18,
@@ -165,13 +146,14 @@
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "dotted",
+					"borderStyle": "none",
 					"dataSource": "Form:C1466.validateLinkWithoutParameter",
 					"styledText": true,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Input4.4dm"
+					"method": "ObjectMethods/Input4.4dm",
+					"textDecoration": "underline"
 				},
 				"Input": {
 					"type": "input",
@@ -225,8 +207,8 @@
 				"Radio Button": {
 					"type": "radio",
 					"text": "10 seconds",
-					"top": 401,
-					"left": 451,
+					"top": 423,
+					"left": 200,
 					"width": 180,
 					"height": 20,
 					"events": [
@@ -239,8 +221,8 @@
 				"Radio Button1": {
 					"type": "radio",
 					"text": "Default lifespan",
-					"top": 401,
-					"left": 289,
+					"top": 423,
+					"left": 38,
 					"width": 150,
 					"height": 20,
 					"events": [
@@ -258,12 +240,13 @@
 					"width": 250,
 					"height": 20,
 					"stroke": "#6495ed",
-					"fontWeight": "bold"
+					"fontWeight": "bold",
+					"fontSize": 16
 				},
 				"Text6": {
 					"type": "text",
 					"text": "Wrong link:",
-					"top": 328,
+					"top": 268,
 					"left": 345,
 					"width": 90,
 					"height": 20,
@@ -274,13 +257,26 @@
 				"Text7": {
 					"type": "text",
 					"text": "Good link:",
-					"top": 258,
+					"top": 328,
 					"left": 345,
 					"width": 90,
 					"height": 20,
 					"stroke": "#6495ed",
 					"fontWeight": "bold",
 					"textAlign": "left"
+				},
+				"CreateAccount1": {
+					"type": "button",
+					"text": "Open the ds.Users.create function",
+					"top": 476,
+					"left": 508,
+					"width": 250,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount1.4dm",
+					"focusable": false
 				}
 			}
 		},
@@ -309,27 +305,28 @@
 				},
 				"Input1": {
 					"type": "input",
-					"left": 518,
-					"top": 234,
-					"width": 400,
-					"height": 30,
+					"left": 40,
+					"top": 428,
+					"width": 750,
+					"height": 20,
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "dotted",
+					"borderStyle": "none",
 					"dataSource": "Form:C1466.validateLink2",
 					"styledText": true,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Input1.4dm"
+					"method": "ObjectMethods/Input1.4dm",
+					"textDecoration": "underline"
 				},
 				"Button1": {
 					"type": "button",
-					"text": "Run with POST",
-					"top": 422,
+					"text": "Create account",
+					"top": 492,
 					"left": 96,
-					"width": 120,
+					"width": 150,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -337,23 +334,10 @@
 					"method": "ObjectMethods/Button1.4dm",
 					"focusable": false
 				},
-				"Input2": {
-					"type": "input",
-					"left": 72,
-					"top": 244,
-					"width": 331,
-					"height": 161,
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "dotted",
-					"dataSource": "LinesCode{1}",
-					"styledText": true
-				},
 				"Input3": {
 					"type": "input",
-					"left": 126,
-					"top": 212,
+					"left": 96,
+					"top": 545,
 					"width": 300,
 					"height": 20,
 					"dataSource": "Form:C1466.createAccountURL2",
@@ -363,31 +347,92 @@
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
-					"fontSize": 16
+					"borderStyle": "none"
 				},
 				"Text1": {
 					"type": "text",
-					"text": "URL:",
-					"top": 212,
-					"left": 26,
-					"width": 80,
+					"text": "Create your account",
+					"top": 205,
+					"left": 62,
+					"width": 250,
 					"height": 20,
-					"textAlign": "right",
+					"textAlign": "left",
 					"fontWeight": "bold",
-					"fontSize": 16,
+					"fontSize": 18,
 					"stroke": "#6495ed"
 				},
-				"Text2": {
+				"Input2": {
+					"type": "input",
+					"left": 132,
+					"top": 254,
+					"width": 181,
+					"height": 20,
+					"dataSource": "Form:C1466.info2.firstname"
+				},
+				"Text8": {
 					"type": "text",
-					"text": "Response",
-					"top": 204,
-					"left": 518,
+					"text": "Firstname",
+					"top": 254,
+					"left": 38,
+					"width": 120,
+					"height": 20
+				},
+				"Input8": {
+					"type": "input",
+					"left": 132,
+					"top": 294,
+					"width": 181,
+					"height": 20,
+					"dataSource": "Form:C1466.info2.lastname"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Lastname",
+					"top": 294,
+					"left": 38,
+					"width": 120,
+					"height": 20
+				},
+				"Input10": {
+					"type": "input",
+					"left": 132,
+					"top": 334,
+					"width": 181,
+					"height": 20,
+					"dataSource": "Form:C1466.info2.email",
+					"events": []
+				},
+				"Text10": {
+					"type": "text",
+					"text": "Email",
+					"top": 334,
+					"left": 38,
+					"width": 120,
+					"height": 20
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Click on the validation link",
+					"top": 397,
+					"left": 40,
 					"width": 250,
 					"height": 20,
 					"fontSize": 18,
 					"fontWeight": "bold",
 					"stroke": "#6495ed"
+				},
+				"CreateAccount2": {
+					"type": "button",
+					"text": "Open the ds.Users.create function",
+					"top": 486,
+					"left": 292,
+					"width": 250,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount2.4dm",
+					"focusable": false
 				}
 			}
 		},
@@ -441,5 +486,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 306
+	"geometryStamp": 407
 }
