@@ -4,6 +4,11 @@ var $requestObj : Object
 var $request : Object
 
 
+If (btnTrace)
+	TRACE:C157
+End if 
+
+
 //$headers:=buildHeaders
 
 $requestObj:={method: HTTP POST method:K71:2; body: New collection:C1472(Form:C1466.info; computeLifeSpan)}
@@ -14,7 +19,7 @@ $request:=4D:C1709.HTTPRequest.new(Form:C1466.createAccountURL; $requestObj).wai
 
 
 If ($request.response.status=402)
-	ALERT:C41("No more 4D Client licence available")
+	ALERT:C41("No more 4D Client licence available - Please restart the HDI")
 Else 
 	If (Value type:C1509($request.response.headers["set-cookie"])=Is collection:K8:32)
 		$cookies:=$request.response.headers["set-cookie"]

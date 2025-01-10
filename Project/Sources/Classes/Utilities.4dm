@@ -14,7 +14,7 @@ exposed onHTTPGet Function validateEmail($token : Text) : 4D:C1709.OutgoingMessa
 		
 		$restore:=Session:C1714.restore($token)
 		
-		If (($restore=True:C214) && (Session:C1714.storage.status.step="Waiting for validation email 2"))
+		If (($restore=True:C214) && (Session:C1714.storage.status.step="Waiting for validation email"))
 			
 			$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
 			$user.validateEmail()
@@ -29,7 +29,7 @@ exposed onHTTPGet Function validateEmail($token : Text) : 4D:C1709.OutgoingMessa
 			End use 
 			
 		Else 
-			$result.setBody("Validation failded")
+			$result.setBody("Validation failed")
 		End if 
 	End if 
 	

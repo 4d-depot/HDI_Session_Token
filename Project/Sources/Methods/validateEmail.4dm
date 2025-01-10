@@ -4,7 +4,7 @@
 
 If (Session:C1714.storage.status#Null:C1517)
 	
-	If (Session:C1714.storage.status.step="Waiting for validation email 1")
+	If (Session:C1714.storage.status.step="Waiting for validation email")
 		
 		$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
 		$user.validateEmail()

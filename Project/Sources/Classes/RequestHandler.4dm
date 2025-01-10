@@ -19,7 +19,12 @@ Function callApp($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
 	$callExternalAppURL:="http://127.0.0.1:8044/4DACTION/callExternalApp?redirect="+$callBackURL
 	
 	$requestObj:={method: HTTP GET method:K71:1}
-	$request:=4D:C1709.HTTPRequest.new($callExternalAppURL; $requestObj).wait()
+	
+	Try
+		$request:=4D:C1709.HTTPRequest.new($callExternalAppURL; $requestObj).wait()
+	Catch
+		$i:=1
+	End try
 	
 	If ((Session:C1714.storage.info.message2=Null:C1517) && (Session:C1714.storage.info.message3=Null:C1517))
 		$body:="<br>"+"<br>"+"No session restored"+"<br>"+"<br>"
@@ -86,3 +91,8 @@ Function handleCallBack($request : 4D:C1709.IncomingMessage)
 		End if 
 		
 	End if 
+	
+	
+	
+	
+	

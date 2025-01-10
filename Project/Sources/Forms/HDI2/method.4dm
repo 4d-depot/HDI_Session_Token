@@ -2,6 +2,8 @@ Case of
 		
 	: (Form event code:C388=On Load:K2:1)
 		
+		btnTrace:=False:C215
+		
 		InitInfo
 		
 		Form:C1466.info:={firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}
@@ -12,7 +14,13 @@ Case of
 		
 		Form:C1466.createAccountURL:="http://127.0.0.1/rest/Users/create"
 		
+		Form:C1466.validateLinkWithoutParameter:="Coming soon"
+		
+		Form:C1466.validateLink:="Coming soon"
+		
 		Form:C1466.createAccountURL2:="http://127.0.0.1/rest/Users/create2"
+		
+		Form:C1466.validateLink2:="Coming soon"
 		
 		Form:C1466.callExternalApp:="127.0.0.1/callExternalApp"
 		

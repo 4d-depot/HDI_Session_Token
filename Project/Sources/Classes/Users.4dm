@@ -17,7 +17,7 @@ exposed Function create($info : Object; $lifespan : Integer) : Text
 	$status:=$user.save()
 	
 	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email 1"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
+		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
 	End use 
 	
 	If ($lifespan#0)
@@ -44,7 +44,7 @@ exposed Function create2($info : Object) : Text
 	$status:=$user.save()
 	
 	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email 2"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
+		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
 	End use 
 	
 	$token:=Session:C1714.createOTP()
