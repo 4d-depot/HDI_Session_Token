@@ -369,16 +369,6 @@
 					"stroke": "#6495ed",
 					"strokeWidth": 1
 				},
-				"Text12": {
-					"type": "text",
-					"text": "<-- Click on it to open",
-					"top": 750,
-					"left": 250,
-					"width": 150,
-					"height": 20,
-					"textAlign": "left",
-					"fontStyle": "normal"
-				},
 				"Input16": {
 					"type": "input",
 					"left": 400,
@@ -410,10 +400,29 @@
 					"fill": "transparent",
 					"borderStyle": "none",
 					"styledText": true
+				},
+				"Input1": {
+					"type": "input",
+					"left": 250,
+					"top": 750,
+					"width": 150,
+					"height": 20,
+					"dataSource": "\"<--Click on it to open\"",
+					"events": [
+						"onClick"
+					],
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontStyle": "normal",
+					"textDecoration": "none",
+					"method": "ObjectMethods/Input1.4dm"
 				}
 			},
 			"entryOrder": [
-				"Input7"
+				"Input7",
+				"Input1"
 			]
 		},
 		{
@@ -622,16 +631,6 @@
 					"stroke": "#6495ed",
 					"strokeWidth": 1
 				},
-				"Text21": {
-					"type": "text",
-					"text": "<-- Click on it to open",
-					"top": 390,
-					"left": 640,
-					"width": 150,
-					"height": 20,
-					"textAlign": "left",
-					"fontStyle": "normal"
-				},
 				"Input27": {
 					"type": "input",
 					"left": 30,
@@ -660,11 +659,46 @@
 					],
 					"method": "ObjectMethods/CreateAccount3.4dm",
 					"focusable": false
+				},
+				"Input2": {
+					"type": "input",
+					"left": 640,
+					"top": 390,
+					"width": 180,
+					"height": 20,
+					"dataSource": "\"<--Click on it to open\"",
+					"events": [
+						"onClick"
+					],
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontStyle": "normal",
+					"textDecoration": "none",
+					"method": "ObjectMethods/Input2.4dm"
 				}
 			},
 			"entryOrder": [
-				"CreateAccount3"
+				"CreateAccount3",
+				"Input2"
 			]
+		},
+		{
+			"objects": {
+				"Input3": {
+					"type": "input",
+					"left": 17,
+					"top": 127,
+					"width": 950,
+					"height": 620,
+					"dataSourceTypeHint": "picture",
+					"dataSource": "Form:C1466.schema",
+					"enterable": false,
+					"focusable": false,
+					"pictureFormat": "scaled"
+				}
+			}
 		},
 		{
 			"objects": {
@@ -751,6 +785,18 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Button",
+					"top": 179,
+					"left": 714,
+					"width": 151,
+					"height": 45,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
 				}
 			}
 		}
@@ -766,5 +812,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 1339
+	"geometryStamp": 1467
 }

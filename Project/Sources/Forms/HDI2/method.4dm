@@ -1,3 +1,9 @@
+
+
+
+var $schema : Picture
+
+
 Case of 
 		
 	: (Form event code:C388=On Load:K2:1)
@@ -27,6 +33,9 @@ Case of
 		Form:C1466.callExternalAppWithWrongCallBack:="127.0.0.1/callExternalAppWithWrongCallBack"
 		
 		Form:C1466.webAreaURL:=""
+		
+		READ PICTURE FILE:C678(File:C1566("/RESOURCES/CallBack.jpeg").platformPath; $schema)
+		Form:C1466.schema:=$schema
 		
 		OBJECT SET ENABLED:C1123(*; "CreateAccount"; ((Form:C1466.life10=1) || (Form:C1466.noLife=1)))
 		
