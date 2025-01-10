@@ -14,7 +14,11 @@ Case of
 		
 		Form:C1466.createAccountURL2:="http://127.0.0.1/rest/Users/create2"
 		
-		Form:C1466.webAreaURL2:=""
+		Form:C1466.callExternalApp:="127.0.0.1/callExternalApp"
+		
+		Form:C1466.callExternalAppWithWrongCallBack:="127.0.0.1/callExternalAppWithWrongCallBack"
+		
+		Form:C1466.webAreaURL:=""
 		
 		OBJECT SET ENABLED:C1123(*; "CreateAccount"; ((Form:C1466.life10=1) || (Form:C1466.noLife=1)))
 		

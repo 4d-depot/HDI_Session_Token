@@ -443,7 +443,7 @@
 					"top": 80,
 					"left": 40,
 					"width": 420,
-					"height": 480,
+					"height": 50,
 					"sizingY": "grow",
 					"dataSource": "Infos[3].Description",
 					"focusable": false,
@@ -459,18 +459,68 @@
 					],
 					"class": "description"
 				},
-				"Rectangle2": {
-					"type": "rectangle",
-					"top": 80,
-					"left": 480,
-					"width": 440,
-					"height": 480,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"sizingY": "grow",
+				"Input11": {
+					"type": "input",
+					"left": 49,
+					"top": 159,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.callExternalApp",
+					"events": [
+						"onClick"
+					],
+					"enterable": false,
+					"focusable": false,
 					"fill": "transparent",
-					"stroke": "#9400D3",
-					"strokeDashArray": "1 1"
+					"borderStyle": "none"
+				},
+				"Web Area": {
+					"type": "webArea",
+					"left": 66,
+					"top": 234,
+					"width": 474,
+					"height": 282,
+					"urlSource": "Form:C1466.webAreaURL",
+					"webEngine": "embedded"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Go",
+					"top": 152,
+					"left": 461,
+					"width": 80,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Input12": {
+					"type": "input",
+					"left": 49,
+					"top": 199,
+					"width": 300,
+					"height": 20,
+					"dataSource": "Form:C1466.callExternalAppWithWrongCallBack",
+					"events": [
+						"onClick"
+					],
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Go",
+					"top": 192,
+					"left": 461,
+					"width": 80,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
 				}
 			}
 		}
@@ -486,5 +536,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 407
+	"geometryStamp": 450
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "class": "RequestHandler",
+    "method": "callAppWithWrongCallback",
+    "regexPattern": "/callExternalAppWithWrongCallBack",
+    "verbs": "get"
+  },
+  {
+    "class": "RequestHandler",
+    "method": "callApp",
+    "regexPattern": "/callExternalApp",
+    "verbs": "get"
+  },  
+  {
+    "class": "RequestHandler",
+    "method": "handleCallBack",
+    "regexPattern": "/callBack",
+    "verbs": "post"
+  }
+]
