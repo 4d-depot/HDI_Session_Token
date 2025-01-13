@@ -1,3 +1,3 @@
 
 
-METHOD OPEN PATH:C1213("[class]/Utilities")
+METHOD OPEN PATH:C1213("[class]/Utilities/validateEmail")

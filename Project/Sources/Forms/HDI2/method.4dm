@@ -40,6 +40,16 @@ Case of
 		OBJECT SET ENABLED:C1123(*; "CreateAccount"; ((Form:C1466.life10=1) || (Form:C1466.noLife=1)))
 		
 		
+		Form:C1466.remoteDatastore:=Open datastore:C1452({hostname: "127.0.0.1"}; "remoteDS")
+		Form:C1466.products:=Form:C1466.remoteDatastore.Products.all()
+		//Form.products:=ds.Products.all()
+		//Form.validateBasket:="http://127.0.0.1/rest/Products/validateBasket"
+		
+		Form:C1466.getBasketLink:="Coming soon"
+		
+		OBJECT SET ENABLED:C1123(*; "Validate"; Form:C1466.selected#Null:C1517)
+		
+		
 	: (Form event code:C388=On Close Box:K2:21)
 		If (Is Windows:C1573 && Application info:C1599().SDIMode)
 			QUIT 4D:C291

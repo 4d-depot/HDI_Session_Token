@@ -36,3 +36,36 @@ exposed onHTTPGet Function validateEmail($token : Text) : 4D:C1709.OutgoingMessa
 	return $result
 	
 	
+	
+	
+exposed onHTTPGet Function getProducts($token : Text) : 4D:C1709.OutgoingMessage
+	
+	var $result:=4D:C1709.OutgoingMessage.new()
+	var $restore : Boolean
+	var $product : cs:C1710.ProductsEntity
+	var $body:="Here are the products in your basket:<br><br>"
+	
+	
+	$result.setBody:=("Getting basket failed")
+	
+	
+	If (Session:C1714.storage.products=Null:C1517)
+		
+		$restore:=Session:C1714.restore($token)
+		
+		If (($restore=True:C214) && (Session:C1714.storage.products#Null:C1517))
+			
+			For each ($product; Session:C1714.storage.products)
+				$body:=$body+" "+$product.name+"<br>"
+			End for each 
+			
+			$result.setBody($body)
+			$result.setHeader("Content-Type"; "text/html")
+			
+		Else 
+			$result.setBody("Getting basket failed")
+		End if 
+	End if 
+	
+	return $result
+	

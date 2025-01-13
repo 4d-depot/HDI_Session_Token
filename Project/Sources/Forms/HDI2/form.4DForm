@@ -427,6 +427,156 @@
 		},
 		{
 			"objects": {
+				"information4": {
+					"type": "input",
+					"top": 70,
+					"left": 50,
+					"width": 900,
+					"height": 300,
+					"sizingY": "grow",
+					"dataSource": "Infos[2].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"LBProducts": {
+					"type": "listbox",
+					"left": 50,
+					"top": 390,
+					"width": 165,
+					"height": 181,
+					"events": [
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.products",
+					"selectedItemsSource": "Form:C1466.selected",
+					"rowHeight": "20px",
+					"focusable": false,
+					"method": "ObjectMethods/LBProducts.4dm",
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 150
+						}
+					]
+				},
+				"Validate": {
+					"type": "button",
+					"text": "Validate basket",
+					"top": 550,
+					"left": 230,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Validate.4dm"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 50,
+					"top": 650,
+					"width": 850,
+					"height": 20,
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.getBasketLink",
+					"styledText": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Input8.4dm",
+					"textDecoration": "underline",
+					"fontWeight": "bold"
+				},
+				"Input10": {
+					"type": "input",
+					"left": 50,
+					"top": 690,
+					"width": 850,
+					"height": 80,
+					"dataSource": "LinesCode{10}",
+					"events": [
+						"onClick"
+					],
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"styledText": true
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Products list",
+					"top": 360,
+					"left": 50,
+					"width": 190,
+					"height": 20,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"stroke": "#6495ed"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Try this link (received by email)",
+					"top": 610,
+					"left": 50,
+					"width": 480,
+					"height": 20,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"stroke": "#6495ed"
+				},
+				"CreateAccount2": {
+					"type": "button",
+					"text": "Open the Utilities singleton getProducts function",
+					"top": 610,
+					"left": 360,
+					"width": 380,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount2.4dm",
+					"focusable": false
+				}
+			},
+			"entryOrder": [
+				"information4",
+				"LBProducts",
+				"Validate",
+				"Input8",
+				"Input10",
+				"CreateAccount2"
+			]
+		},
+		{
+			"objects": {
 				"information2": {
 					"type": "input",
 					"top": 70,
@@ -434,7 +584,7 @@
 					"width": 900,
 					"height": 230,
 					"sizingY": "grow",
-					"dataSource": "Infos[2].Description",
+					"dataSource": "Infos[3].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -649,10 +799,10 @@
 				},
 				"CreateAccount3": {
 					"type": "button",
-					"text": "Open the Utilities singleton",
+					"text": "Open the Utilities singleton validateEmail function",
 					"top": 750,
 					"left": 30,
-					"width": 250,
+					"width": 380,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -678,11 +828,7 @@
 					"textDecoration": "none",
 					"method": "ObjectMethods/Input2.4dm"
 				}
-			},
-			"entryOrder": [
-				"CreateAccount3",
-				"Input2"
-			]
+			}
 		},
 		{
 			"objects": {
@@ -812,5 +958,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 1467
+	"geometryStamp": 1663
 }
