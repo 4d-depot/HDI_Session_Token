@@ -1,4 +1,4 @@
 
 
 
-Form:C1466.mails:=ds:C1482.Emails.query("read = :1"; False:C215)
+Form:C1466.mails:=ds:C1482.Emails.query("validated = :1"; False:C215)

@@ -356,7 +356,9 @@
 				"moveable": false,
 				"placeholder": "",
 				"revealPassword": true,
-				"intervals": []
+				"intervals": [],
+				"datasource": "credentials.email",
+				"dataType": "object"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -481,7 +483,7 @@
 						"returns": {
 							"name": "result",
 							"type": "Text",
-							"datasource": "result"
+							"datasource": "Authentication:target"
 						},
 						"feedback": true
 					}
@@ -541,7 +543,31 @@
 						"loader": "",
 						"parent": "same-tab",
 						"target": "CreateAccount",
-						"isHardCoded": true
+						"isHardCoded": true,
+						"disabled": true
+					},
+					{
+						"type": "simple-action",
+						"id": "hPp6YojCLZ5yUsa8cxyAF2",
+						"events": [
+							"onclick"
+						],
+						"action": "set",
+						"actionType": "datasource",
+						"datasource": {
+							"name": "target",
+							"type": "scalar",
+							"from": "",
+							"namespace": "Authentication",
+							"dataType": "string",
+							"target": "crea",
+							"targetNamespace": "",
+							"targetType": "unknown",
+							"set": {
+								"value": "createAccount",
+								"type": "string"
+							}
+						}
 					}
 				],
 				"iconPosition": "hidden",
@@ -612,7 +638,7 @@
 				"type": "password",
 				"moveable": false,
 				"placeholder": "",
-				"datasource": "",
+				"datasource": "credentials.password",
 				"dataType": "string",
 				"revealPassword": true,
 				"intervals": []

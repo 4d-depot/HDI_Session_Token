@@ -17,7 +17,6 @@ exposed onHTTPGet Function validateEmail($token : Text) : 4D:C1709.OutgoingMessa
 		If (($restore=True:C214) && (Session:C1714.storage.status.step="Waiting for validation email"))
 			
 			$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
-			$user.validateEmail()
 			
 			$result.setBody("Welcome "+Session:C1714.storage.status.fullname+"<br>"\
 				+"Your email "+Session:C1714.storage.status.email+" has been validated")

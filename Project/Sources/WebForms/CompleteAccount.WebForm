@@ -1,0 +1,60 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"airyMode": false,
+				"className": "bg-white h-full w-full px-6"
+			},
+			"displayName": "Page",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"xOO79S1WQU"
+			],
+			"linkedNodes": {}
+		},
+		"xOO79S1WQU": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Congratulations, your account has been created and your mail has been validated!",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": ""
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}

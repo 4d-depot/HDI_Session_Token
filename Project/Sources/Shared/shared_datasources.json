@@ -1,0 +1,18 @@
+{
+	"Authentication": [
+		{
+			"id": "email",
+			"type": "scalar",
+			"namespace": "Authentication",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "target",
+			"type": "scalar",
+			"namespace": "Authentication",
+			"dataType": "string",
+			"initialValue": "Authentication"
+		}
+	]
+}

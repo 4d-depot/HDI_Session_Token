@@ -26,7 +26,10 @@ exposed Function get fullname() : Text
 	
 Function validateEmail()
 	
+	var $theEmail : cs:C1710.EmailsEntity
 	var $status : Object
 	
-	This:C1470.validated:=True:C214
-	$status:=This:C1470.save()
+	
+	$theEmail:=This:C1470.emails.first()
+	$theEmail.validated:=True:C214
+	$status:=$theEmail.save()

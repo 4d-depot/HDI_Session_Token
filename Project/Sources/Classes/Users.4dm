@@ -11,7 +11,6 @@ exposed Function create($info : Object; $lifespan : Integer) : Text
 	
 	$user:=This:C1470.new()
 	$user.fromObject($info)
-	$user.validated:=False:C215
 	$user.password:=""
 	
 	$status:=$user.save()
@@ -36,10 +35,12 @@ exposed Function createQodlyUser($info : Object)
 	var $status : Object
 	var $token : Text
 	var $mail : cs:C1710.EmailsEntity
+	var $notDropped : cs:C1710.EmailsSelection
+	
 	
 	$user:=This:C1470.new()
 	$user.fromObject($info)
-	$user.validated:=False:C215
+	$user.password:=Generate password hash:C1533($info.password)
 	$status:=$user.save()
 	
 	Use (Session:C1714.storage)
@@ -48,9 +49,11 @@ exposed Function createQodlyUser($info : Object)
 	
 	$token:=Session:C1714.createOTP()
 	
+	$notDropped:=$user.emails.drop()
+	
 	$mail:=ds:C1482.Emails.new()
 	$mail.link:="127.0.0.1/validateEmail?$4DSID="+$token
-	$mail.read:=False:C215
+	$mail.validated:=False:C215
 	$mail.user:=$user
 	$status:=$mail.save()
 	
@@ -66,7 +69,6 @@ exposed Function createForBlogpost($info : Object) : Text
 	
 	$user:=This:C1470.new()
 	$user.fromObject($info)
-	$user.validated:=False:C215
 	$user.password:=""
 	
 	$status:=$user.save()
@@ -90,7 +92,6 @@ exposed Function create2($info : Object) : Text
 	
 	$user:=This:C1470.new()
 	$user.fromObject($info)
-	$user.validated:=False:C215
 	$user.password:=""
 	
 	$status:=$user.save()
