@@ -100,23 +100,26 @@ exposed Function validatePayment($chosenProducts : cs:C1710.ProductsSelection) :
 	
 	var $result:="Payment failed"
 	
-	
-	Use (Session:C1714.storage)
-		Session:C1714.storage.info:=New shared object:C1526("paymentStatus"; "Calling payment app")
-		Session:C1714.storage.chosenProducts:=$chosenProducts
-	End use 
-	
-	$token:=Session:C1714.createOTP()
-	
-	$callBackURL:="http://127.0.0.1/callBack?state%253D"+$token
-	
-	$callExternalAppURL:="http://127.0.0.1:8044/4DACTION/callPaymentApp?redirect="+$callBackURL
-	$requestObj:={method: HTTP GET method:K71:1}
-	$request:=4D:C1709.HTTPRequest.new($callExternalAppURL; $requestObj).wait()
-	
-	
-	If (Position:C15("Payment validated"; Session:C1714.storage.info.paymentStatus)#0)
-		$result:=Session:C1714.storage.info.paymentStatus
+	If ($chosenProducts.length=0)
+		$result:="Select products first"
+	Else 
+		Use (Session:C1714.storage)
+			Session:C1714.storage.info:=New shared object:C1526("paymentStatus"; "Calling payment app")
+			Session:C1714.storage.chosenProducts:=$chosenProducts
+		End use 
+		
+		$token:=Session:C1714.createOTP()
+		
+		$callBackURL:="http://127.0.0.1/callBack?state%253D"+$token
+		
+		$callExternalAppURL:="http://127.0.0.1:8044/4DACTION/callPaymentApp?redirect="+$callBackURL
+		$requestObj:={method: HTTP GET method:K71:1}
+		$request:=4D:C1709.HTTPRequest.new($callExternalAppURL; $requestObj).wait()
+		
+		
+		If (Position:C15("Payment validated"; Session:C1714.storage.info.paymentStatus)#0)
+			$result:=Session:C1714.storage.info.paymentStatus
+		End if 
+		
 	End if 
-	
 	return $result

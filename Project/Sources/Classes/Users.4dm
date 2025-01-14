@@ -29,7 +29,7 @@ exposed Function create($info : Object; $lifespan : Integer) : Text
 	
 	
 	
-exposed Function createQodlyUser($info : Object)
+Function createQodlyUser($info : Object) : Text
 	
 	var $user : cs:C1710.UsersEntity
 	var $status : Object
@@ -37,27 +37,29 @@ exposed Function createQodlyUser($info : Object)
 	var $mail : cs:C1710.EmailsEntity
 	var $notDropped : cs:C1710.EmailsSelection
 	
-	
-	$user:=This:C1470.new()
-	$user.fromObject($info)
-	$user.password:=Generate password hash:C1533($info.password)
-	$status:=$user.save()
-	
-	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
-	End use 
-	
-	$token:=Session:C1714.createOTP()
-	
-	$notDropped:=$user.emails.drop()
-	
-	$mail:=ds:C1482.Emails.new()
-	$mail.link:="127.0.0.1/validateEmail?$4DSID="+$token
-	$mail.validated:=False:C215
-	$mail.user:=$user
-	$status:=$mail.save()
-	
-	//Web Form.setMessage("Go back to 4D to check the mails")
+	If (This:C1470.query("email = :1"; $info.email).length>=1)
+		return "An account already exist"
+	Else 
+		$user:=This:C1470.new()
+		$user.fromObject($info)
+		$user.password:=Generate password hash:C1533($info.password)
+		$status:=$user.save()
+		
+		Use (Session:C1714.storage)
+			Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
+		End use 
+		
+		$token:=Session:C1714.createOTP()
+		
+		$notDropped:=$user.emails.drop()
+		
+		$mail:=ds:C1482.Emails.new()
+		$mail.link:="127.0.0.1/validateEmail?$4DSID="+$token
+		$mail.validated:=False:C215
+		$mail.user:=$user
+		$status:=$mail.save()
+		return "OK"
+	End if 
 	
 	
 exposed Function createForBlogpost($info : Object) : Text

@@ -42,8 +42,7 @@
 				"name": "matrixStyle",
 				"content": "self .FdVirtualGrid > div .selected {\n\nbackground-color: #d2e2f9;\n\nborder-radius : 15px;\n\n}",
 				"parentId": null,
-				"id": "UJA4pUXm3HY6nOYgQMcoh",
-				"scope": "local"
+				"id": "UJA4pUXm3HY6nOYgQMcoh"
 			}
 		]
 	},
@@ -57,17 +56,19 @@
 				"classNames": [],
 				"events": [],
 				"airyMode": false,
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"display": "flex",
+					"gap": "20px"
+				}
 			},
 			"displayName": "Page",
 			"custom": {},
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"xOO79S1WQU",
-				"Ohym7iyj6B",
-				"zYusOEHFOb",
-				"fYtLbilODd"
+				"wPYJiG6o0V",
+				"-fkFZshh9B"
 			],
 			"linkedNodes": {}
 		},
@@ -85,7 +86,7 @@
 						"children": [
 							{
 								"text": "Congratulations, your account has been created and your email address has been validated!",
-								"bold": false,
+								"bold": true,
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false
@@ -93,11 +94,12 @@
 						]
 					}
 				],
-				"datasource": ""
+				"datasource": "",
+				"style": {}
 			},
 			"displayName": "Text",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "bzWHRUVMqj",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -115,11 +117,12 @@
 					"marginTop": "0px",
 					"alignItems": "center",
 					"gap": "40px"
-				}
+				},
+				"classNames": []
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "-gDhCGp9Jp",
 			"hidden": false,
 			"nodes": [
 				"bNbseIHWZ0",
@@ -1037,12 +1040,14 @@
 				],
 				"iconPosition": "hidden",
 				"style": {
-					"display": "flex"
+					"display": "block",
+					"justifyContent": "flex-start",
+					"alignItems": "start"
 				}
 			},
 			"displayName": "Button",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "-fkFZshh9B",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
@@ -1117,7 +1122,324 @@
 			},
 			"displayName": "Text",
 			"custom": {},
+			"parent": "-fkFZshh9B",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"-gDhCGp9Jp": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"alignItems": "start",
+					"flexDirection": "column"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "bzWHRUVMqj",
+			"hidden": false,
+			"nodes": [
+				"2XL5GN8VUC",
+				"Ohym7iyj6B"
+			],
+			"linkedNodes": {}
+		},
+		"bzWHRUVMqj": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"gap": "30px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "-fkFZshh9B",
+			"hidden": false,
+			"nodes": [
+				"xOO79S1WQU",
+				"Na0LufvsLy",
+				"-gDhCGp9Jp"
+			],
+			"linkedNodes": {}
+		},
+		"0mcBCj0-xn": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "3B0V8zIof9",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"-fkFZshh9B": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"width": "50%"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
 			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"bzWHRUVMqj",
+				"zYusOEHFOb",
+				"fYtLbilODd"
+			],
+			"linkedNodes": {}
+		},
+		"wPYJiG6o0V": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"classNames": [
+					"cartStyle"
+				],
+				"style": {
+					"width": "600px",
+					"alignItems": "center",
+					"justifyContent": "flex-start"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"52FE2vVjHz",
+				"CbVj4SdDkB"
+			],
+			"linkedNodes": {}
+		},
+		"52FE2vVjHz": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "GUIDELINES",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontSize": "20px",
+					"fontWeight": "500",
+					"textAlign": "center"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "wPYJiG6o0V",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"CbVj4SdDkB": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "1-",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " Select some products to add them in the chosen products list."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "2-"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " Click on the Validate payment button"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginTop": "0px",
+					"fontFamily": "Roboto",
+					"fontSize": "16px",
+					"textAlign": "start"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "wPYJiG6o0V",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Na0LufvsLy": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "You can start working with the products below.",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "bzWHRUVMqj",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"2XL5GN8VUC": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Clear chosen products",
+				"classNames": [],
+				"events": [
+					{
+						"type": "simple-action",
+						"id": "wkboViDmrShyAfhYKDH2bD",
+						"events": [
+							"onclick"
+						],
+						"action": "reset",
+						"actionType": "datasource",
+						"datasource": {
+							"name": "chosenProducts",
+							"type": "entitysel",
+							"from": "",
+							"namespace": ""
+						}
+					}
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "flex"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "-gDhCGp9Jp",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "JNXSWGzBSr"
+			}
+		},
+		"JNXSWGzBSr": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": []
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "2XL5GN8VUC",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

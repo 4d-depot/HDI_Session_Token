@@ -8,6 +8,8 @@
 				"namespace": "",
 				"dataType": "object",
 				"initialValue": {
+					"email": "mary@acme.com",
+					"password": "a",
 					"createAccount": true
 				}
 			}
@@ -24,6 +26,12 @@
 				"content": "self {\n  background-color : #ffffffff;\n  color : #666682;\n}",
 				"parentId": null,
 				"id": "DqyTqbssWxMrnZfb5HBFx"
+			},
+			{
+				"name": "cartStyle",
+				"content": "self {\n  background-color : #ffffffff;\n  box-shadow : 0px 0px 6px 0px #00000023;\n  display : flex;\n  flex-direction : column;\n  align-items : start;\n  justify-content : flex-start;\n  gap : 10px;\n  margin-top : 0px;\n  border-width : 1px;\n  border-radius : 20px;\n\t}",
+				"parentId": null,
+				"id": "AoToQjuef17JacX9rEn0v"
 			}
 		]
 	},
@@ -37,13 +45,18 @@
 				"classNames": [],
 				"events": [],
 				"airyMode": false,
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"display": "flex",
+					"gap": "20px"
+				}
 			},
 			"displayName": "Page",
 			"custom": {},
 			"parent": "",
 			"hidden": false,
 			"nodes": [
+				"FMmqwD5oqf",
 				"zvB6phUBKy"
 			],
 			"linkedNodes": {}
@@ -58,19 +71,21 @@
 				"iterableChild": true,
 				"style": {
 					"backgroundImage": "url(https://raw.githubusercontent.com/4d/Web-studio-TIPS/gh-build/groups/login/assets/loginBackground.png)",
-					"width": "100%",
+					"width": "50%",
 					"height": "100%",
 					"marginTop": "0px",
 					"marginRight": "0px",
 					"marginBottom": "0px",
 					"marginLeft": "0px",
-					"minWidth": "100%",
-					"maxWidth": "100%",
+					"minWidth": "50%",
+					"maxWidth": "50%",
 					"backgroundSize": "cover",
 					"backgroundRepeat": "no-repeat",
 					"minHeight": "100%",
 					"maxHeight": "100%",
-					"display": "flex"
+					"display": "flex",
+					"borderWidth": "1px",
+					"borderRadius": "20px"
 				},
 				"classNames": []
 			},
@@ -109,7 +124,9 @@
 					"minWidth": "100%",
 					"maxWidth": "100%",
 					"minHeight": "100%",
-					"maxHeight": "100%"
+					"maxHeight": "100%",
+					"borderWidth": "1px",
+					"borderRadius": "20px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -193,6 +210,7 @@
 			"hidden": false,
 			"nodes": [
 				"renqLDazxV",
+				"Oi7sdxhFDt",
 				"VHv3iuzWRM",
 				"aV-GmK2nKG",
 				"fFBZE8W3Tu",
@@ -238,7 +256,8 @@
 					"display": "flex",
 					"alignItems": "center",
 					"gap": "10px",
-					"fontSize": "14px"
+					"fontSize": "14px",
+					"marginTop": "20px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -582,31 +601,6 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "Users",
-						"events": [
-							"onclick"
-						],
-						"id": "hWga1r2adVffRjmUpQdfS2",
-						"method": "ds.Users.createQodlyUser",
-						"params": [
-							{
-								"name": "info",
-								"type": "Object",
-								"datasource": "info",
-								"id": "ivEbnrVExuKhSccQ6TCeK3"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable",
-							"datasource": ""
-						},
-						"feedback": true,
-						"disabled": true
-					},
-					{
-						"type": "method",
 						"dataclass": "DataStore",
 						"events": [
 							"onclick"
@@ -715,6 +709,212 @@
 					}
 				],
 				"datasource": ""
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "8JtrzsN4fh",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"FMmqwD5oqf": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"classNames": [
+					"cartStyle"
+				],
+				"style": {
+					"width": "600px",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"J3vx3mIIBE",
+				"_weDogC-AJ"
+			],
+			"linkedNodes": {}
+		},
+		"J3vx3mIIBE": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "GUIDELINES",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontSize": "20px",
+					"fontWeight": "500",
+					"textAlign": "center"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "FMmqwD5oqf",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"_weDogC-AJ": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Enter an email address and a password.",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Click on the "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Create the account"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " button."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": true,
+								"strikethrough": false,
+								"text": "N.B."
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " If trying to create an already existing account, there is an error message."
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginTop": "0px",
+					"fontFamily": "Roboto",
+					"fontSize": "16px",
+					"textAlign": "start"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "FMmqwD5oqf",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Oi7sdxhFDt": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Create an account",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontSize": "20px",
+					"fontWeight": "500"
+				}
 			},
 			"displayName": "Text",
 			"custom": {},

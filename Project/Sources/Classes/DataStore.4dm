@@ -5,15 +5,19 @@ Class extends DataStoreImplementation
 exposed Function authentify($credentials : Object) : Text
 	
 	var $user : cs:C1710.UsersEntity
-	var $result : Variant
+	var $result : Text
 	//var $formula : Object
 	
 	//$result:="Wrong credentials. Be sure your have created an account"
 	
 	If ($credentials.createAccount)
-		ds:C1482.Users.createQodlyUser($credentials)
-		Session:C1714.setPrivileges("forDemo")
-		Web Form:C1735.setMessage("Go back to 4D to check the mails")
+		$result:=ds:C1482.Users.createQodlyUser($credentials)
+		If ($result#"OK")
+			Web Form:C1735.setError($result)
+		Else 
+			Session:C1714.setPrivileges("forDemo")
+			Web Form:C1735.setMessage("Go back to 4D to check the mails")
+		End if 
 	Else 
 		//$formula:=(This.emails.first().validated=True)
 		//$user:=ds.Users.query("email === :1 and :2"; $credentials.email; $formula).first()
