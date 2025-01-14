@@ -82,6 +82,166 @@
 		},
 		{
 			"objects": {
+				"information5": {
+					"type": "input",
+					"top": 70,
+					"left": 50,
+					"width": 900,
+					"height": 100,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"Input20": {
+					"type": "input",
+					"left": 79,
+					"top": 230,
+					"width": 400,
+					"height": 40,
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "\"Open the Qodly demo\"",
+					"events": [
+						"onClick"
+					],
+					"fontStyle": "normal",
+					"fontSize": 18,
+					"textDecoration": "underline",
+					"method": "ObjectMethods/Input20.4dm"
+				},
+				"LBProducts1": {
+					"type": "listbox",
+					"left": 37,
+					"top": 400,
+					"width": 165,
+					"height": 181,
+					"events": [
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.mails",
+					"selectedItemsSource": "",
+					"rowHeight": "20px",
+					"focusable": false,
+					"method": "ObjectMethods/LBProducts1.4dm",
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"selectionMode": "single",
+					"currentItemSource": "Form:C1466.selectedEmail",
+					"columns": [
+						{
+							"header": {
+								"text": "Mail",
+								"name": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.ID",
+							"width": 150,
+							"textAlign": "center"
+						}
+					]
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Emails list",
+					"top": 370,
+					"left": 37,
+					"width": 190,
+					"height": 20,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"stroke": "#6495ed"
+				},
+				"CreateAccount5": {
+					"type": "button",
+					"text": "Refresh",
+					"top": 405,
+					"left": 222,
+					"width": 100,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount5.4dm",
+					"focusable": false
+				},
+				"Input28": {
+					"type": "input",
+					"left": 368,
+					"top": 455,
+					"width": 600,
+					"height": 40,
+					"dataSource": "Form:C1466.selectedEmail.link",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"textDecoration": "underline",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 14
+				},
+				"Text10": {
+					"type": "text",
+					"text": "Click on this link --> ",
+					"top": 455,
+					"left": 216,
+					"width": 150,
+					"height": 20,
+					"fontSize": 14
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Copy / paste this link in another browser or in a private navigation window",
+					"top": 619,
+					"left": 120,
+					"width": 396,
+					"height": 92
+				},
+				"CreateAccount6": {
+					"type": "button",
+					"text": "Copy",
+					"top": 495,
+					"left": 216,
+					"width": 100,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount6.4dm",
+					"focusable": false
+				}
+			},
+			"entryOrder": [
+				"information5",
+				"Input20",
+				"LBProducts1",
+				"CreateAccount5",
+				"Input28",
+				"CreateAccount6"
+			]
+		},
+		{
+			"objects": {
 				"information": {
 					"type": "input",
 					"top": 70,
@@ -90,7 +250,7 @@
 					"height": 340,
 					"sizingX": "grow",
 					"sizingY": "grow",
-					"dataSource": "Infos[1].Description",
+					"dataSource": "Infos[2].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -419,11 +579,7 @@
 					"textDecoration": "none",
 					"method": "ObjectMethods/Input1.4dm"
 				}
-			},
-			"entryOrder": [
-				"Input7",
-				"Input1"
-			]
+			}
 		},
 		{
 			"objects": {
@@ -432,9 +588,9 @@
 					"top": 70,
 					"left": 50,
 					"width": 900,
-					"height": 300,
+					"height": 290,
 					"sizingY": "grow",
-					"dataSource": "Infos[2].Description",
+					"dataSource": "Infos[3].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -565,15 +721,7 @@
 					"method": "ObjectMethods/CreateAccount2.4dm",
 					"focusable": false
 				}
-			},
-			"entryOrder": [
-				"information4",
-				"LBProducts",
-				"Validate",
-				"Input8",
-				"Input10",
-				"CreateAccount2"
-			]
+			}
 		},
 		{
 			"objects": {
@@ -584,7 +732,7 @@
 					"width": 900,
 					"height": 230,
 					"sizingY": "grow",
-					"dataSource": "Infos[3].Description",
+					"dataSource": "Infos[4].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -827,6 +975,19 @@
 					"fontStyle": "normal",
 					"textDecoration": "none",
 					"method": "ObjectMethods/Input2.4dm"
+				},
+				"CreateAccount4": {
+					"type": "button",
+					"text": "Create for blogpost",
+					"top": 320,
+					"left": 410,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount4.4dm",
+					"focusable": false
 				}
 			}
 		},
@@ -855,7 +1016,7 @@
 					"width": 420,
 					"height": 50,
 					"sizingY": "grow",
-					"dataSource": "Infos[3].Description",
+					"dataSource": "Infos[5].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -958,5 +1119,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 1663
+	"geometryStamp": 1705
 }

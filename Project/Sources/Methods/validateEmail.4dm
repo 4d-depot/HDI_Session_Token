@@ -12,8 +12,8 @@ If (Session:C1714.storage.status#Null:C1517)
 		WEB SEND TEXT:C677("Welcome "+Session:C1714.storage.status.fullname+"<br>"\
 			+"Your email "+Session:C1714.storage.status.email+" has been validated")
 		
-		Use (Session:C1714.storage)
-			Session:C1714.storage.status:=Null:C1517
+		Use (Session:C1714.storage.status)
+			Session:C1714.storage.status.step:="Email validated"
 		End use 
 		
 	End if 

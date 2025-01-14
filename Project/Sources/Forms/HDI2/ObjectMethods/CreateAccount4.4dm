@@ -9,7 +9,7 @@ End if
 
 
 $requestObj:={method: HTTP POST method:K71:2; body: [Form:C1466.info2]}
-$request:=4D:C1709.HTTPRequest.new(Form:C1466.createAccountURL2; $requestObj).wait()
+$request:=4D:C1709.HTTPRequest.new("http://127.0.0.1/rest/Users/createForBlogpost"; $requestObj).wait()
 
 
 If ($request.response.status=402)

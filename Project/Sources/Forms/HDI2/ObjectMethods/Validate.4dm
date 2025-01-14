@@ -6,7 +6,10 @@ If (btnTrace)
 End if 
 
 
-Form:C1466.getBasketLink:=Form:C1466.remoteDatastore.Products.validateBasket(Form:C1466.selected)
+//Form.getBasketLink:=Form.remoteDatastore.Products.validateBasket(Form.selected)
 
-//Form.getBasketLink:=Form.selected.validate()
+Form:C1466.getBasketLink:=Form:C1466.selected.someInfos()
+
+
+//Form.getBasketLink:=Form.selected.bookTheBasket()
 

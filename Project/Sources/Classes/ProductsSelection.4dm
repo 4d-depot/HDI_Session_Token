@@ -1,16 +1,25 @@
 Class extends EntitySelection
 
 
-exposed Function validate() : Text
+
+
+
+exposed Function bookTheBasket() : Text
+	
+	return "Test"
+	
+	
+exposed Function someInfos() : Text
+	
+	//return "Test"
 	
 	var $token : Text
 	
-	//Use (Session.storage)
-	//Session.storage.products:=$products
-	//End use 
+	Use (Session:C1714.storage)
+		Session:C1714.storage.products:=This:C1470
+	End use 
 	
 	
-	//$token:=Session.createOTP()
+	$token:=Session:C1714.createOTP()
 	
-	//return "127.0.0.1/rest/$singleton/Utilities/getProducts?$params="+"'"+"["+"\""+$token+"\""+"]'"
-	
+	return "127.0.0.1/rest/$singleton/Utilities/getProducts?$params="+"'"+"["+"\""+$token+"\""+"]'"

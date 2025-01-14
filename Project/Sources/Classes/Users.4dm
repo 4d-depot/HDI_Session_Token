@@ -29,6 +29,58 @@ exposed Function create($info : Object; $lifespan : Integer) : Text
 	return "127.0.0.1/4DACTION/validateEmail?$4DSID="+$token
 	
 	
+	
+exposed Function createQodlyUser($info : Object)
+	
+	var $user : cs:C1710.UsersEntity
+	var $status : Object
+	var $token : Text
+	var $mail : cs:C1710.EmailsEntity
+	
+	$user:=This:C1470.new()
+	$user.fromObject($info)
+	$user.validated:=False:C215
+	$status:=$user.save()
+	
+	Use (Session:C1714.storage)
+		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
+	End use 
+	
+	$token:=Session:C1714.createOTP()
+	
+	$mail:=ds:C1482.Emails.new()
+	$mail.link:="127.0.0.1/validateEmail?$4DSID="+$token
+	$mail.read:=False:C215
+	$mail.user:=$user
+	$status:=$mail.save()
+	
+	//Web Form.setMessage("Go back to 4D to check the mails")
+	
+	
+exposed Function createForBlogpost($info : Object) : Text
+	
+	var $user : cs:C1710.UsersEntity
+	var $status : Object
+	var $token : Text
+	
+	
+	$user:=This:C1470.new()
+	$user.fromObject($info)
+	$user.validated:=False:C215
+	$user.password:=""
+	
+	$status:=$user.save()
+	
+	Use (Session:C1714.storage)
+		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
+	End use 
+	
+	
+	$token:=Session:C1714.createOTP()
+	
+	return "127.0.0.1/rest/$singleton/Utilities/validateEmailForBlogpost?$4DSID="+$token
+	
+	
 exposed Function create2($info : Object) : Text
 	
 	var $user : cs:C1710.UsersEntity
