@@ -1,7 +1,7 @@
 {
 	"methods": {
-		"callExternalApp": {
-			"timeStamp": "2025-01-10T11:41:33Z",
+		"callPaymentApp": {
+			"timeStamp": "2025-01-14T15:20:37Z",
 			"attributes": {
 				"publishedWeb": true
 			}

@@ -1,6 +1,6 @@
 
-
 shared singleton Class constructor()
+	
 	
 Function callApp($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
 	
@@ -14,7 +14,7 @@ Function callApp($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
 	
 	$token:=Session:C1714.createOTP()
 	
-	$callBackURL:="http://127.0.0.1/callBack?%25244DSID%253D"+$token
+	$callBackURL:="http://127.0.0.1/callBack?%2524state%253D"+$token
 	
 	$callExternalAppURL:="http://127.0.0.1:8044/4DACTION/callExternalApp?redirect="+$callBackURL
 	
@@ -77,7 +77,9 @@ Function callAppWithWrongCallback($request : 4D:C1709.IncomingMessage) : 4D:C170
 	
 Function handleCallBack($request : 4D:C1709.IncomingMessage)
 	
-	$coll:=OB Entries:C1720($request.urlQuery)
+	$otp:=$request.urlQuery.state
+	
+	$restore:=Session:C1714.restore($otp)
 	
 	$text:=$request.getText()
 	
@@ -85,11 +87,12 @@ Function handleCallBack($request : 4D:C1709.IncomingMessage)
 		
 		If (Session:C1714.storage.info#Null:C1517)
 			Use (Session:C1714.storage.info)
-				Session:C1714.storage.info.message2:=$text
-				Session:C1714.storage.info.message3:="Callback done with "+$coll[0].key+" = "+$coll[0].value
+				Session:C1714.storage.info.paymentStatus:=$text
+				If (Session:C1714.storage.chosenProducts#Null:C1517)
+					Session:C1714.storage.info.paymentStatus:=Session:C1714.storage.info.paymentStatus+" total price: "+String:C10(Session:C1714.storage.chosenProducts.sum("price"))
+				End if 
 			End use 
 		End if 
-		
 	End if 
 	
 	

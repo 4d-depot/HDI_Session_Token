@@ -40,8 +40,8 @@ Case of
 		OBJECT SET ENABLED:C1123(*; "CreateAccount"; ((Form:C1466.life10=1) || (Form:C1466.noLife=1)))
 		
 		
-		Form:C1466.remoteDatastore:=Open datastore:C1452({hostname: "127.0.0.1"}; "remoteDS")
-		Form:C1466.products:=Form:C1466.remoteDatastore.Products.all()
+		//Form.remoteDatastore:=Open datastore({hostname: "127.0.0.1"}; "remoteDS")
+		//Form.products:=Form.remoteDatastore.Products.all()
 		//Form.products:=ds.Products.all()
 		//Form.validateBasket:="http://127.0.0.1/rest/Products/validateBasket"
 		

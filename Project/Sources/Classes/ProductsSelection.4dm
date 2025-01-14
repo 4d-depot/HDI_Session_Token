@@ -23,3 +23,5 @@ exposed Function someInfos() : Text
 	$token:=Session:C1714.createOTP()
 	
 	return "127.0.0.1/rest/$singleton/Utilities/getProducts?$params="+"'"+"["+"\""+$token+"\""+"]'"
+	
+	
