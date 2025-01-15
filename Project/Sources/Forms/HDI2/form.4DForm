@@ -310,6 +310,19 @@
 					"focusable": false,
 					"fontFamily": "0",
 					"fontSize": 13
+				},
+				"CreateAccount7": {
+					"type": "button",
+					"text": "Open the link in private navigation (Chrome)",
+					"top": 480,
+					"left": 630,
+					"width": 300,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/CreateAccount7.4dm",
+					"focusable": false
 				}
 			},
 			"entryOrder": [
@@ -320,7 +333,8 @@
 				"Input28",
 				"CreateAccount6",
 				"Button12",
-				"Button14"
+				"Button14",
+				"CreateAccount7"
 			]
 		},
 		{
@@ -1202,5 +1216,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2285
+	"geometryStamp": 2314
 }
