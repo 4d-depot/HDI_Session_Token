@@ -33,7 +33,25 @@
 			"isCanvas": true,
 			"props": {
 				"classNames": [],
-				"events": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Utilities",
+						"events": [
+							"oninit"
+						],
+						"id": "jC3cEzfkiDm4rDacMMJEhS",
+						"method": "Utilities.getSessionId",
+						"params": [],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "result",
+							"type": "Text",
+							"datasource": "Authentication:sessionId"
+						}
+					}
+				],
 				"airyMode": false,
 				"className": "bg-white h-full w-full px-6",
 				"style": {
@@ -47,8 +65,7 @@
 			"hidden": false,
 			"nodes": [
 				"2ARs94-m7v",
-				"pYVEioxjsu",
-				"KtvFtbdLod"
+				"YnnNjYOBT2"
 			],
 			"linkedNodes": {}
 		},
@@ -62,7 +79,7 @@
 				"iterableChild": true,
 				"style": {
 					"backgroundImage": "url(https://raw.githubusercontent.com/4d/Web-studio-TIPS/gh-build/groups/login/assets/loginBackground.png)",
-					"width": "50%",
+					"width": "100%",
 					"height": "100%",
 					"marginTop": "0px",
 					"marginRight": "0px",
@@ -80,7 +97,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "YnnNjYOBT2",
 			"hidden": false,
 			"nodes": [
 				"CjpbrBhTMl",
@@ -267,7 +284,8 @@
 					"marginRight": "0px",
 					"marginBottom": "0px",
 					"marginTop": "0px",
-					"width": "100px"
+					"width": "100px",
+					"minWidth": "100px"
 				},
 				"doc": [
 					{
@@ -403,7 +421,8 @@
 					"marginRight": "0px",
 					"marginBottom": "0px",
 					"marginTop": "0px",
-					"width": "100px"
+					"width": "100px",
+					"minWidth": "100px"
 				},
 				"doc": [
 					{
@@ -900,7 +919,31 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"KtvFtbdLod": {
+		"YnnNjYOBT2": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"width": "50%",
+					"display": "flex",
+					"flexDirection": "column"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"1Nxm1rKSPv",
+				"pYVEioxjsu"
+			],
+			"linkedNodes": {}
+		},
+		"1Nxm1rKSPv": {
 			"type": {
 				"resolvedName": "Text"
 			},
@@ -913,18 +956,24 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Session id: ",
-								"bold": false,
+								"text": "Session ID",
+								"bold": true,
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ": "
 							},
 							{
 								"type": "datasource",
 								"datasource": "Authentication:sessionId",
 								"children": [
 									{
-										"bold": false,
 										"italic": false,
 										"underlined": false,
 										"strikethrough": false,
@@ -944,7 +993,7 @@
 			},
 			"displayName": "Text",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "YnnNjYOBT2",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

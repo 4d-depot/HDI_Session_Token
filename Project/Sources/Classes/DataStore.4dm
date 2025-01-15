@@ -27,7 +27,7 @@ exposed Function authentify($credentials : Object; $createAccount : Boolean) : T
 			If (Verify password hash:C1534($credentials.password; $user.password))
 				Session:C1714.clearPrivileges()
 				Session:C1714.setPrivileges("forDemo")
-				return "CompleteAccount"
+				return "Products"
 			Else 
 				Web Form:C1735.setError("Wrong credentials. Be sure your have created an account and validated the email")
 				return "Authentication"

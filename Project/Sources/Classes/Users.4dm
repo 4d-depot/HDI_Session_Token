@@ -2,33 +2,33 @@ Class extends DataClass
 
 
 
-exposed Function create($info : Object; $lifespan : Integer) : Text
-	
-	var $user : cs:C1710.UsersEntity
-	var $status : Object
-	var $token : Text
-	
-	
-	$user:=This:C1470.new()
-	$user.fromObject($info)
-	$user.password:=""
-	
-	$status:=$user.save()
-	
-	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
-	End use 
-	
-	If ($lifespan#0)
-		$token:=Session:C1714.createOTP($lifespan)
-	Else 
-		$token:=Session:C1714.createOTP()
-	End if 
-	
-	return "127.0.0.1/4DACTION/validateEmail?$4DSID="+$token
-	
-	
-	
+//exposed Function create($info : Object; $lifespan : Integer) : Text
+
+//var $user : cs.UsersEntity
+//var $status : Object
+//var $token : Text
+
+
+//$user:=This.new()
+//$user.fromObject($info)
+//$user.password:=""
+
+//$status:=$user.save()
+
+//Use (Session.storage)
+//Session.storage.status:=New shared object("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
+//End use 
+
+//If ($lifespan#0)
+//$token:=Session.createOTP($lifespan)
+//Else 
+//$token:=Session.createOTP()
+//End if 
+
+//return "127.0.0.1/4DACTION/validateEmail?$4DSID="+$token
+
+
+
 Function createQodlyUser($info : Object) : Text
 	
 	var $user : cs:C1710.UsersEntity

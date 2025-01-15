@@ -15,10 +15,12 @@ Function validateQodlyEmail() : 4D:C1709.OutgoingMessage
 		$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
 		$user.validateEmail()
 		
-		$result.setBody("Congratulations <br>"\
-			+"Your email "+Session:C1714.storage.status.email+" has been validated")
+		//$result.setBody("Congratulations <br>"\
+			+"Your email "+Session.storage.status.email+" has been validated")
+		//$result.setHeader("Content-Type"; "text/html")
 		
-		$result.setHeader("Content-Type"; "text/html")
+		$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=AccountCreated")
+		$result.setStatus(302)
 		
 		Use (Session:C1714.storage.status)
 			Session:C1714.storage.status.step:="Email validated"
