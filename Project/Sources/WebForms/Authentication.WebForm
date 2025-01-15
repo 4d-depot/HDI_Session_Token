@@ -989,7 +989,10 @@
 						]
 					}
 				],
-				"datasource": "Authentication:sessionId"
+				"datasource": "Authentication:sessionId",
+				"style": {
+					"paddingLeft": "8px"
+				}
 			},
 			"displayName": "Text",
 			"custom": {},

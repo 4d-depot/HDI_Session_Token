@@ -143,7 +143,10 @@
 						]
 					}
 				],
-				"datasource": "paymentResult"
+				"datasource": "paymentResult",
+				"style": {
+					"paddingLeft": "32px"
+				}
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -745,7 +748,10 @@
 						]
 					}
 				],
-				"datasource": "Authentication:sessionId"
+				"datasource": "Authentication:sessionId",
+				"style": {
+					"paddingLeft": "16px"
+				}
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -813,7 +819,7 @@
 			},
 			"displayName": "Text",
 			"custom": {},
-			"parent": "-gDhCGp9Jp",
+			"parent": "hWicpcIVPt",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -1704,7 +1710,8 @@
 					"display": "flex",
 					"marginTop": "0px",
 					"alignItems": "center",
-					"gap": "40px"
+					"gap": "40px",
+					"width": "auto"
 				},
 				"classNames": []
 			},
@@ -1737,8 +1744,9 @@
 			"parent": "bzWHRUVMqj",
 			"hidden": false,
 			"nodes": [
-				"43CtviNTI6",
-				"Ohym7iyj6B"
+				"hWicpcIVPt",
+				"Ohym7iyj6B",
+				"wuxmLgyUwW"
 			],
 			"linkedNodes": {}
 		},
@@ -1827,7 +1835,7 @@
 			},
 			"displayName": "Text",
 			"custom": {},
-			"parent": "bzWHRUVMqj",
+			"parent": "wuxmLgyUwW",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -1843,7 +1851,8 @@
 				"style": {
 					"display": "flex",
 					"flexDirection": "column",
-					"gap": "30px"
+					"gap": "30px",
+					"alignItems": "center"
 				}
 			},
 			"displayName": "Stylebox",
@@ -1851,7 +1860,54 @@
 			"parent": "-fkFZshh9B",
 			"hidden": false,
 			"nodes": [
-				"-gDhCGp9Jp",
+				"-gDhCGp9Jp"
+			],
+			"linkedNodes": {}
+		},
+		"hWicpcIVPt": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"justifyContent": "flex-end",
+					"alignItems": "center",
+					"width": "780px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "-gDhCGp9Jp",
+			"hidden": false,
+			"nodes": [
+				"43CtviNTI6"
+			],
+			"linkedNodes": {}
+		},
+		"wuxmLgyUwW": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"width": "780px",
+					"display": "flex",
+					"alignItems": "center",
+					"justifyContent": "flex-end"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "-gDhCGp9Jp",
+			"hidden": false,
+			"nodes": [
 				"4lMfyPZUzz"
 			],
 			"linkedNodes": {}
