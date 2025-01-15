@@ -1,19 +1,7 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [
-			{
-				"id": "info",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "object",
-				"initialValue": {
-					"email": "mary@acme.com",
-					"password": "a",
-					"createAccount": true
-				}
-			}
-		],
+		"datasources": [],
 		"styles": [
 			{
 				"name": "sign-in",
@@ -57,7 +45,8 @@
 			"hidden": false,
 			"nodes": [
 				"FMmqwD5oqf",
-				"zvB6phUBKy"
+				"zvB6phUBKy",
+				"43bRWJte7I"
 			],
 			"linkedNodes": {}
 		},
@@ -369,7 +358,7 @@
 				"placeholder": "",
 				"revealPassword": true,
 				"intervals": [],
-				"datasource": "info.email",
+				"datasource": "Authentication:credentials.email",
 				"dataType": "object"
 			},
 			"displayName": "Input",
@@ -525,7 +514,7 @@
 				"type": "password",
 				"moveable": false,
 				"placeholder": "",
-				"datasource": "info.password",
+				"datasource": "Authentication:credentials.password",
 				"dataType": "object",
 				"revealPassword": true,
 				"intervals": []
@@ -611,8 +600,17 @@
 							{
 								"name": "credentials",
 								"type": "Object",
-								"datasource": "info",
+								"datasource": "Authentication:credentials",
 								"id": "9vE2oZkfsEQY9bzYn6wgMA"
+							},
+							{
+								"name": "createAccount",
+								"type": "Boolean",
+								"datasource": "",
+								"id": "jhSAvyKCJEcmyFWAdoYg7y",
+								"isHardCoded": true,
+								"hardCodedType": "bool",
+								"hardCodedValue": "true"
 							}
 						],
 						"datasource": "",
@@ -919,6 +917,54 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "8JtrzsN4fh",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"43bRWJte7I": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Session id: ",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"type": "datasource",
+								"datasource": "Authentication:sessionId",
+								"children": [
+									{
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "Authentication:sessionId"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

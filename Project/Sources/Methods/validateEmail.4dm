@@ -1,4 +1,4 @@
-//%attributes = {"publishedWeb":true}
+//%attributes = {"invisible":true,"publishedWeb":true}
 
 
 

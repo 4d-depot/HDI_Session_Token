@@ -28,13 +28,13 @@ Case of
 		
 		$options:=New object:C1471
 		
-		$options.title:="Setup the title in the"+$cr+"00_Start Method"
+		$options.title:="getting started with using a web session OTP"
 		
 		$options.blog:="blog.4d.com"
-		$options.info:="Setup the info in the 00_Start Method"  //ex : "4D View Pro feature"
+		$options.info:="Scalable web session"  //ex : "4D View Pro feature"
 		
-		$options.minimumVersion:="2000"  // 1660 means 16R6   1601 means 16.1 (do not use !)
-
+		$options.minimumVersion:="2080"  // 1660 means 16R6   1601 means 16.1 (do not use !)
+		
 		
 		// $options.license:=4D View license  // IF ANY NEEDED
 		

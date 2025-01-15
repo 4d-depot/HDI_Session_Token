@@ -16,7 +16,7 @@ exposed Function create($info : Object; $lifespan : Integer) : Text
 	$status:=$user.save()
 	
 	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
+		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
 	End use 
 	
 	If ($lifespan#0)
@@ -76,7 +76,7 @@ exposed Function createForBlogpost($info : Object) : Text
 	$status:=$user.save()
 	
 	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
+		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
 	End use 
 	
 	
@@ -85,23 +85,23 @@ exposed Function createForBlogpost($info : Object) : Text
 	return "127.0.0.1/rest/$singleton/Utilities/validateEmailForBlogpost?$4DSID="+$token
 	
 	
-exposed Function create2($info : Object) : Text
+	//exposed Function create2($info : Object) : Text
 	
-	var $user : cs:C1710.UsersEntity
-	var $status : Object
-	var $token : Text
+	//var $user : cs.UsersEntity
+	//var $status : Object
+	//var $token : Text
 	
 	
-	$user:=This:C1470.new()
-	$user.fromObject($info)
-	$user.password:=""
+	//$user:=This.new()
+	//$user.fromObject($info)
+	//$user.password:=""
 	
-	$status:=$user.save()
+	//$status:=$user.save()
 	
-	Use (Session:C1714.storage)
-		Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
-	End use 
+	//Use (Session.storage)
+	//Session.storage.status:=New shared object("step"; "Waiting for validation email"; "email"; $user.email; "fullname"; $user.fullname; "ID"; $user.ID)
+	//End use 
 	
-	$token:=Session:C1714.createOTP()
+	//$token:=Session.createOTP()
 	
-	return "127.0.0.1/rest/$singleton/Utilities/validateEmail?$params="+"'"+"["+"\""+$token+"\""+"]'"
+	//return "127.0.0.1/rest/$singleton/Utilities/validateEmail?$params="+"'"+"["+"\""+$token+"\""+"]'"

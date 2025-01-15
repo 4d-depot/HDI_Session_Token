@@ -1,22 +1,10 @@
 [
   {
-    "class": "Utilities",
+    "class": "RequestHandler",
     "method": "validateQodlyEmail",
     "regexPattern": "/validateEmail",
     "verbs": "get"
-  }, 
-  {
-    "class": "RequestHandler",
-    "method": "callAppWithWrongCallback",
-    "regexPattern": "/callExternalAppWithWrongCallBack",
-    "verbs": "get"
-  },
-  {
-    "class": "RequestHandler",
-    "method": "callApp",
-    "regexPattern": "/callExternalApp",
-    "verbs": "get"
-  },  
+  },   
   {
     "class": "RequestHandler",
     "method": "handleCallBack",

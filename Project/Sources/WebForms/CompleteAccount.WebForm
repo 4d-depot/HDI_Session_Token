@@ -43,6 +43,12 @@
 				"content": "self .FdVirtualGrid > div .selected {\n\nbackground-color: #d2e2f9;\n\nborder-radius : 15px;\n\n}",
 				"parentId": null,
 				"id": "UJA4pUXm3HY6nOYgQMcoh"
+			},
+			{
+				"name": "buttonHoverEffect",
+				"content": "self {\n  border: 2px solid currentColor;\n  border-radius: 3rem;\n  color: #226aa4;\n  font-family: roboto;\n  font-size: 1rem;\n  font-weight: 300;\n  overflow: hidden;\n  padding: 1rem 2rem;\n  position: relative;\n  text-decoration: none;\n  transition: .2s transform ease-in-out;\n  will-change: transform;\n  z-index: 0;\n  background-color: transparent;\n}\n\nself::after {\n  background-color: #226aa4;\n\tcolor: white;\n  border-radius: 2rem;\n  content: '';\n  display: block;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  transform: translate(-100%, 0) rotate(10deg);\n  transform-origin: top left;\n  transition: .2s transform ease-out;\n  will-change: transform;\n  z-index: -1;\n}\n\nself:hover::after {\n\n  transform: translate(0, 0);\n}\n\nself:hover {\n\tcolor: white;\n  border: 2px solid transparent;\n  transform: scale(1.05);\n  will-change: transform;\n}",
+				"parentId": null,
+				"id": "A7ydKIaqj-XvU1TecPyol"
 			}
 		]
 	},
@@ -54,7 +60,25 @@
 			"isCanvas": true,
 			"props": {
 				"classNames": [],
-				"events": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Utilities",
+						"events": [
+							"oninit"
+						],
+						"id": "sEjAfpt4WkNjLQ8LeYqUHQ",
+						"method": "Utilities.getSessionId",
+						"params": [],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "result",
+							"type": "Text",
+							"datasource": "Authentication:sessionId"
+						}
+					}
+				],
 				"airyMode": false,
 				"className": "bg-white h-full w-full px-6",
 				"style": {
@@ -1004,73 +1028,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"zYusOEHFOb": {
-			"type": {
-				"resolvedName": "Button"
-			},
-			"isCanvas": false,
-			"props": {
-				"text": "Validate payment",
-				"classNames": [],
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"onclick"
-						],
-						"id": "3b1PgLP461B6KKuHtQP1Qn",
-						"method": "Utilities.validatePayment",
-						"params": [
-							{
-								"name": "chosenProducts",
-								"type": "cs.ProductsSelection",
-								"datasource": "chosenProducts",
-								"id": "ao7v2MPsNcMbgQCsALrVFq"
-							}
-						],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "Text",
-							"datasource": "paymentResult"
-						}
-					}
-				],
-				"iconPosition": "hidden",
-				"style": {
-					"display": "block",
-					"justifyContent": "flex-start",
-					"alignItems": "start"
-				}
-			},
-			"displayName": "Button",
-			"custom": {},
-			"parent": "-fkFZshh9B",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"icon": "jrNu05jNxD"
-			}
-		},
-		"jrNu05jNxD": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"icon": "fa-regular fa-star"
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"parent": "zYusOEHFOb",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"fYtLbilODd": {
 			"type": {
 				"resolvedName": "Text"
@@ -1146,7 +1103,7 @@
 			"parent": "bzWHRUVMqj",
 			"hidden": false,
 			"nodes": [
-				"2XL5GN8VUC",
+				"43CtviNTI6",
 				"Ohym7iyj6B"
 			],
 			"linkedNodes": {}
@@ -1172,7 +1129,9 @@
 			"nodes": [
 				"xOO79S1WQU",
 				"Na0LufvsLy",
-				"-gDhCGp9Jp"
+				"NBgWzKD9Ym",
+				"-gDhCGp9Jp",
+				"4lMfyPZUzz"
 			],
 			"linkedNodes": {}
 		},
@@ -1202,7 +1161,7 @@
 				"events": [],
 				"iterableChild": true,
 				"style": {
-					"width": "50%"
+					"width": "70%"
 				}
 			},
 			"displayName": "Stylebox",
@@ -1211,7 +1170,6 @@
 			"hidden": false,
 			"nodes": [
 				"bzWHRUVMqj",
-				"zYusOEHFOb",
 				"fYtLbilODd"
 			],
 			"linkedNodes": {}
@@ -1228,7 +1186,7 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "600px",
+					"width": "800px",
 					"alignItems": "center",
 					"justifyContent": "flex-start"
 				}
@@ -1336,6 +1294,348 @@
 								"text": ""
 							}
 						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "When clicking on the "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Validate payment"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " button:"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- the "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "validatePayment"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " function of the "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Utilities"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " singleton is called"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- it calls a third party system with an URL like:"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "http://127.0.0.1:8044/4DACTION/callPaymentApp?"
+							},
+							{
+								"text": "redirect",
+								"bold": true
+							},
+							{
+								"text": "=http://127.0.0.1/callBack"
+							},
+							{
+								"text": "?state",
+								"bold": true
+							},
+							{
+								"text": "=EB9032B7E70E4EE5866055A578755B1F"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "http://127.0.0.1:8044/4DACTION/callPaymentApp",
+								"underlined": true
+							},
+							{
+								"text": ":"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "It is the HTTP server of a component placed in this demo to feature a third party system"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "redirect",
+								"bold": true,
+								"underlined": true
+							},
+							{
+								"text": "=http://127.0.0.1/callBack",
+								"underlined": true
+							},
+							{
+								"text": "?state",
+								"bold": true,
+								"underlined": true
+							},
+							{
+								"text": "=EB9032B7E70E4EE5866055A578755B1F",
+								"underlined": true
+							},
+							{
+								"text": ":"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "The redirect parameter provies the callback URL the third party system must use to go back on this Qodly demo."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "The"
+							},
+							{
+								"text": " /callBack",
+								"bold": true
+							},
+							{
+								"text": " prefix is handled in the HTTP request handlers json file."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Sometimes the third party system does not allow the callback URL to contain custom parameters like $4DSID."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "But, they allow to be sent a client information ("
+							},
+							{
+								"text": "e.g.",
+								"italic": true
+							},
+							{
+								"text": " a "
+							},
+							{
+								"text": "state",
+								"bold": true
+							},
+							{
+								"text": ") and the third party system returns this information back to the caller. This is a way to be called back with a 4D web session OTP. Here it is the "
+							},
+							{
+								"text": "state",
+								"bold": true
+							},
+							{
+								"text": " parameter."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "The state parameter contains the session OTP to retrieve the original session."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Check the code in the "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "handleCallBack"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " function of the "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "RequestHandler"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " singleton to learn how to retrieve the original session."
+							}
+						]
 					}
 				],
 				"datasource": "",
@@ -1389,18 +1689,16 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"2XL5GN8VUC": {
+		"43CtviNTI6": {
 			"type": {
-				"resolvedName": "Button"
+				"resolvedName": "Text"
 			},
 			"isCanvas": false,
 			"props": {
-				"text": "Clear chosen products",
-				"classNames": [],
 				"events": [
 					{
 						"type": "simple-action",
-						"id": "wkboViDmrShyAfhYKDH2bD",
+						"id": "1fnN3aE131U1S6oWvtbahY",
 						"events": [
 							"onclick"
 						],
@@ -1414,32 +1712,165 @@
 						}
 					}
 				],
-				"iconPosition": "hidden",
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Clear chosen products",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
 				"style": {
-					"display": "flex"
-				}
+					"fontWeight": "300",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"paddingTop": "4px",
+					"paddingBottom": "4px",
+					"borderRadius": "12px",
+					"width": "fit-content",
+					"backgroundColor": "#226aa4",
+					"color": "#ffffffff",
+					"marginLeft": "0px",
+					"display": "flex",
+					"flexDirection": "row",
+					"marginTop": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px"
+				},
+				"iterableChild": true
 			},
-			"displayName": "Button",
+			"displayName": "Text",
 			"custom": {},
 			"parent": "-gDhCGp9Jp",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {
-				"icon": "JNXSWGzBSr"
-			}
+			"linkedNodes": {}
 		},
-		"JNXSWGzBSr": {
+		"4lMfyPZUzz": {
 			"type": {
-				"resolvedName": "Icon"
+				"resolvedName": "Text"
 			},
 			"isCanvas": false,
 			"props": {
-				"classNames": [],
-				"events": []
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Utilities",
+						"events": [
+							"onclick"
+						],
+						"id": "vc1VaJyyzGxDGvqL6NVfTM",
+						"method": "Utilities.validatePayment",
+						"params": [
+							{
+								"name": "chosenProducts",
+								"type": "cs.ProductsSelection",
+								"datasource": "chosenProducts",
+								"id": "w3BFBTjXQHZdCbYdFv1trY"
+							}
+						],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "result",
+							"type": "Text",
+							"datasource": "paymentResult"
+						}
+					}
+				],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Validate payment",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontWeight": "300",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"paddingTop": "4px",
+					"paddingBottom": "4px",
+					"borderRadius": "12px",
+					"width": "fit-content",
+					"backgroundColor": "#226aa4",
+					"color": "#ffffffff",
+					"marginLeft": "0px",
+					"display": "block",
+					"flexDirection": "row",
+					"marginTop": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px"
+				},
+				"iterableChild": true
 			},
-			"displayName": "Icon",
+			"displayName": "Text",
 			"custom": {},
-			"parent": "2XL5GN8VUC",
+			"parent": "bzWHRUVMqj",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"NBgWzKD9Ym": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Session id: ",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"type": "datasource",
+								"datasource": "Authentication:sessionId",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "Authentication:sessionId"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "bzWHRUVMqj",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

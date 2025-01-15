@@ -1,18 +1,29 @@
 {
 	"Authentication": [
 		{
-			"id": "email",
-			"type": "scalar",
-			"namespace": "Authentication",
-			"dataType": "string",
-			"initialValue": ""
-		},
-		{
 			"id": "target",
 			"type": "scalar",
 			"namespace": "Authentication",
 			"dataType": "string",
 			"initialValue": "Authentication"
+		},
+		{
+			"id": "credentials",
+			"type": "scalar",
+			"namespace": "Authentication",
+			"dataType": "object",
+			"initialValue": {
+				"email": "mary@acme.com",
+				"password": "a",
+				"createAccount": true
+			}
+		},
+		{
+			"id": "sessionId",
+			"type": "scalar",
+			"namespace": "Authentication",
+			"dataType": "string",
+			"initialValue": ""
 		}
 	]
 }

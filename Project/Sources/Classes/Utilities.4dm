@@ -2,98 +2,71 @@ shared singleton Class constructor()
 	
 	
 	
-exposed onHTTPGet Function validateEmail($token : Text) : 4D:C1709.OutgoingMessage
+	//exposed onHTTPGet Function validateEmail($token : Text) : 4D.OutgoingMessage
 	
-	var $result:=4D:C1709.OutgoingMessage.new()
-	var $restore : Boolean
+	//var $result:=4D.OutgoingMessage.new()
+	//var $restore : Boolean
 	
-	$result.setBody:=("Validation failed")
-	
-	
-	If (Session:C1714.storage.status=Null:C1517)
-		
-		$restore:=Session:C1714.restore($token)
-		
-		If (($restore=True:C214) && (Session:C1714.storage.status.step="Waiting for validation email"))
-			
-			$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
-			
-			$result.setBody("Welcome "+Session:C1714.storage.status.fullname+"<br>"\
-				+"Your email "+Session:C1714.storage.status.email+" has been validated")
-			
-			$result.setHeader("Content-Type"; "text/html")
-			
-			Use (Session:C1714.storage.status)
-				Session:C1714.storage.status.step:="Email validated"
-			End use 
-			
-		Else 
-			$result.setBody("Validation failed")
-		End if 
-	End if 
-	
-	return $result
+	//$result.setBody:=("Validation failed")
 	
 	
-Function validateQodlyEmail() : 4D:C1709.OutgoingMessage
+	//If (Session.storage.status=Null)
 	
-	var $result:=4D:C1709.OutgoingMessage.new()
-	var $restore : Boolean
+	//$restore:=Session.restore($token)
 	
-	$result.setBody:=("Validation failed")
+	//If (($restore=True) && (Session.storage.status.step="Waiting for validation email"))
 	
+	//$user:=ds.Users.get(Session.storage.status.ID)
 	
-	If (Session:C1714.storage.status.step="Waiting for validation email")
-		
-		$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
-		$user.validateEmail()
-		
-		$result.setBody("Congratulations <br>"\
-			+"Your email "+Session:C1714.storage.status.email+" has been validated")
-		
-		$result.setHeader("Content-Type"; "text/html")
-		
-		Use (Session:C1714.storage.status)
-			Session:C1714.storage.status.step:="Email validated"
-		End use 
-		
-	Else 
-		$result.setBody("Validation failed")
-	End if 
+	//$result.setBody("Welcome "+Session.storage.status.fullname+"<br>"\
+		+"Your email "+Session.storage.status.email+" has been validated")
 	
-	return $result
+	//$result.setHeader("Content-Type"; "text/html")
+	
+	//Use (Session.storage.status)
+	//Session.storage.status.step:="Email validated"
+	//End use 
+	
+	//Else 
+	//$result.setBody("Validation failed")
+	//End if 
+	//End if 
+	
+	//return $result
 	
 	
-exposed onHTTPGet Function getProducts($token : Text) : 4D:C1709.OutgoingMessage
-	
-	var $result:=4D:C1709.OutgoingMessage.new()
-	var $restore : Boolean
-	var $product : cs:C1710.ProductsEntity
-	var $body:="Here are the products in your basket:<br><br>"
 	
 	
-	$result.setBody:=("Getting basket failed")
+	//exposed onHTTPGet Function getProducts($token : Text) : 4D.OutgoingMessage
+	
+	//var $result:=4D.OutgoingMessage.new()
+	//var $restore : Boolean
+	//var $product : cs.ProductsEntity
+	//var $body:="Here are the products in your basket:<br><br>"
 	
 	
-	If (Session:C1714.storage.products=Null:C1517)
-		
-		$restore:=Session:C1714.restore($token)
-		
-		If (($restore=True:C214) && (Session:C1714.storage.products#Null:C1517))
-			
-			For each ($product; Session:C1714.storage.products)
-				$body:=$body+" "+$product.name+"<br>"
-			End for each 
-			
-			$result.setBody($body)
-			$result.setHeader("Content-Type"; "text/html")
-			
-		Else 
-			$result.setBody("Getting basket failed")
-		End if 
-	End if 
+	//$result.setBody:=("Getting basket failed")
 	
-	return $result
+	
+	//If (Session.storage.products=Null)
+	
+	//$restore:=Session.restore($token)
+	
+	//If (($restore=True) && (Session.storage.products#Null))
+	
+	//For each ($product; Session.storage.products)
+	//$body:=$body+" "+$product.name+"<br>"
+	//End for each 
+	
+	//$result.setBody($body)
+	//$result.setHeader("Content-Type"; "text/html")
+	
+	//Else 
+	//$result.setBody("Getting basket failed")
+	//End if 
+	//End if 
+	
+	//return $result
 	
 	
 exposed Function validatePayment($chosenProducts : cs:C1710.ProductsSelection) : Text
@@ -110,7 +83,8 @@ exposed Function validatePayment($chosenProducts : cs:C1710.ProductsSelection) :
 		
 		$token:=Session:C1714.createOTP()
 		
-		$callBackURL:="http://127.0.0.1/callBack?state%253D"+$token
+		$callBackURL:="http://127.0.0.1/callBack?state="+$token
+		//$callBackURL:="http://127.0.0.1/callBack?state%253D"+$token
 		
 		$callExternalAppURL:="http://127.0.0.1:8044/4DACTION/callPaymentApp?redirect="+$callBackURL
 		$requestObj:={method: HTTP GET method:K71:1}
@@ -123,3 +97,7 @@ exposed Function validatePayment($chosenProducts : cs:C1710.ProductsSelection) :
 		
 	End if 
 	return $result
+	
+	
+exposed Function getSessionId() : Text
+	return Session:C1714.id

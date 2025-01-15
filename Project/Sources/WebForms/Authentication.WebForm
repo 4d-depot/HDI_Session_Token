@@ -8,16 +8,6 @@
 				"namespace": "",
 				"dataType": "string",
 				"initialValue": ""
-			},
-			{
-				"id": "credentials",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "object",
-				"initialValue": {
-					"email": "",
-					"password": ""
-				}
 			}
 		],
 		"styles": [
@@ -25,15 +15,13 @@
 				"name": "sign-in",
 				"content": "self {\n  position: absolute;\n  width: 1727px;\n  height: 1119px;\n  top: 0;\n  left: 0;\n  background-blend-mode: overlay;\n  background: linear-gradient(135deg, rgba(235, 144, 206, 0.6) 0%, rgba(129, 53, 212, 0.2) 54.91%, rgba(72, 55, 188, 0) 100%);\n  border-width : 1px;\n  border-radius : 20px;\n}",
 				"parentId": null,
-				"id": "chyCpB18gb-6WmyX4Vdkz",
-				"scope": "local"
+				"id": "chyCpB18gb-6WmyX4Vdkz"
 			},
 			{
 				"name": "lightMode",
 				"content": "self {\n  background-color : #ffffffff;\n  color : #666682;\n}",
 				"parentId": null,
-				"id": "DqyTqbssWxMrnZfb5HBFx",
-				"scope": "local"
+				"id": "DqyTqbssWxMrnZfb5HBFx"
 			}
 		]
 	},
@@ -59,7 +47,8 @@
 			"hidden": false,
 			"nodes": [
 				"2ARs94-m7v",
-				"pYVEioxjsu"
+				"pYVEioxjsu",
+				"KtvFtbdLod"
 			],
 			"linkedNodes": {}
 		},
@@ -364,7 +353,7 @@
 				"placeholder": "",
 				"revealPassword": true,
 				"intervals": [],
-				"datasource": "credentials.email",
+				"datasource": "Authentication:credentials.email",
 				"dataType": "object"
 			},
 			"displayName": "Input",
@@ -482,8 +471,17 @@
 							{
 								"name": "credentials",
 								"type": "Object",
-								"datasource": "credentials",
+								"datasource": "Authentication:credentials",
 								"id": "fc4suadrweWVbth79YgxTa"
+							},
+							{
+								"name": "createAccount",
+								"type": "Boolean",
+								"datasource": "Fa",
+								"id": "3oNtdQPgsSd546M7YK5P9Y",
+								"isHardCoded": true,
+								"hardCodedType": "bool",
+								"hardCodedValue": "false"
 							}
 						],
 						"datasource": "",
@@ -540,19 +538,6 @@
 				"text": "Create an account",
 				"classNames": [],
 				"events": [
-					{
-						"type": "navigation",
-						"id": "5bSkyjvpCpDa28niBAcwhM",
-						"events": [
-							"onclick"
-						],
-						"externalLink": false,
-						"loader": "",
-						"parent": "same-tab",
-						"target": "CreateAccount",
-						"isHardCoded": true,
-						"disabled": true
-					},
 					{
 						"type": "simple-action",
 						"id": "hPp6YojCLZ5yUsa8cxyAF2",
@@ -645,8 +630,8 @@
 				"type": "password",
 				"moveable": false,
 				"placeholder": "",
-				"datasource": "credentials.password",
-				"dataType": "string",
+				"datasource": "Authentication:credentials.password",
+				"dataType": "object",
 				"revealPassword": true,
 				"intervals": []
 			},
@@ -911,6 +896,55 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "2ARs94-m7v",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"KtvFtbdLod": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Session id: ",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"type": "datasource",
+								"datasource": "Authentication:sessionId",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "Authentication:sessionId"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

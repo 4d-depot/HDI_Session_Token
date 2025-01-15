@@ -12,7 +12,25 @@
 			"isCanvas": true,
 			"props": {
 				"classNames": [],
-				"events": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Utilities",
+						"events": [
+							"oninit"
+						],
+						"id": "wVRCJxfNj9ivzGwKK1L3jr",
+						"method": "Utilities.getSessionId",
+						"params": [],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "result",
+							"type": "Text",
+							"datasource": "Authentication:sessionId"
+						}
+					}
+				],
 				"airyMode": false,
 				"className": "bg-white h-full w-full px-6"
 			},

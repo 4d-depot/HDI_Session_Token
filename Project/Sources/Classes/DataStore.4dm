@@ -2,7 +2,7 @@ Class extends DataStoreImplementation
 
 
 
-exposed Function authentify($credentials : Object) : Text
+exposed Function authentify($credentials : Object; $createAccount : Boolean) : Text
 	
 	var $user : cs:C1710.UsersEntity
 	var $result : Text
@@ -10,13 +10,13 @@ exposed Function authentify($credentials : Object) : Text
 	
 	//$result:="Wrong credentials. Be sure your have created an account"
 	
-	If ($credentials.createAccount)
+	If ($createAccount)
 		$result:=ds:C1482.Users.createQodlyUser($credentials)
 		If ($result#"OK")
 			Web Form:C1735.setError($result)
 		Else 
 			Session:C1714.setPrivileges("forDemo")
-			Web Form:C1735.setMessage("Go back to 4D to check the mails")
+			Web Form:C1735.setMessage("Account created - Go back to 4D to check the mails")
 		End if 
 	Else 
 		//$formula:=(This.emails.first().validated=True)
@@ -28,10 +28,11 @@ exposed Function authentify($credentials : Object) : Text
 				Session:C1714.clearPrivileges()
 				Session:C1714.setPrivileges("forDemo")
 				return "CompleteAccount"
+			Else 
+				Web Form:C1735.setError("Wrong credentials. Be sure your have created an account and validated the email")
+				return "Authentication"
 			End if 
-		End if 
-		
-		If ($result#"CompleteAccount")
+		Else 
 			Web Form:C1735.setError("Wrong credentials. Be sure your have created an account and validated the email")
 			return "Authentication"
 		End if 

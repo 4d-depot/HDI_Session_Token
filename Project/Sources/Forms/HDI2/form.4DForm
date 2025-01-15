@@ -58,10 +58,10 @@
 			"objects": {
 				"information1": {
 					"type": "input",
-					"top": 70,
-					"left": 50,
-					"width": 800,
-					"height": 60,
+					"top": 130,
+					"left": 60,
+					"width": 900,
+					"height": 500,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "Infos[0].Description",
@@ -85,9 +85,9 @@
 				"information5": {
 					"type": "input",
 					"top": 70,
-					"left": 50,
+					"left": 60,
 					"width": 900,
-					"height": 100,
+					"height": 160,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "Infos[1].Description",
@@ -107,9 +107,9 @@
 				"Input20": {
 					"type": "input",
 					"left": 60,
-					"top": 230,
+					"top": 260,
 					"width": 400,
-					"height": 40,
+					"height": 30,
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
@@ -122,13 +122,14 @@
 					"fontSize": 18,
 					"textDecoration": "underline",
 					"method": "ObjectMethods/Input20.4dm",
-					"stroke": "#6495ed"
+					"stroke": "#6495ed",
+					"fontWeight": "bold"
 				},
 				"LBEmails": {
 					"type": "listbox",
 					"left": 60,
-					"top": 400,
-					"width": 315,
+					"top": 370,
+					"width": 295,
 					"height": 181,
 					"events": [
 						"onSelectionChange"
@@ -153,7 +154,7 @@
 								"name": "Footer2"
 							},
 							"dataSource": "This:C1470.ID",
-							"width": 100,
+							"width": 80,
 							"textAlign": "center"
 						},
 						{
@@ -173,7 +174,7 @@
 				"Text9": {
 					"type": "text",
 					"text": "Emails list",
-					"top": 370,
+					"top": 340,
 					"left": 60,
 					"width": 100,
 					"height": 20,
@@ -185,8 +186,8 @@
 				"CreateAccount5": {
 					"type": "button",
 					"text": "Refresh the emails list",
-					"top": 370,
-					"left": 200,
+					"top": 340,
+					"left": 170,
 					"width": 180,
 					"height": 20,
 					"events": [
@@ -197,8 +198,8 @@
 				},
 				"Input28": {
 					"type": "input",
-					"left": 400,
-					"top": 460,
+					"left": 380,
+					"top": 430,
 					"width": 600,
 					"height": 20,
 					"dataSource": "Form:C1466.selectedEmail.link",
@@ -215,8 +216,8 @@
 				"Text11": {
 					"type": "text",
 					"text": "1- Copy / paste this link in another browser or in a private navigation window",
-					"top": 560,
-					"left": 400,
+					"top": 520,
+					"left": 380,
 					"width": 500,
 					"height": 40,
 					"fontWeight": "bold",
@@ -226,9 +227,9 @@
 				"CreateAccount6": {
 					"type": "button",
 					"text": "Copy the link in the pasteboard",
-					"top": 515,
-					"left": 400,
-					"width": 250,
+					"top": 480,
+					"left": 380,
+					"width": 230,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -239,8 +240,8 @@
 				"Text12": {
 					"type": "text",
 					"text": "Selected email details",
-					"top": 370,
-					"left": 400,
+					"top": 340,
+					"left": 380,
 					"width": 300,
 					"height": 20,
 					"textAlign": "left",
@@ -251,8 +252,8 @@
 				"Text17": {
 					"type": "text",
 					"text": "Validation link",
-					"top": 420,
-					"left": 400,
+					"top": 390,
+					"left": 380,
 					"width": 150,
 					"height": 20,
 					"textAlign": "left",
@@ -263,8 +264,8 @@
 				"Text10": {
 					"type": "text",
 					"text": "2- Repeat the operation, you'll verify a One Time Passcode is usable once only",
-					"top": 620,
-					"left": 400,
+					"top": 580,
+					"left": 380,
 					"width": 500,
 					"height": 40,
 					"fontWeight": "bold",
@@ -274,13 +275,41 @@
 				"Text18": {
 					"type": "text",
 					"text": "3- Go back to the Qodly app to log in with this account",
-					"top": 680,
-					"left": 400,
+					"top": 640,
+					"left": 380,
 					"width": 500,
-					"height": 40,
+					"height": 30,
 					"fontWeight": "bold",
 					"stroke": "#008000",
 					"fontSize": 16
+				},
+				"Button12": {
+					"type": "button",
+					"text": "Show the HTTPRequestHandlers.json file on disk",
+					"top": 700,
+					"left": 60,
+					"width": 340,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button12.4dm",
+					"focusable": false
+				},
+				"Button14": {
+					"type": "button",
+					"text": "Open the validateQodlyEmail function in the RequestHandler singleton",
+					"top": 750,
+					"left": 60,
+					"width": 420,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button14.4dm",
+					"focusable": false,
+					"fontFamily": "0",
+					"fontSize": 13
 				}
 			},
 			"entryOrder": [
@@ -289,7 +318,9 @@
 				"LBEmails",
 				"CreateAccount5",
 				"Input28",
-				"CreateAccount6"
+				"CreateAccount6",
+				"Button12",
+				"Button14"
 			]
 		},
 		{
@@ -1171,5 +1202,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2089
+	"geometryStamp": 2285
 }
