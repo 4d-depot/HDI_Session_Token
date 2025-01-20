@@ -24,12 +24,12 @@ Class extends Entity
 //End case 
 
 
-Function validateEmail()
-	
-	var $theEmail : cs:C1710.EmailsEntity
-	var $status : Object
-	
-	
-	$theEmail:=This:C1470.emails.first()
-	$theEmail.validated:=True:C214
-	$status:=$theEmail.save()
+//Function validateEmail()
+
+//var $theEmail : cs.EmailsEntity
+//var $status : Object
+
+
+//$theEmail:=This.emails.first()
+//$theEmail.validated:=True
+//$status:=$theEmail.save()

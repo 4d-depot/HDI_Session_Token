@@ -6,18 +6,17 @@ shared singleton Class constructor()
 Function validateQodlyEmail() : 4D:C1709.OutgoingMessage
 	
 	var $result:=4D:C1709.OutgoingMessage.new()
+	var $user : cs:C1710.UsersEntity
+	var $status : Object
+	
 	
 	$result.setBody("Validation failed")
-	
 	
 	If (Session:C1714.storage.status.step="Waiting for validation email")
 		
 		$user:=ds:C1482.Users.get(Session:C1714.storage.status.ID)
-		$user.validateEmail()
-		
-		//$result.setBody("Congratulations <br>"\
-			+"Your email "+Session.storage.status.email+" has been validated")
-		//$result.setHeader("Content-Type"; "text/html")
+		$user.validated:=True:C214
+		$status:=$user.save()
 		
 		$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=AccountCreated")
 		$result.setStatus(302)
@@ -49,6 +48,22 @@ Function handleCallBack($request : 4D:C1709.IncomingMessage)
 			End use 
 		End if 
 	End if 
+	
+	
+Function restoreChosenProducts($request : 4D:C1709.IncomingMessage)
+	var $result:=4D:C1709.OutgoingMessage.new()
+	
+	$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=ProductsReminder")
+	$result.setStatus(302)
+	
+	
+	return $result
+	
+	
+	
+	
+	
+	
 	
 	
 	

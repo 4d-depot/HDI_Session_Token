@@ -12,32 +12,32 @@ Case of
 		
 		InitInfo
 		
-		Form:C1466.info:={firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}
+		//Form.info:={firstname: "Mary"; lastname: "Smith"; email: "mary.smith@acme.com"}
 		
-		Form:C1466.info2:={firstname: "John"; lastname: "Brown"; email: "john.brown@acme.com"}
+		//Form.info2:={firstname: "John"; lastname: "Brown"; email: "john.brown@acme.com"}
 		
-		Form:C1466.noLife:=1
+		//Form.noLife:=1
 		
-		Form:C1466.createAccountURL:="http://127.0.0.1/rest/Users/create"
+		//Form.createAccountURL:="http://127.0.0.1/rest/Users/create"
 		
-		Form:C1466.validateLinkWithoutParameter:="Coming soon"
+		//Form.validateLinkWithoutParameter:="Coming soon"
 		
-		Form:C1466.validateLink:="Coming soon"
+		//Form.validateLink:="Coming soon"
 		
-		Form:C1466.createAccountURL2:="http://127.0.0.1/rest/Users/create2"
+		//Form.createAccountURL2:="http://127.0.0.1/rest/Users/create2"
 		
-		Form:C1466.validateLink2:="Coming soon"
+		//Form.validateLink2:="Coming soon"
 		
-		Form:C1466.callExternalApp:="127.0.0.1/callExternalApp"
+		//Form.callExternalApp:="127.0.0.1/callExternalApp"
 		
-		Form:C1466.callExternalAppWithWrongCallBack:="127.0.0.1/callExternalAppWithWrongCallBack"
+		//Form.callExternalAppWithWrongCallBack:="127.0.0.1/callExternalAppWithWrongCallBack"
 		
-		Form:C1466.webAreaURL:=""
+		//Form.webAreaURL:=""
 		
-		READ PICTURE FILE:C678(File:C1566("/RESOURCES/CallBack.jpeg").platformPath; $schema)
-		Form:C1466.schema:=$schema
+		//READ PICTURE FILE(File("/RESOURCES/CallBack.jpeg").platformPath; $schema)
+		//Form.schema:=$schema
 		
-		OBJECT SET ENABLED:C1123(*; "CreateAccount"; ((Form:C1466.life10=1) || (Form:C1466.noLife=1)))
+		//OBJECT SET ENABLED(*; "CreateAccount"; ((Form.life10=1) || (Form.noLife=1)))
 		
 		
 		//Form.remoteDatastore:=Open datastore({hostname: "127.0.0.1"}; "remoteDS")
@@ -45,9 +45,9 @@ Case of
 		//Form.products:=ds.Products.all()
 		//Form.validateBasket:="http://127.0.0.1/rest/Products/validateBasket"
 		
-		Form:C1466.getBasketLink:="Coming soon"
+		//Form.getBasketLink:="Coming soon"
 		
-		OBJECT SET ENABLED:C1123(*; "Validate"; Form:C1466.selected#Null:C1517)
+		//OBJECT SET ENABLED(*; "Validate"; Form.selected#Null)
 		
 		
 	: (Form event code:C388=On Close Box:K2:21)

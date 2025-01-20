@@ -10,5 +10,11 @@
     "method": "handleCallBack",
     "regexPattern": "/callBack",
     "verbs": "post"
+  },
+  {
+    "class": "RequestHandler",
+    "method": "restoreChosenProducts",
+    "regexPattern": "/retrieveProducts",
+    "verbs": "get"
   }
 ]

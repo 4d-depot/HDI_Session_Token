@@ -84,12 +84,10 @@ exposed Function validatePayment($chosenProducts : cs:C1710.ProductsSelection) :
 		$token:=Session:C1714.createOTP()
 		
 		$callBackURL:="http://127.0.0.1/callBack?state="+$token
-		//$callBackURL:="http://127.0.0.1/callBack?state%253D"+$token
 		
 		$callExternalAppURL:="http://127.0.0.1:8044/4DACTION/callPaymentApp?redirect="+$callBackURL
 		$requestObj:={method: HTTP GET method:K71:1}
 		$request:=4D:C1709.HTTPRequest.new($callExternalAppURL; $requestObj).wait()
-		
 		
 		If (Position:C15("Payment validated"; Session:C1714.storage.info.paymentStatus)#0)
 			$result:=Session:C1714.storage.info.paymentStatus
@@ -97,6 +95,15 @@ exposed Function validatePayment($chosenProducts : cs:C1710.ProductsSelection) :
 		
 	End if 
 	return $result
+	
+	
+exposed Function getChosenProducts() : cs:C1710.ProductsSelection
+	
+	If (Session:C1714.storage.chosenProducts#Null:C1517)
+		return Session:C1714.storage.chosenProducts
+	Else 
+		return ds:C1482.Products.newSelection()
+	End if 
 	
 	
 exposed Function getSessionId() : Text

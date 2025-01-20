@@ -28,13 +28,6 @@
 				"initialValue": "",
 				"depth": null,
 				"pageSize": 100
-			},
-			{
-				"id": "paymentResult",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "string",
-				"initialValue": ""
 			}
 		],
 		"styles": [
@@ -50,6 +43,51 @@
 				"parentId": null,
 				"id": "A7ydKIaqj-XvU1TecPyol"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "Default",
+				"id": "6BdTKQE31whnLoU5mj98hC"
+			},
+			{
+				"label": "EnableSave",
+				"id": "fSTFbgaMY2R1PWqkVqrJ7W",
+				"conditions": {
+					"id": "4tD2xgqwh3jibekCnZHaW9",
+					"type": "combination",
+					"op": "and",
+					"conditions": [
+						{
+							"id": "oo73y5pc4LbUbBcRnqGFgY",
+							"type": "datasource",
+							"name": "condition",
+							"value": "",
+							"valueType": "hardCoded",
+							"path": "chosenProducts",
+							"dsType": "entitysel",
+							"op": "notnull"
+						},
+						{
+							"id": "53DkLYgjhLifKj1y4wLGzL",
+							"type": "datasource",
+							"name": "condition",
+							"value": "0",
+							"valueType": "hardCoded",
+							"path": "chosenProducts.length",
+							"dsType": "long",
+							"op": "neq",
+							"dataType": "number"
+						}
+					]
+				}
+			}
+		],
+		"defaultStates": [
+			"6BdTKQE31whnLoU5mj98hC"
 		]
 	},
 	"components": {
@@ -77,23 +115,6 @@
 							"type": "Text",
 							"datasource": "Authentication:sessionId"
 						}
-					},
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"oninit"
-						],
-						"id": "wt3zEQwzpmtHVkjq4jA4hd",
-						"method": "Utilities.getChosenProducts",
-						"params": [],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "cs.ProductsSelection",
-							"datasource": "chosenProducts"
-						}
 					}
 				],
 				"airyMode": false,
@@ -111,65 +132,6 @@
 				"wPYJiG6o0V",
 				"-fkFZshh9B"
 			],
-			"linkedNodes": {}
-		},
-		"fYtLbilODd": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Payment result",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": ": "
-							},
-							{
-								"type": "datasource",
-								"datasource": "paymentResult",
-								"children": [
-									{
-										"bold": false,
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false,
-										"text": "xxxx"
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "paymentResult",
-				"style": {
-					"paddingLeft": "32px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "-gDhCGp9Jp",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"0mcBCj0-xn": {
@@ -210,7 +172,8 @@
 			"hidden": false,
 			"nodes": [
 				"NBgWzKD9Ym",
-				"bzWHRUVMqj"
+				"bzWHRUVMqj",
+				"moloVfFvDS"
 			],
 			"linkedNodes": {}
 		},
@@ -338,14 +301,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Validate payment"
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": " button"
+								"text": "Save chosen products"
 							}
 						]
 					},
@@ -400,7 +356,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "validatePayment"
+								"text": "saveProducts()"
 							},
 							{
 								"bold": false,
@@ -414,14 +370,26 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Utilities"
+								"text": "ProductsSelection class"
 							},
 							{
 								"bold": false,
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " singleton is called"
+								"text": " is called"
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- the chosen products are put in the session"
 							}
 						]
 					},
@@ -445,7 +413,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "- an external payment system is called with an URL like:"
+								"text": "- an email sending is simulated to remind the user some products are waiting in the basket."
 							}
 						]
 					},
@@ -465,237 +433,11 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "http://127.0.0.1:8044/4DACTION/callPaymentApp?"
-							},
-							{
-								"text": "redirect",
-								"bold": true
-							},
-							{
-								"text": "=http://127.0.0.1/callBack"
-							},
-							{
-								"text": "?state",
-								"bold": true
-							},
-							{
-								"text": "=xxxxx"
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
 								"bold": false,
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": ""
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "a-"
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": " "
-							},
-							{
-								"text": "http://127.0.0.1:8044/4DACTION/callPaymentApp",
-								"underlined": true
-							},
-							{
-								"text": ":"
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "A component placed in this demo features a third party payment system."
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "This URL targets the HTTP server of this component (on the 8044 port)."
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "The callPaymentApp method of the component just calls the given redirect URL."
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": ""
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "b-",
-								"bold": true
-							},
-							{
-								"text": " "
-							},
-							{
-								"text": "redirect",
-								"bold": true,
-								"underlined": true
-							},
-							{
-								"text": "=http://127.0.0.1/callBack",
-								"underlined": true
-							},
-							{
-								"text": "?state",
-								"bold": true,
-								"underlined": true
-							},
-							{
-								"text": "=xxxxx:"
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "The redirect parameter contains the callback URL the third party system must call to go back on this Qodly demo."
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": ""
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "The"
-							},
-							{
-								"text": " /callBack",
-								"bold": true
-							},
-							{
-								"text": " prefix is handled in the HTTP request handlers of this demo and triggers the "
-							},
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "handleCallBack"
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": " function of the "
-							},
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "RequestHandler"
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": " singleton."
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": ""
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "The "
-							},
-							{
-								"text": "state",
-								"bold": true
-							},
-							{
-								"text": " parameter contains the OTP to retrieve the session thanks to the restore() function on the Session object (see "
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "the "
-							},
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "handleCallBack"
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": " function of the "
-							},
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "RequestHandler"
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": " singleton)"
+								"text": "Go back the 4D demo to get this email. "
 							}
 						]
 					}
@@ -1764,100 +1506,8 @@
 			"nodes": [
 				"hWicpcIVPt",
 				"Ohym7iyj6B",
-				"wuxmLgyUwW",
-				"fYtLbilODd",
-				"z7GTry2McH"
+				"wuxmLgyUwW"
 			],
-			"linkedNodes": {}
-		},
-		"4lMfyPZUzz": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"onclick"
-						],
-						"id": "vc1VaJyyzGxDGvqL6NVfTM",
-						"method": "Utilities.validatePayment",
-						"params": [
-							{
-								"name": "chosenProducts",
-								"type": "cs.ProductsSelection",
-								"datasource": "chosenProducts",
-								"id": "w3BFBTjXQHZdCbYdFv1trY"
-							}
-						],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "Text",
-							"datasource": "paymentResult"
-						}
-					},
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"onclick"
-						],
-						"id": "9b1xqsWGMDN6Q5XfCqa4p2",
-						"method": "Utilities.getSessionId",
-						"params": [],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "Text",
-							"datasource": "Authentication:sessionId"
-						}
-					}
-				],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Validate payment",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": "",
-				"style": {
-					"fontWeight": "300",
-					"paddingLeft": "12px",
-					"paddingRight": "12px",
-					"paddingTop": "4px",
-					"paddingBottom": "4px",
-					"borderRadius": "12px",
-					"width": "fit-content",
-					"backgroundColor": "#226aa4",
-					"color": "#ffffffff",
-					"marginLeft": "0px",
-					"display": "block",
-					"flexDirection": "row",
-					"marginTop": "0px",
-					"marginRight": "0px",
-					"marginBottom": "0px"
-				},
-				"iterableChild": true
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "wuxmLgyUwW",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"bzWHRUVMqj": {
@@ -1928,11 +1578,77 @@
 			"parent": "-gDhCGp9Jp",
 			"hidden": false,
 			"nodes": [
-				"4lMfyPZUzz"
+				"-H_0VZN33L"
 			],
 			"linkedNodes": {}
 		},
-		"z7GTry2McH": {
+		"-H_0VZN33L": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Save chosen products",
+				"classNames": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "ProductsSelection",
+						"events": [
+							"onclick"
+						],
+						"id": "pveuFTZYdMp6XBJN78nrEi",
+						"method": "chosenProducts.saveProducts",
+						"params": [],
+						"namespace": "",
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						},
+						"feedback": true
+					}
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "#226aa4",
+					"borderRadius": "15px",
+					"width": "200px"
+				},
+				"disabled": true
+			},
+			"displayName": "Button",
+			"custom": {
+				"states:fSTFbgaMY2R1PWqkVqrJ7W": {
+					"disabled": false
+				}
+			},
+			"parent": "wuxmLgyUwW",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "f-rjahZa2i"
+			}
+		},
+		"f-rjahZa2i": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-star"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "-H_0VZN33L",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"moloVfFvDS": {
 			"type": {
 				"resolvedName": "StyleBox"
 			},
@@ -1949,20 +1665,20 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "-gDhCGp9Jp",
+			"parent": "-fkFZshh9B",
 			"hidden": false,
 			"nodes": [
-				"yfggOePoTJ"
+				"ciZ1gis4TY"
 			],
 			"linkedNodes": {}
 		},
-		"yfggOePoTJ": {
+		"ciZ1gis4TY": {
 			"type": {
 				"resolvedName": "Button"
 			},
 			"isCanvas": false,
 			"props": {
-				"text": "Next",
+				"text": "Previous",
 				"classNames": [],
 				"events": [
 					{
@@ -1983,7 +1699,7 @@
 							"targetNamespace": "",
 							"targetType": "unknown",
 							"set": {
-								"value": "ChooseAndSaveProducts",
+								"value": "Products",
 								"type": "string"
 							}
 						}
@@ -2001,14 +1717,14 @@
 			},
 			"displayName": "Button",
 			"custom": {},
-			"parent": "z7GTry2McH",
+			"parent": "moloVfFvDS",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
-				"icon": "ac-BHc6HbB"
+				"icon": "NHqTsrxZkd"
 			}
 		},
-		"ac-BHc6HbB": {
+		"NHqTsrxZkd": {
 			"type": {
 				"resolvedName": "Icon"
 			},
@@ -2020,7 +1736,7 @@
 			},
 			"displayName": "Icon",
 			"custom": {},
-			"parent": "yfggOePoTJ",
+			"parent": "ciZ1gis4TY",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

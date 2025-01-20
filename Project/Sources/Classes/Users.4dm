@@ -51,11 +51,11 @@ Function createQodlyUser($info : Object) : Text
 		
 		$token:=Session:C1714.createOTP()
 		
-		$notDropped:=$user.emails.drop()
+		$notDropped:=ds:C1482.Emails.all().drop()
 		
 		$mail:=ds:C1482.Emails.new()
 		$mail.link:="127.0.0.1/validateEmail?$4DSID="+$token
-		$mail.validated:=False:C215
+		$mail.subject:="Validate email for "+$info.email
 		$mail.user:=$user
 		$status:=$mail.save()
 		return "OK"

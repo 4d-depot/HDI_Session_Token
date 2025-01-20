@@ -14,8 +14,7 @@
 			"dataType": "object",
 			"initialValue": {
 				"email": "mary@acme.com",
-				"password": "a",
-				"createAccount": true
+				"password": "a"
 			}
 		},
 		{
