@@ -160,7 +160,7 @@
 				"events": [],
 				"iterableChild": true,
 				"style": {
-					"width": "fit-content"
+					"width": "50%"
 				},
 				"classNames": [
 					"cartStyle"
@@ -189,7 +189,7 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "800px",
+					"width": "600px",
 					"alignItems": "center",
 					"justifyContent": "flex-start"
 				}
@@ -301,7 +301,13 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Save chosen products"
+								"text": "Save chosen products "
+							},
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "button"
 							}
 						]
 					},
@@ -447,7 +453,7 @@
 					"marginLeft": "0px",
 					"marginRight": "0px",
 					"marginBottom": "0px",
-					"marginTop": "0px",
+					"marginTop": "40px",
 					"fontFamily": "Roboto",
 					"fontSize": "16px",
 					"textAlign": "start"
