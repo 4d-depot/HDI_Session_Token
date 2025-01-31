@@ -10,7 +10,7 @@ WEB GET VARIABLES:C683($anames; $avalues)
 $index:=Find in array:C230($anames; "redirect")
 $urlToCall:=$avalues{$index}
 
-$requestObj:={method: HTTP POST method:K71:2; body: "Payment validated"}
+$requestObj:={method: HTTP POST method:K71:2; body: "Registring done"}
 $callback:=4D:C1709.HTTPRequest.new($urlToCall; $requestObj).wait()
 
 

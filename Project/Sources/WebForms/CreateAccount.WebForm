@@ -151,7 +151,7 @@
 				"events": [],
 				"iterableChild": true,
 				"style": {
-					"width": "450px",
+					"width": "550px",
 					"paddingTop": "0px",
 					"paddingRight": "0px",
 					"paddingBottom": "0px",
@@ -161,7 +161,7 @@
 					"marginBottom": "0px",
 					"marginLeft": "0px",
 					"minWidth": "450px",
-					"maxWidth": "450px"
+					"maxWidth": "550px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -216,12 +216,8 @@
 			"hidden": false,
 			"nodes": [
 				"renqLDazxV",
-				"Oi7sdxhFDt",
 				"VHv3iuzWRM",
-				"aV-GmK2nKG",
 				"fFBZE8W3Tu",
-				"jlYvUkrcW_",
-				"2VEg0jzd4N",
 				"u1UCvlwwvh",
 				"KGi9ZI7iRF"
 			],
@@ -261,9 +257,9 @@
 				"style": {
 					"display": "flex",
 					"alignItems": "center",
-					"gap": "10px",
 					"fontSize": "14px",
-					"marginTop": "20px"
+					"marginTop": "20px",
+					"width": "100%"
 				}
 			},
 			"displayName": "Stylebox",
@@ -271,47 +267,8 @@
 			"parent": "8JtrzsN4fh",
 			"hidden": false,
 			"nodes": [
-				"6uEssajUrA",
 				"xg23HiiylD"
 			],
-			"linkedNodes": {}
-		},
-		"6uEssajUrA": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"marginLeft": "0px",
-					"marginRight": "0px",
-					"marginBottom": "0px",
-					"marginTop": "0px",
-					"width": "100px"
-				},
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Email Address",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "VHv3iuzWRM",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"xg23HiiylD": {
@@ -323,11 +280,12 @@
 				"events": [],
 				"placeholder": "placeholder",
 				"label": "label",
-				"labelPosition": "hidden",
+				"labelPosition": "left",
 				"iterableChild": true,
 				"style": {
 					"marginTop": "0px",
-					"marginBottom": "6px"
+					"marginBottom": "6px",
+					"width": "100%"
 				}
 			},
 			"displayName": "Text Input",
@@ -348,9 +306,11 @@
 			"props": {
 				"events": [],
 				"moveable": false,
-				"text": "User name or Email address<br>",
+				"text": "Email Address",
 				"style": {
-					"color": "#666682"
+					"color": "#666682",
+					"textAlign": "end",
+					"width": "250px"
 				},
 				"deletable": true
 			},
@@ -385,30 +345,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"aV-GmK2nKG": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"paddingLeft": "0px",
-					"paddingRight": "0px",
-					"paddingBottom": "0px",
-					"paddingTop": "0px",
-					"marginBottom": "6px",
-					"fontSize": "12px"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "8JtrzsN4fh",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"fFBZE8W3Tu": {
 			"type": {
 				"resolvedName": "StyleBox"
@@ -420,8 +356,8 @@
 				"style": {
 					"display": "flex",
 					"alignItems": "center",
-					"gap": "10px",
-					"fontSize": "14px"
+					"fontSize": "14px",
+					"width": "100%"
 				}
 			},
 			"displayName": "Stylebox",
@@ -429,47 +365,8 @@
 			"parent": "8JtrzsN4fh",
 			"hidden": false,
 			"nodes": [
-				"aXed1PHQjD",
 				"v0ihJFZR3w"
 			],
-			"linkedNodes": {}
-		},
-		"aXed1PHQjD": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"marginLeft": "0px",
-					"marginRight": "0px",
-					"marginBottom": "0px",
-					"marginTop": "0px",
-					"width": "100px"
-				},
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Password",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "fFBZE8W3Tu",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"v0ihJFZR3w": {
@@ -481,11 +378,12 @@
 				"events": [],
 				"placeholder": "placeholder",
 				"label": "label",
-				"labelPosition": "hidden",
+				"labelPosition": "left",
 				"iterableChild": true,
 				"style": {
 					"marginBottom": "0px",
-					"marginTop": "0px"
+					"marginTop": "0px",
+					"width": "100%"
 				}
 			},
 			"displayName": "Text Input",
@@ -509,7 +407,9 @@
 				"deletable": true,
 				"text": "Password",
 				"style": {
-					"color": "#666682"
+					"color": "#666682",
+					"textAlign": "end",
+					"width": "250px"
 				}
 			},
 			"displayName": "Label",
@@ -547,55 +447,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"jlYvUkrcW_": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"paddingLeft": "0px",
-					"paddingRight": "0px",
-					"paddingBottom": "0px",
-					"paddingTop": "0px",
-					"display": "flex",
-					"justifyContent": "space-between",
-					"alignItems": "center",
-					"marginBottom": "6px",
-					"fontSize": "12px"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "8JtrzsN4fh",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"2VEg0jzd4N": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"paddingLeft": "0px",
-					"paddingRight": "0px",
-					"paddingBottom": "0px",
-					"paddingTop": "0px"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "8JtrzsN4fh",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"u1UCvlwwvh": {
 			"type": {
 				"resolvedName": "Button"
@@ -612,22 +463,13 @@
 							"onclick"
 						],
 						"id": "3kuMsuogWrrYx2crgDRfx3",
-						"method": "ds.authentify",
+						"method": "ds.createAccount",
 						"params": [
 							{
 								"name": "credentials",
 								"type": "Object",
 								"datasource": "Authentication:credentials",
 								"id": "9vE2oZkfsEQY9bzYn6wgMA"
-							},
-							{
-								"name": "createAccount",
-								"type": "Boolean",
-								"datasource": "true",
-								"id": "omV5Kq626zR5q1hXfx1gzn",
-								"isHardCoded": true,
-								"hardCodedType": "bool",
-								"hardCodedValue": "true"
 							}
 						],
 						"datasource": "",
@@ -996,41 +838,6 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "FMmqwD5oqf",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"Oi7sdxhFDt": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Create an account",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": "",
-				"style": {
-					"fontSize": "20px",
-					"fontWeight": "500"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "8JtrzsN4fh",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

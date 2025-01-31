@@ -1,7 +1,7 @@
 {
 	"methods": {
-		"callPaymentApp": {
-			"timeStamp": "2025-01-14T15:20:37Z",
+		"callRegistringApp": {
+			"timeStamp": "2025-01-30T09:53:47Z",
 			"attributes": {
 				"publishedWeb": true
 			}

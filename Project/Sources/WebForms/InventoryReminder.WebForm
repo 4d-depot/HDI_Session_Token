@@ -3,7 +3,7 @@
 		"v": "1.0",
 		"datasources": [
 			{
-				"id": "myProducts",
+				"id": "inventory",
 				"type": "entitysel",
 				"dataclass": "Products",
 				"namespace": "",
@@ -105,14 +105,14 @@
 							"oninit"
 						],
 						"id": "sr7j2GLPnG7vckufqfXebX",
-						"method": "Utilities.getChosenProducts",
+						"method": "Utilities.getInventory",
 						"params": [],
 						"datasource": "",
 						"methodType": "singleton",
 						"returns": {
 							"name": "result",
 							"type": "cs.ProductsSelection",
-							"datasource": "myProducts"
+							"datasource": "inventory"
 						}
 					}
 				],
@@ -250,7 +250,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "DO NO FORGET",
+								"text": "DO NO FORGET THIS INVENTORY",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -528,7 +528,7 @@
 					"height": "600px",
 					"marginLeft": "0px"
 				},
-				"datasource": "myProducts",
+				"datasource": "inventory",
 				"gridProps": {
 					"styleboxWidth": 358,
 					"styleboxHeight": 50,

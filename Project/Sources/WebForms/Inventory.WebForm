@@ -21,7 +21,7 @@
 				"depth": null
 			},
 			{
-				"id": "chosenProducts",
+				"id": "inventory",
 				"type": "entitysel",
 				"dataclass": "Products",
 				"namespace": "",
@@ -30,7 +30,7 @@
 				"pageSize": 100
 			},
 			{
-				"id": "paymentResult",
+				"id": "result",
 				"type": "scalar",
 				"namespace": "",
 				"dataType": "string",
@@ -50,7 +50,8 @@
 				"parentId": null,
 				"id": "A7ydKIaqj-XvU1TecPyol"
 			}
-		]
+		],
+		"states": []
 	},
 	"components": {
 		"ROOT": {
@@ -85,15 +86,16 @@
 							"oninit"
 						],
 						"id": "wt3zEQwzpmtHVkjq4jA4hd",
-						"method": "Utilities.getChosenProducts",
+						"method": "Utilities.getInventory",
 						"params": [],
 						"datasource": "",
 						"methodType": "singleton",
 						"returns": {
 							"name": "result",
 							"type": "cs.ProductsSelection",
-							"datasource": "chosenProducts"
-						}
+							"datasource": "inventory"
+						},
+						"disabled": false
 					}
 				],
 				"airyMode": false,
@@ -126,7 +128,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Payment result",
+								"text": "Registring result",
 								"bold": true,
 								"italic": false,
 								"underlined": false,
@@ -141,7 +143,7 @@
 							},
 							{
 								"type": "datasource",
-								"datasource": "paymentResult",
+								"datasource": "result",
 								"children": [
 									{
 										"bold": false,
@@ -160,7 +162,7 @@
 						]
 					}
 				],
-				"datasource": "paymentResult",
+				"datasource": "result",
 				"style": {
 					"paddingLeft": "32px"
 				}
@@ -300,7 +302,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " Select some products to add them in the chosen products list."
+								"text": " Select some products to add them in the inventory."
 							}
 						]
 					},
@@ -338,7 +340,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Validate payment"
+								"text": "Register"
 							},
 							{
 								"bold": false,
@@ -400,7 +402,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "validatePayment"
+								"text": "registerInventory"
 							},
 							{
 								"bold": false,
@@ -445,7 +447,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "- an external payment system is called with an URL like:"
+								"text": "- an external registring system is called with an URL like:"
 							}
 						]
 					},
@@ -465,7 +467,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "http://127.0.0.1:8044/4DACTION/callPaymentApp?"
+								"text": "http://127.0.0.1:8044/4DACTION/callRegistringApp?"
 							},
 							{
 								"text": "redirect",
@@ -513,11 +515,8 @@
 								"text": " "
 							},
 							{
-								"text": "http://127.0.0.1:8044/4DACTION/callPaymentApp",
+								"text": "http://127.0.0.1:8044/4DACTION/callRegistringApp:",
 								"underlined": true
-							},
-							{
-								"text": ":"
 							}
 						]
 					},
@@ -525,7 +524,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "A component placed in this demo features a third party payment system."
+								"text": "A component placed in this demo features a third party registring system."
 							}
 						]
 					},
@@ -541,7 +540,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "The callPaymentApp method of the component just calls the given redirect URL."
+								"text": "The callRegistringApp method of the component just calls the given redirect URL."
 							}
 						]
 					},
@@ -794,7 +793,7 @@
 						"action": "reset",
 						"actionType": "datasource",
 						"datasource": {
-							"name": "chosenProducts",
+							"name": "inventory",
 							"type": "entitysel",
 							"from": "",
 							"namespace": ""
@@ -806,7 +805,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Clear chosen products",
+								"text": "Clear inventory",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -854,7 +853,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "PRODUCTS",
+								"text": "Products",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -865,7 +864,7 @@
 				],
 				"datasource": "",
 				"style": {
-					"fontSize": "26px",
+					"fontSize": "20px",
 					"fontWeight": "300",
 					"marginTop": "12px",
 					"marginRight": "20px",
@@ -899,7 +898,9 @@
 					"marginLeft": "0px",
 					"marginTop": "0px",
 					"marginRight": "0px",
-					"fontFamily": "Poppins"
+					"fontFamily": "Poppins",
+					"display": "flex",
+					"justifyContent": "center"
 				},
 				"iterableChild": true
 			},
@@ -1135,7 +1136,7 @@
 							{
 								"name": "selection",
 								"type": "cs.productSelection",
-								"datasource": "chosenProducts",
+								"datasource": "inventory",
 								"id": "n4PF2PnJKoiNajxhM2pn87"
 							}
 						],
@@ -1144,7 +1145,7 @@
 						"returns": {
 							"name": "result",
 							"type": "cs.productSelection",
-							"datasource": "chosenProducts"
+							"datasource": "inventory"
 						}
 					}
 				],
@@ -1302,7 +1303,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "CHOSEN PRODUCTS",
+								"text": "Inventory",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1313,7 +1314,7 @@
 				],
 				"datasource": "",
 				"style": {
-					"fontSize": "26px",
+					"fontSize": "20px",
 					"fontWeight": "300",
 					"marginTop": "12px",
 					"marginRight": "20px",
@@ -1348,7 +1349,9 @@
 					"marginTop": "0px",
 					"marginRight": "0px",
 					"width": "100%",
-					"fontFamily": "Poppins"
+					"fontFamily": "Poppins",
+					"display": "flex",
+					"justifyContent": "center"
 				},
 				"iterableChild": true
 			},
@@ -1580,7 +1583,7 @@
 					"height": "600px",
 					"marginLeft": "0px"
 				},
-				"datasource": "chosenProducts",
+				"datasource": "inventory",
 				"gridProps": {
 					"styleboxWidth": 358,
 					"styleboxHeight": 100,
@@ -1762,6 +1765,7 @@
 			"parent": "bzWHRUVMqj",
 			"hidden": false,
 			"nodes": [
+				"lmoofUffgL",
 				"hWicpcIVPt",
 				"Ohym7iyj6B",
 				"wuxmLgyUwW",
@@ -1784,12 +1788,12 @@
 							"onclick"
 						],
 						"id": "vc1VaJyyzGxDGvqL6NVfTM",
-						"method": "Utilities.validatePayment",
+						"method": "Utilities.registerInventory",
 						"params": [
 							{
-								"name": "chosenProducts",
+								"name": "inventory",
 								"type": "cs.ProductsSelection",
-								"datasource": "chosenProducts",
+								"datasource": "inventory",
 								"id": "w3BFBTjXQHZdCbYdFv1trY"
 							}
 						],
@@ -1798,7 +1802,7 @@
 						"returns": {
 							"name": "result",
 							"type": "Text",
-							"datasource": "paymentResult"
+							"datasource": "result"
 						}
 					},
 					{
@@ -1824,7 +1828,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Validate payment",
+								"text": "Register",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1983,7 +1987,7 @@
 							"targetNamespace": "",
 							"targetType": "unknown",
 							"set": {
-								"value": "ChooseAndSaveProducts",
+								"value": "SaveInventory",
 								"type": "string"
 							}
 						}
@@ -2023,6 +2027,65 @@
 			"parent": "yfggOePoTJ",
 			"hidden": false,
 			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Ean4nYyU9g": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "PRODUCTS INVENTORY",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"color": "#226aa4",
+					"fontWeight": "300",
+					"fontSize": "26px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "lmoofUffgL",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"lmoofUffgL": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "-gDhCGp9Jp",
+			"hidden": false,
+			"nodes": [
+				"Ean4nYyU9g"
+			],
 			"linkedNodes": {}
 		}
 	}

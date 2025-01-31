@@ -1,7 +1,7 @@
 [
   {
     "class": "RequestHandler",
-    "method": "validateQodlyEmail",
+    "method": "validateEmail",
     "regexPattern": "/validateEmail",
     "verbs": "get"
   },   
@@ -13,8 +13,8 @@
   },
   {
     "class": "RequestHandler",
-    "method": "restoreChosenProducts",
-    "regexPattern": "/retrieveProducts",
+    "method": "restoreInventory",
+    "regexPattern": "/retrieveInventory",
     "verbs": "get"
   }
 ]

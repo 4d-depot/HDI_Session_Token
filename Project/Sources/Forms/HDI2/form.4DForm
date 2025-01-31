@@ -87,7 +87,7 @@
 					"top": 70,
 					"left": 60,
 					"width": 1100,
-					"height": 160,
+					"height": 180,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "Infos[1].Description",
@@ -107,14 +107,14 @@
 				"Input20": {
 					"type": "input",
 					"left": 30,
-					"top": 250,
+					"top": 270,
 					"width": 400,
 					"height": 30,
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
-					"dataSource": "\"Start the demo with Qodly studio\"",
+					"dataSource": "\"Click on this link to render the Qodly app\"",
 					"events": [
 						"onClick"
 					],
@@ -128,9 +128,9 @@
 				"LBEmails": {
 					"type": "listbox",
 					"left": 30,
-					"top": 340,
+					"top": 360,
 					"width": 395,
-					"height": 181,
+					"height": 101,
 					"events": [
 						"onClick",
 						"onSelectionChange"
@@ -175,7 +175,7 @@
 				"Text9": {
 					"type": "text",
 					"text": "Emails list",
-					"top": 310,
+					"top": 330,
 					"left": 30,
 					"width": 100,
 					"height": 20,
@@ -187,7 +187,7 @@
 				"CreateAccount5": {
 					"type": "button",
 					"text": "Refresh the emails list",
-					"top": 310,
+					"top": 330,
 					"left": 140,
 					"width": 180,
 					"height": 20,
@@ -200,7 +200,7 @@
 				"Input28": {
 					"type": "input",
 					"left": 30,
-					"top": 610,
+					"top": 530,
 					"width": 640,
 					"height": 20,
 					"dataSource": "Form:C1466.selectedEmail.link",
@@ -217,19 +217,19 @@
 				"Text17": {
 					"type": "text",
 					"text": "Link:",
-					"top": 580,
+					"top": 500,
 					"left": 30,
 					"width": 80,
 					"height": 20,
 					"textAlign": "left",
 					"fontWeight": "bold",
 					"fontSize": 16,
-					"stroke": "#6495ed"
+					"stroke": "#696969"
 				},
 				"Button12": {
 					"type": "button",
 					"text": "Show the HTTPRequestHandlers.json file on disk",
-					"top": 750,
+					"top": 740,
 					"left": 30,
 					"width": 340,
 					"height": 20,
@@ -241,10 +241,10 @@
 				},
 				"Button14": {
 					"type": "button",
-					"text": "Open the validateQodlyEmail function in the RequestHandler singleton",
-					"top": 750,
+					"text": "Open the RequestHandler singleton",
+					"top": 740,
 					"left": 410,
-					"width": 420,
+					"width": 300,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -256,10 +256,10 @@
 				},
 				"CreateAccount7": {
 					"type": "button",
-					"text": "Click here to validate the email",
-					"top": 650,
+					"text": "1- Copy validation email link in pasteboard",
+					"top": 590,
 					"left": 30,
-					"width": 200,
+					"width": 300,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -269,30 +269,33 @@
 				},
 				"WebArea": {
 					"type": "webArea",
-					"left": 670,
+					"left": 750,
 					"top": 300,
-					"width": 550,
+					"width": 500,
 					"height": 430,
 					"urlSource": "",
 					"webEngine": "embedded",
-					"sizingX": "fixed"
+					"sizingX": "fixed",
+					"borderStyle": "dotted"
 				},
 				"Text12": {
 					"type": "text",
-					"text": "It opens the link in private navigation (Chrome)",
-					"top": 650,
-					"left": 260,
-					"width": 360,
-					"height": 20,
+					"text": "1.2- Paste this link in a private navigation browser window",
+					"top": 590,
+					"left": 340,
+					"width": 400,
+					"height": 40,
 					"fontStyle": "italic",
-					"fontSize": 14
+					"fontSize": 16,
+					"fontWeight": "bold",
+					"stroke": "#6495ed"
 				},
 				"CreateAccount6": {
 					"type": "button",
-					"text": "Click here to view the saved products",
-					"top": 710,
+					"text": "2- Click here to view the saved inventory",
+					"top": 660,
 					"left": 30,
-					"width": 250,
+					"width": 300,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -302,36 +305,36 @@
 				},
 				"SaveProductsLabel": {
 					"type": "text",
-					"text": "Saved products",
+					"text": "Saved inventory",
 					"top": 270,
-					"left": 670,
+					"left": 750,
 					"width": 250,
 					"height": 20,
 					"textAlign": "left",
 					"fontWeight": "bold",
 					"fontSize": 18,
 					"stroke": "#6495ed",
-					"visibility": "hidden"
+					"visibility": "visible"
 				},
 				"Text21": {
 					"type": "text",
 					"text": "Mail content",
-					"top": 540,
+					"top": 470,
 					"left": 30,
 					"width": 250,
 					"height": 20,
 					"textAlign": "left",
 					"fontWeight": "bold",
 					"fontSize": 18,
-					"stroke": "#6495ed",
-					"textDecoration": "underline"
+					"stroke": "#696969",
+					"textDecoration": "none"
 				},
 				"Text22": {
 					"type": "text",
-					"text": "-------------------------------------------- >",
-					"top": 710,
-					"left": 310,
-					"width": 300,
+					"text": "---------------------------------------------------------- >",
+					"top": 660,
+					"left": 340,
+					"width": 370,
 					"height": 20
 				}
 			},
@@ -347,873 +350,6 @@
 				"WebArea",
 				"CreateAccount6"
 			]
-		},
-		{
-			"objects": {
-				"information": {
-					"type": "input",
-					"top": 70,
-					"left": 50,
-					"width": 900,
-					"height": 340,
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"dataSource": "Infos[2].Description",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"styledText": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"class": "description"
-				},
-				"Input6": {
-					"type": "input",
-					"left": 400,
-					"top": 500,
-					"width": 570,
-					"height": 20,
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"dataSource": "Form:C1466.validateLink",
-					"styledText": true,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Input6.4dm",
-					"textDecoration": "underline",
-					"fontWeight": "bold"
-				},
-				"CreateAccount": {
-					"type": "button",
-					"text": "Create account",
-					"top": 720,
-					"left": 30,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount.4dm",
-					"focusable": false
-				},
-				"Input7": {
-					"type": "input",
-					"left": 30,
-					"top": 750,
-					"width": 240,
-					"height": 20,
-					"dataSource": "Form:C1466.createAccountURL",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontStyle": "italic",
-					"textDecoration": "underline",
-					"method": "ObjectMethods/Input7.4dm"
-				},
-				"Text24": {
-					"type": "text",
-					"text": "Create your account",
-					"top": 420,
-					"left": 30,
-					"width": 380,
-					"height": 20,
-					"textAlign": "center",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"Input4": {
-					"type": "input",
-					"left": 400,
-					"top": 630,
-					"width": 570,
-					"height": 20,
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"dataSource": "Form:C1466.validateLinkWithoutParameter",
-					"styledText": true,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Input4.4dm",
-					"textDecoration": "underline",
-					"fontWeight": "bold"
-				},
-				"Input": {
-					"type": "input",
-					"left": 120,
-					"top": 470,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.info.firstname"
-				},
-				"Text": {
-					"type": "text",
-					"text": "Firstname",
-					"top": 470,
-					"left": -10,
-					"width": 120,
-					"height": 20,
-					"textAlign": "right"
-				},
-				"Input5": {
-					"type": "input",
-					"left": 120,
-					"top": 530,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.info.lastname"
-				},
-				"Text3": {
-					"type": "text",
-					"text": "Lastname",
-					"top": 530,
-					"left": -10,
-					"width": 120,
-					"height": 20,
-					"textAlign": "right"
-				},
-				"Input9": {
-					"type": "input",
-					"left": 120,
-					"top": 590,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.info.email",
-					"events": []
-				},
-				"Text4": {
-					"type": "text",
-					"text": "Email",
-					"top": 590,
-					"left": -10,
-					"width": 120,
-					"height": 20,
-					"textAlign": "right"
-				},
-				"Radio Button": {
-					"type": "radio",
-					"text": "10 seconds",
-					"top": 680,
-					"left": 190,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"radioGroup": "Lifespan",
-					"dataSource": "Form:C1466.life10",
-					"method": "ObjectMethods/Radio Button.4dm"
-				},
-				"Radio Button1": {
-					"type": "radio",
-					"text": "Default lifespan",
-					"top": 680,
-					"left": 30,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"radioGroup": "Lifespan",
-					"dataSource": "Form:C1466.noLife",
-					"method": "ObjectMethods/Radio Button1.4dm"
-				},
-				"Text5": {
-					"type": "text",
-					"text": "The validation link will be valid during:",
-					"top": 640,
-					"left": 30,
-					"width": 320,
-					"height": 20,
-					"stroke": "#6495ed",
-					"fontWeight": "bold",
-					"fontSize": 16
-				},
-				"Text6": {
-					"type": "text",
-					"text": "Wrong link:",
-					"top": 600,
-					"left": 400,
-					"width": 90,
-					"height": 20,
-					"stroke": "#6495ed",
-					"fontWeight": "bold",
-					"textAlign": "left",
-					"fontSize": 18
-				},
-				"Text7": {
-					"type": "text",
-					"text": "Good link:",
-					"top": 470,
-					"left": 400,
-					"width": 90,
-					"height": 20,
-					"stroke": "#6495ed",
-					"fontWeight": "bold",
-					"textAlign": "left",
-					"fontSize": 18
-				},
-				"Input13": {
-					"type": "input",
-					"left": 120,
-					"top": 490,
-					"width": 200,
-					"height": 20,
-					"dataSource": "LinesCode{1}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Input14": {
-					"type": "input",
-					"left": 120,
-					"top": 550,
-					"width": 200,
-					"height": 20,
-					"dataSource": "LinesCode{2}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Input15": {
-					"type": "input",
-					"left": 120,
-					"top": 610,
-					"width": 200,
-					"height": 20,
-					"dataSource": "LinesCode{3}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Text2": {
-					"type": "text",
-					"text": "Try those links (received by email)",
-					"top": 420,
-					"left": 420,
-					"width": 480,
-					"height": 20,
-					"textAlign": "center",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"Line": {
-					"type": "line",
-					"top": 410,
-					"left": 390,
-					"width": 0,
-					"height": 360,
-					"stroke": "#6495ed",
-					"strokeWidth": 1
-				},
-				"Input16": {
-					"type": "input",
-					"left": 400,
-					"top": 540,
-					"width": 570,
-					"height": 60,
-					"dataSource": "LinesCode{4}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Input17": {
-					"type": "input",
-					"left": 400,
-					"top": 670,
-					"width": 570,
-					"height": 60,
-					"dataSource": "LinesCode{5}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Input1": {
-					"type": "input",
-					"left": 250,
-					"top": 750,
-					"width": 150,
-					"height": 20,
-					"dataSource": "\"<--Click on it to open\"",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontStyle": "normal",
-					"textDecoration": "none",
-					"method": "ObjectMethods/Input1.4dm"
-				}
-			}
-		},
-		{
-			"objects": {
-				"information4": {
-					"type": "input",
-					"top": 70,
-					"left": 50,
-					"width": 900,
-					"height": 290,
-					"sizingY": "grow",
-					"dataSource": "Infos[3].Description",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"styledText": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"class": "description"
-				},
-				"LBProducts": {
-					"type": "listbox",
-					"left": 50,
-					"top": 390,
-					"width": 165,
-					"height": 181,
-					"events": [
-						"onSelectionChange"
-					],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.products",
-					"selectedItemsSource": "Form:C1466.selected",
-					"rowHeight": "20px",
-					"focusable": false,
-					"method": "ObjectMethods/LBProducts.4dm",
-					"scrollbarHorizontal": "hidden",
-					"headerHeight": "21px",
-					"columns": [
-						{
-							"header": {
-								"text": "Name",
-								"name": "Header1"
-							},
-							"name": "Column1",
-							"footer": {
-								"name": "Footer1"
-							},
-							"dataSource": "This:C1470.name",
-							"width": 150
-						}
-					]
-				},
-				"Validate": {
-					"type": "button",
-					"text": "Validate basket",
-					"top": 550,
-					"left": 230,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"focusable": false,
-					"method": "ObjectMethods/Validate.4dm"
-				},
-				"Input8": {
-					"type": "input",
-					"left": 50,
-					"top": 650,
-					"width": 850,
-					"height": 20,
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"dataSource": "Form:C1466.getBasketLink",
-					"styledText": true,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Input8.4dm",
-					"textDecoration": "underline",
-					"fontWeight": "bold"
-				},
-				"Input10": {
-					"type": "input",
-					"left": 50,
-					"top": 690,
-					"width": 850,
-					"height": 80,
-					"dataSource": "LinesCode{10}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Text1": {
-					"type": "text",
-					"text": "Products list",
-					"top": 360,
-					"left": 50,
-					"width": 190,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"Text8": {
-					"type": "text",
-					"text": "Try this link (received by email)",
-					"top": 610,
-					"left": 50,
-					"width": 480,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"CreateAccount2": {
-					"type": "button",
-					"text": "Open the Utilities singleton getProducts function",
-					"top": 610,
-					"left": 360,
-					"width": 380,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount2.4dm",
-					"focusable": false
-				}
-			}
-		},
-		{
-			"objects": {
-				"information2": {
-					"type": "input",
-					"top": 70,
-					"left": 50,
-					"width": 900,
-					"height": 230,
-					"sizingY": "grow",
-					"dataSource": "Infos[4].Description",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"styledText": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"class": "description"
-				},
-				"Input18": {
-					"type": "input",
-					"left": 30,
-					"top": 590,
-					"width": 850,
-					"height": 20,
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"dataSource": "Form:C1466.validateLink2",
-					"styledText": true,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Input18.4dm",
-					"textDecoration": "underline",
-					"fontWeight": "bold"
-				},
-				"CreateAccount1": {
-					"type": "button",
-					"text": "Create account",
-					"top": 360,
-					"left": 410,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount1.4dm",
-					"focusable": false
-				},
-				"Input19": {
-					"type": "input",
-					"left": 410,
-					"top": 390,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.createAccountURL2",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontStyle": "italic",
-					"textDecoration": "underline",
-					"method": "ObjectMethods/Input19.4dm"
-				},
-				"Text13": {
-					"type": "text",
-					"text": "Create your account",
-					"top": 310,
-					"left": 30,
-					"width": 250,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"Input21": {
-					"type": "input",
-					"left": 120,
-					"top": 360,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.info2.firstname"
-				},
-				"Text14": {
-					"type": "text",
-					"text": "Firstname",
-					"top": 360,
-					"left": -10,
-					"width": 120,
-					"height": 20,
-					"textAlign": "right"
-				},
-				"Input22": {
-					"type": "input",
-					"left": 120,
-					"top": 420,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.info2.lastname"
-				},
-				"Text15": {
-					"type": "text",
-					"text": "Lastname",
-					"top": 420,
-					"left": -10,
-					"width": 120,
-					"height": 20,
-					"textAlign": "right"
-				},
-				"Input23": {
-					"type": "input",
-					"left": 120,
-					"top": 480,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.info2.email",
-					"events": []
-				},
-				"Text16": {
-					"type": "text",
-					"text": "Email",
-					"top": 480,
-					"left": -10,
-					"width": 120,
-					"height": 20,
-					"textAlign": "right"
-				},
-				"Input24": {
-					"type": "input",
-					"left": 120,
-					"top": 380,
-					"width": 200,
-					"height": 20,
-					"dataSource": "LinesCode{6}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Input25": {
-					"type": "input",
-					"left": 120,
-					"top": 440,
-					"width": 200,
-					"height": 20,
-					"dataSource": "LinesCode{7}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Input26": {
-					"type": "input",
-					"left": 120,
-					"top": 500,
-					"width": 200,
-					"height": 20,
-					"dataSource": "LinesCode{8}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"Text20": {
-					"type": "text",
-					"text": "Click on this link (received by email)",
-					"top": 550,
-					"left": 30,
-					"width": 350,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"Line1": {
-					"type": "line",
-					"top": 530,
-					"left": 30,
-					"width": 700,
-					"height": 0,
-					"stroke": "#6495ed",
-					"strokeWidth": 1
-				},
-				"Input27": {
-					"type": "input",
-					"left": 30,
-					"top": 630,
-					"width": 850,
-					"height": 100,
-					"dataSource": "LinesCode{9}",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"styledText": true
-				},
-				"CreateAccount3": {
-					"type": "button",
-					"text": "Open the Utilities singleton validateEmail function",
-					"top": 750,
-					"left": 30,
-					"width": 380,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount3.4dm",
-					"focusable": false
-				},
-				"Input2": {
-					"type": "input",
-					"left": 640,
-					"top": 390,
-					"width": 180,
-					"height": 20,
-					"dataSource": "\"<--Click on it to open\"",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontStyle": "normal",
-					"textDecoration": "none",
-					"method": "ObjectMethods/Input2.4dm"
-				},
-				"CreateAccount4": {
-					"type": "button",
-					"text": "Create for blogpost",
-					"top": 320,
-					"left": 410,
-					"width": 150,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount4.4dm",
-					"focusable": false
-				}
-			}
-		},
-		{
-			"objects": {
-				"Input3": {
-					"type": "input",
-					"left": 17,
-					"top": 127,
-					"width": 950,
-					"height": 620,
-					"dataSourceTypeHint": "picture",
-					"dataSource": "Form:C1466.schema",
-					"enterable": false,
-					"focusable": false,
-					"pictureFormat": "scaled"
-				}
-			}
-		},
-		{
-			"objects": {
-				"information3": {
-					"type": "input",
-					"top": 80,
-					"left": 40,
-					"width": 420,
-					"height": 50,
-					"sizingY": "grow",
-					"dataSource": "Infos[5].Description",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"styledText": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"class": "description"
-				},
-				"Input11": {
-					"type": "input",
-					"left": 49,
-					"top": 159,
-					"width": 200,
-					"height": 20,
-					"dataSource": "Form:C1466.callExternalApp",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none"
-				},
-				"Web Area": {
-					"type": "webArea",
-					"left": 66,
-					"top": 234,
-					"width": 474,
-					"height": 282,
-					"urlSource": "Form:C1466.webAreaURL",
-					"webEngine": "embedded"
-				},
-				"Button": {
-					"type": "button",
-					"text": "Go",
-					"top": 152,
-					"left": 461,
-					"width": 80,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button.4dm"
-				},
-				"Input12": {
-					"type": "input",
-					"left": 49,
-					"top": 199,
-					"width": 300,
-					"height": 20,
-					"dataSource": "Form:C1466.callExternalAppWithWrongCallBack",
-					"events": [
-						"onClick"
-					],
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none"
-				},
-				"Button2": {
-					"type": "button",
-					"text": "Go",
-					"top": 192,
-					"left": 461,
-					"width": 80,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button2.4dm"
-				},
-				"Button1": {
-					"type": "button",
-					"text": "Button",
-					"top": 179,
-					"left": 714,
-					"width": 151,
-					"height": 45,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button1.4dm"
-				}
-			}
 		}
 	],
 	"$4d": {
@@ -1227,5 +363,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2667
+	"geometryStamp": 2749
 }

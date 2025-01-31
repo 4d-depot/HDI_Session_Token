@@ -1,14 +1,8 @@
 {
-	"forceLogin": true,
+	"forceLogin": false,
 	"permissions": {
 		"allowed": []
 	},
-	"privileges": [
-		{
-			"id": "wekPapAE1zHePBLPdyXUUo",
-			"privilege": "forDemo",
-			"includes": []
-		}
-	],
+	"privileges": [],
 	"roles": []
 }

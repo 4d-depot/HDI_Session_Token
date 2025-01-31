@@ -25,8 +25,6 @@
 	</table>
 	<table name="Users" uuid="778D322260274CD49C60520C2185968F" id="2">
 		<field name="ID" uuid="6303E5DC14FD447498C19F69DAF50195" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
-		<field name="firstname" uuid="CE8C7762A3CA4CFD8E08FE5FD38A68CE" type="10" limiting_length="255" never_null="true" id="2"/>
-		<field name="lastname" uuid="C08922D3C2F64FA8943F61B1D10EDFE2" type="10" limiting_length="255" never_null="true" id="3"/>
 		<field name="email" uuid="FA8FC82DE92B42B9BDB7D6D033E0676B" type="10" limiting_length="255" never_null="true" id="4"/>
 		<field name="password" uuid="4DCABCB92D6C4213ADB2305084654C0C" type="10" limiting_length="255" never_null="true" id="5"/>
 		<field name="validated" uuid="8C572A0719274C52A6E874D65E4D3B5A" type="1" never_null="true" id="6"/>
