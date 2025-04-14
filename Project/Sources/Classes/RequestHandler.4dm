@@ -29,29 +29,22 @@ Function validateEmail() : 4D:C1709.OutgoingMessage
 	return $result
 	
 	
-Function handleCallBack($request : 4D:C1709.IncomingMessage)
+Function handleCallBack($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
 	
-	var $otp; $text : Text
+	var $otp : Text
 	var $restore : Boolean
-	
+	var $result:=4D:C1709.OutgoingMessage.new()
 	
 	$otp:=$request.urlQuery.state
 	
+	TRACE:C157
+	
 	$restore:=Session:C1714.restore($otp)
 	
-	$text:=$request.getText()
+	$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=RetrievedProducts")
+	$result.setStatus(302)
 	
-	If ($text#Null:C1517)
-		
-		If (Session:C1714.storage.info#Null:C1517)
-			Use (Session:C1714.storage.info)
-				Session:C1714.storage.info.inventoryStatus:=$text
-				If (Session:C1714.storage.inventory#Null:C1517)
-					Session:C1714.storage.info.inventoryStatus+=" total price: "+String:C10(Session:C1714.storage.inventory.sum("price"))
-				End if 
-			End use 
-		End if 
-	End if 
+	return $result
 	
 	
 Function restoreInventory($request : 4D:C1709.IncomingMessage)

@@ -2,19 +2,15 @@
   {
     "class": "RequestHandler",
     "method": "validateEmail",
-    "regexPattern": "/validateEmail",
-    "verbs": "get"
-  },   
-  {
-    "class": "RequestHandler",
-    "method": "handleCallBack",
-    "regexPattern": "/callBack",
-    "verbs": "post"
+    "verbs": "GET",
+    "id": "kCS4vxTocoE5bGPj9fVHEe",
+    "regexPattern": "/validateEmail"
   },
   {
     "class": "RequestHandler",
-    "method": "restoreInventory",
-    "regexPattern": "/retrieveInventory",
-    "verbs": "get"
+    "method": "handleCallBack",
+    "verbs": "GET",
+    "id": "7UPhAQwAMSqzW9hPUee9UP",
+    "regexPattern": "/callBack"
   }
 ]

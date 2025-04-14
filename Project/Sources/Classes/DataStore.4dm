@@ -11,8 +11,6 @@ exposed Function authentify($credentials : Object) : Text
 	
 	If ($user#Null:C1517)
 		If (Verify password hash:C1534($credentials.password; $user.password))
-			Session:C1714.clearPrivileges()
-			Session:C1714.setPrivileges("")
 			
 			Use (Session:C1714.storage)
 				Session:C1714.storage.user:=New shared object:C1526("ID"; $user.ID)
@@ -31,18 +29,18 @@ exposed Function authentify($credentials : Object) : Text
 	
 	
 	
-exposed Function createAccount($credentials : Object) : Text
+	//exposed Function createAccount($credentials : Object) : Text
 	
-	var $result : Text
+	//var $result : Text
 	
 	
-	$result:=ds:C1482.Users.create($credentials)
+	//$result:=ds.Users.create($credentials)
 	
-	If ($result="OK")
-		Session:C1714.setPrivileges("")
-		Web Form:C1735.setMessage("Account created - Go back to 4D to check the emails")
-	Else 
-		Web Form:C1735.setError($result)
-	End if 
+	//If ($result="OK")
+	//Session.setPrivileges("")
+	//Web Form.setMessage("Account created - Go back to 4D to check the emails")
+	//Else 
+	//Web Form.setError($result)
+	//End if 
 	
-	return "CreateAccount"
+	//return "CreateAccount"

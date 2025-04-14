@@ -106,8 +106,8 @@
 				},
 				"Input20": {
 					"type": "input",
-					"left": 30,
-					"top": 270,
+					"left": 60,
+					"top": 250,
 					"width": 400,
 					"height": 30,
 					"enterable": false,
@@ -124,231 +124,11 @@
 					"method": "ObjectMethods/Input20.4dm",
 					"stroke": "#6495ed",
 					"fontWeight": "bold"
-				},
-				"LBEmails": {
-					"type": "listbox",
-					"left": 30,
-					"top": 360,
-					"width": 395,
-					"height": 101,
-					"events": [
-						"onClick",
-						"onSelectionChange"
-					],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.mails",
-					"selectedItemsSource": "",
-					"rowHeight": "20px",
-					"focusable": false,
-					"scrollbarHorizontal": "hidden",
-					"headerHeight": "21px",
-					"selectionMode": "single",
-					"currentItemSource": "Form:C1466.selectedEmail",
-					"columns": [
-						{
-							"header": {
-								"text": "Mail ID",
-								"name": "Header2"
-							},
-							"name": "Column2",
-							"footer": {
-								"name": "Footer2"
-							},
-							"dataSource": "This:C1470.ID",
-							"width": 80,
-							"textAlign": "center"
-						},
-						{
-							"header": {
-								"name": "Header3",
-								"text": "Subject"
-							},
-							"name": "Column3",
-							"dataSource": "This:C1470.subject",
-							"footer": {
-								"name": "Footer3"
-							},
-							"width": 300
-						}
-					]
-				},
-				"Text9": {
-					"type": "text",
-					"text": "Emails list",
-					"top": 330,
-					"left": 30,
-					"width": 100,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed"
-				},
-				"CreateAccount5": {
-					"type": "button",
-					"text": "Refresh the emails list",
-					"top": 330,
-					"left": 140,
-					"width": 180,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount5.4dm",
-					"focusable": false
-				},
-				"Input28": {
-					"type": "input",
-					"left": 30,
-					"top": 530,
-					"width": 640,
-					"height": 20,
-					"dataSource": "Form:C1466.selectedEmail.link",
-					"enterable": false,
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"textDecoration": "underline",
-					"events": [
-						"onClick"
-					],
-					"fontSize": 16
-				},
-				"Text17": {
-					"type": "text",
-					"text": "Link:",
-					"top": 500,
-					"left": 30,
-					"width": 80,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 16,
-					"stroke": "#696969"
-				},
-				"Button12": {
-					"type": "button",
-					"text": "Show the HTTPRequestHandlers.json file on disk",
-					"top": 740,
-					"left": 30,
-					"width": 340,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button12.4dm",
-					"focusable": false
-				},
-				"Button14": {
-					"type": "button",
-					"text": "Open the RequestHandler singleton",
-					"top": 740,
-					"left": 410,
-					"width": 300,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button14.4dm",
-					"focusable": false,
-					"fontFamily": "0",
-					"fontSize": 13
-				},
-				"CreateAccount7": {
-					"type": "button",
-					"text": "1- Copy validation email link in pasteboard",
-					"top": 590,
-					"left": 30,
-					"width": 300,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount7.4dm",
-					"focusable": false
-				},
-				"WebArea": {
-					"type": "webArea",
-					"left": 750,
-					"top": 300,
-					"width": 500,
-					"height": 430,
-					"urlSource": "",
-					"webEngine": "embedded",
-					"sizingX": "fixed",
-					"borderStyle": "dotted"
-				},
-				"Text12": {
-					"type": "text",
-					"text": "1.2- Paste this link in a private navigation browser window",
-					"top": 590,
-					"left": 340,
-					"width": 400,
-					"height": 40,
-					"fontStyle": "italic",
-					"fontSize": 16,
-					"fontWeight": "bold",
-					"stroke": "#6495ed"
-				},
-				"CreateAccount6": {
-					"type": "button",
-					"text": "2- Click here to view the saved inventory",
-					"top": 660,
-					"left": 30,
-					"width": 300,
-					"height": 20,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/CreateAccount6.4dm",
-					"focusable": false
-				},
-				"SaveProductsLabel": {
-					"type": "text",
-					"text": "Saved inventory",
-					"top": 270,
-					"left": 750,
-					"width": 250,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#6495ed",
-					"visibility": "visible"
-				},
-				"Text21": {
-					"type": "text",
-					"text": "Mail content",
-					"top": 470,
-					"left": 30,
-					"width": 250,
-					"height": 20,
-					"textAlign": "left",
-					"fontWeight": "bold",
-					"fontSize": 18,
-					"stroke": "#696969",
-					"textDecoration": "none"
-				},
-				"Text22": {
-					"type": "text",
-					"text": "---------------------------------------------------------- >",
-					"top": 660,
-					"left": 340,
-					"width": 370,
-					"height": 20
 				}
 			},
 			"entryOrder": [
 				"information5",
-				"Input20",
-				"LBEmails",
-				"CreateAccount5",
-				"Input28",
-				"Button12",
-				"Button14",
-				"CreateAccount7",
-				"WebArea",
-				"CreateAccount6"
+				"Input20"
 			]
 		}
 	],
@@ -363,5 +143,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2749
+	"geometryStamp": 2757
 }

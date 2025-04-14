@@ -2,7 +2,7 @@ Class extends DataClass
 
 
 
-Function create($info : Object) : Text
+exposed Function create($info : Object) : Text
 	
 	var $user : cs:C1710.UsersEntity
 	var $status : Object
@@ -10,8 +10,11 @@ Function create($info : Object) : Text
 	var $notDropped : cs:C1710.EmailsSelection
 	var $mail : cs:C1710.EmailsEntity
 	
+	var $validationMail : Text
+	
+	
 	If (This:C1470.query("email = :1"; $info.email).length>=1)
-		return "An account already exist"
+		Web Form:C1735.setError("An account already exist for this email address")
 	Else 
 		$user:=This:C1470.new()
 		$user.email:=$info.email
@@ -24,13 +27,13 @@ Function create($info : Object) : Text
 		
 		$token:=Session:C1714.createOTP()
 		
-		$notDropped:=ds:C1482.Emails.all().drop()
+		//$notDropped:=ds.Emails.all().drop()
 		
-		$mail:=ds:C1482.Emails.new()
-		$mail.link:="127.0.0.1/validateEmail?$4DSID="+$token
-		$mail.subject:="Validate email for "+$info.email
-		$mail.user:=$user
-		$status:=$mail.save()
-		return "OK"
+		//$mail:=ds.Emails.new()
+		$validationMail:="127.0.0.1/validateEmail?$4DSID="+$token
+		//$mail.subject:="Validate email for "+$info.email
+		//$mail.user:=$user
+		//$status:=$mail.save()
+		return $validationMail
 	End if 
 	

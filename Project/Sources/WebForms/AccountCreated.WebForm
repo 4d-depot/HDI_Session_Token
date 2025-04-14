@@ -195,7 +195,7 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "40%",
+					"width": "600px",
 					"alignItems": "center",
 					"justifyContent": "flex-start"
 				}
@@ -364,54 +364,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"wXZIpNPG3U": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [
-					{
-						"type": "navigation",
-						"id": "1MYzwZdzeiPFs1xeKSHTHc",
-						"events": [
-							"onclick"
-						],
-						"externalLink": false,
-						"loader": "",
-						"parent": "new-tab",
-						"target": "Start",
-						"isHardCoded": true
-					}
-				],
-				"iterableChild": true,
-				"style": {
-					"marginTop": "20px",
-					"textDecorationLine": " underline"
-				},
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Go on authentication",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "IElMrfS4b5",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"aCMEbenzcg": {
 			"type": {
 				"resolvedName": "StyleBox"
@@ -488,8 +440,7 @@
 			"parent": "aCMEbenzcg",
 			"hidden": false,
 			"nodes": [
-				"xOO79S1WQU",
-				"wXZIpNPG3U"
+				"xOO79S1WQU"
 			],
 			"linkedNodes": {}
 		},

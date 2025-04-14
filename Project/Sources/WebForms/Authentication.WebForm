@@ -313,7 +313,8 @@
 				"intervals": [],
 				"datasource": "Authentication:credentials.email",
 				"dataType": "object",
-				"style": {}
+				"style": {},
+				"eyePosition": "right"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -499,7 +500,8 @@
 				"dataType": "object",
 				"revealPassword": true,
 				"intervals": [],
-				"style": {}
+				"style": {},
+				"eyePosition": "right"
 			},
 			"displayName": "Input",
 			"custom": {

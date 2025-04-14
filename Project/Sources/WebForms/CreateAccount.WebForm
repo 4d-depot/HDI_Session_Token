@@ -1,7 +1,15 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [],
+		"datasources": [
+			{
+				"id": "validationLink",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": ""
+			}
+		],
 		"styles": [
 			{
 				"name": "sign-in",
@@ -21,6 +29,33 @@
 				"parentId": null,
 				"id": "AoToQjuef17JacX9rEn0v"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "ToValidate",
+				"id": "efMYgQuksmxJogK8DTrvYP",
+				"conditions": {
+					"id": "1HcxYUfEqrDKJgxqT3FUtt",
+					"type": "datasource",
+					"name": "condition",
+					"value": "",
+					"valueType": "hardCoded",
+					"path": "validationLink",
+					"dsType": "string",
+					"op": "neq"
+				}
+			},
+			{
+				"label": "Default",
+				"id": "oxLT2iqxmuHGjVfe1xYzf4"
+			}
+		],
+		"defaultStates": [
+			"oxLT2iqxmuHGjVfe1xYzf4"
 		]
 	},
 	"components": {
@@ -151,7 +186,7 @@
 				"events": [],
 				"iterableChild": true,
 				"style": {
-					"width": "550px",
+					"width": "80%",
 					"paddingTop": "0px",
 					"paddingRight": "0px",
 					"paddingBottom": "0px",
@@ -160,8 +195,7 @@
 					"marginRight": "0px",
 					"marginBottom": "0px",
 					"marginLeft": "0px",
-					"minWidth": "450px",
-					"maxWidth": "550px"
+					"minWidth": "550px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -198,7 +232,8 @@
 					"marginTop": "6px",
 					"marginBottom": "6px",
 					"paddingTop": "40px",
-					"paddingBottom": "40px"
+					"paddingBottom": "40px",
+					"gap": "20px"
 				},
 				"classNames": [
 					"lightMode"
@@ -219,7 +254,8 @@
 				"VHv3iuzWRM",
 				"fFBZE8W3Tu",
 				"u1UCvlwwvh",
-				"KGi9ZI7iRF"
+				"zRppl8DmTc",
+				"7M1oIPjQSE"
 			],
 			"linkedNodes": {}
 		},
@@ -308,7 +344,6 @@
 				"moveable": false,
 				"text": "Email Address",
 				"style": {
-					"color": "#666682",
 					"textAlign": "end",
 					"width": "250px"
 				},
@@ -336,7 +371,8 @@
 				"revealPassword": true,
 				"intervals": [],
 				"datasource": "Authentication:credentials.email",
-				"dataType": "object"
+				"dataType": "object",
+				"eyePosition": "right"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -407,7 +443,6 @@
 				"deletable": true,
 				"text": "Password",
 				"style": {
-					"color": "#666682",
 					"textAlign": "end",
 					"width": "250px"
 				}
@@ -434,7 +469,8 @@
 				"datasource": "Authentication:credentials.password",
 				"dataType": "object",
 				"revealPassword": true,
-				"intervals": []
+				"intervals": [],
+				"eyePosition": "right"
 			},
 			"displayName": "Input",
 			"custom": {
@@ -458,25 +494,25 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "DataStore",
+						"dataclass": "Users",
 						"events": [
 							"onclick"
 						],
-						"id": "3kuMsuogWrrYx2crgDRfx3",
-						"method": "ds.createAccount",
+						"id": "xe4HsmqfiD59gnLpScMcHj",
+						"method": "ds.Users.create",
 						"params": [
 							{
-								"name": "credentials",
+								"name": "info",
 								"type": "Object",
 								"datasource": "Authentication:credentials",
-								"id": "9vE2oZkfsEQY9bzYn6wgMA"
+								"id": "nWHgCBNdpDQJcCTpKR2QfB"
 							}
 						],
 						"datasource": "",
 						"returns": {
 							"name": "result",
 							"type": "Text",
-							"datasource": "Authentication:target"
+							"datasource": "validationLink"
 						},
 						"feedback": true
 					}
@@ -512,65 +548,6 @@
 			"displayName": "Icon",
 			"custom": {},
 			"parent": "u1UCvlwwvh",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"KGi9ZI7iRF": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [
-					{
-						"type": "simple-action",
-						"id": "uPaUhjX7YEvjPg1VcEhxLe",
-						"events": [
-							"onclick"
-						],
-						"action": "set",
-						"actionType": "datasource",
-						"datasource": {
-							"name": "target",
-							"type": "scalar",
-							"from": "",
-							"namespace": "Authentication",
-							"dataType": "string",
-							"target": "Au",
-							"targetNamespace": "",
-							"targetType": "unknown",
-							"set": {
-								"value": "Authentication",
-								"type": "string"
-							}
-						}
-					}
-				],
-				"iterableChild": true,
-				"style": {
-					"marginTop": "20px",
-					"textDecorationLine": " underline"
-				},
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Back to authentication",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "8JtrzsN4fh",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -739,7 +716,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "(See the createQodlyUser() function in the Users dataclass.)"
+								"text": "(See the create() function in the Users dataclass.)"
 							}
 						]
 					},
@@ -763,7 +740,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "An email sending is simulated."
+								"text": "An email sending is simulated by displaying the account validation link."
 							}
 						]
 					},
@@ -787,7 +764,33 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Go back the 4D demo to get the email validation link."
+								"text": "Copy this link thanks to the tooltip and paste it in a "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "private navigation window"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " of your browser (or in another browser)."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
 							}
 						]
 					},
@@ -818,7 +821,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " If trying to create an already existing account, there is an error message."
+								"text": " If you try to create an already existing account, there is an error message."
 							}
 						]
 					}
@@ -920,6 +923,268 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "SAtBRhjsR_",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"7M1oIPjQSE": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"alignItems": "center",
+					"gap": "20px",
+					"flexDirection": "column",
+					"justifyContent": "flex-start",
+					"borderWidth": "1px",
+					"marginTop": "30px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {
+				"states:oxLT2iqxmuHGjVfe1xYzf4": {
+					"style": {
+						"display": "none"
+					}
+				},
+				"states:efMYgQuksmxJogK8DTrvYP": {
+					"style": {
+						"display": "flex"
+					}
+				}
+			},
+			"parent": "8JtrzsN4fh",
+			"hidden": false,
+			"nodes": [
+				"5iOFUKT2ID",
+				"v0As64Y4s0",
+				"LDkmwYbgrf"
+			],
+			"linkedNodes": {}
+		},
+		"v0As64Y4s0": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [
+					{
+						"type": "navigation",
+						"id": "rqBTkbJFSvcdc4KXXKgncG",
+						"events": [
+							"onclick"
+						],
+						"externalLink": true,
+						"parent": "new-tab",
+						"isHardCoded": false,
+						"target": "linkOK"
+					}
+				],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							},
+							{
+								"type": "datasource",
+								"datasource": "validationLink",
+								"children": [
+									{
+										"italic": false,
+										"underlined": true,
+										"strikethrough": false,
+										"text": "xxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "validationLink",
+				"style": {
+					"color": "#cc75ca "
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "7M1oIPjQSE",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"LDkmwYbgrf": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Utilities",
+						"events": [
+							"onclick"
+						],
+						"id": "8r66SjS4e88Vzs1Bor7SJb",
+						"method": "Utilities.copyContent",
+						"params": [
+							{
+								"name": "link",
+								"type": "Text",
+								"datasource": "validationLink",
+								"id": "6RFbsJv7ND9eqeAc9NfMK8"
+							}
+						],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						},
+						"feedback": true
+					}
+				],
+				"iterableChild": true,
+				"style": {
+					"backgroundColor": "#226aa4",
+					"width": "40px",
+					"height": "40px",
+					"borderRadius": "50%",
+					"color": "#ffffffff",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "7M1oIPjQSE",
+			"hidden": false,
+			"nodes": [
+				"_4him-vFSS"
+			],
+			"linkedNodes": {}
+		},
+		"_4him-vFSS": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-copy",
+				"style": {
+					"fontSize": "20px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "LDkmwYbgrf",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"5iOFUKT2ID": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Account validation link",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": ""
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "7M1oIPjQSE",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"zRppl8DmTc": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [
+					{
+						"type": "simple-action",
+						"id": "wJJpMAR3N5Qwrfb8a2sMqS",
+						"events": [
+							"onclick"
+						],
+						"action": "set",
+						"actionType": "datasource",
+						"datasource": {
+							"name": "target",
+							"type": "scalar",
+							"from": "",
+							"namespace": "Authentication",
+							"dataType": "string",
+							"target": "Authentication",
+							"targetNamespace": "",
+							"targetType": "unknown",
+							"set": {
+								"value": "Authentication",
+								"type": "string"
+							}
+						}
+					}
+				],
+				"iterableChild": true,
+				"style": {
+					"marginTop": "20px",
+					"textDecorationLine": " underline"
+				},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Go back on authentication",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": ""
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "8JtrzsN4fh",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
