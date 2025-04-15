@@ -29,18 +29,4 @@ exposed Function authentify($credentials : Object) : Text
 	
 	
 	
-	//exposed Function createAccount($credentials : Object) : Text
 	
-	//var $result : Text
-	
-	
-	//$result:=ds.Users.create($credentials)
-	
-	//If ($result="OK")
-	//Session.setPrivileges("")
-	//Web Form.setMessage("Account created - Go back to 4D to check the emails")
-	//Else 
-	//Web Form.setError($result)
-	//End if 
-	
-	//return "CreateAccount"

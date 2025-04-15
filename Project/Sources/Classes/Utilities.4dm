@@ -16,7 +16,7 @@ exposed Function registerInventory($inventory : cs:C1710.ProductsSelection) : Te
 	
 	$token:=Session:C1714.createOTP()
 	
-	$callBackURL:="http://127.0.0.1/callBack?state="+$token
+	$callBackURL:="http://127.0.0.1/retrieveProducts?state="+$token
 	
 	return $callBackURL
 	

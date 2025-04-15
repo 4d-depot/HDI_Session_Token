@@ -24,5 +24,38 @@
 			"dataType": "string",
 			"initialValue": ""
 		}
+	],
+	"Qodly": [
+		{
+			"id": "Location",
+			"dataType": "object",
+			"type": "scalar",
+			"namespace": "Qodly",
+			"initialValue": {
+				"urlQuery": [],
+				"urlPath": {},
+				"Anchor": ""
+			},
+			"schema": {
+				"type": "object",
+				"properties": [
+					{
+						"name": "urlQuery",
+						"type": "array",
+						"initialValue": []
+					},
+					{
+						"name": "urlPath",
+						"type": "object",
+						"initialValue": {}
+					},
+					{
+						"name": "Anchor",
+						"type": "string",
+						"initialValue": ""
+					}
+				]
+			}
+		}
 	]
 }

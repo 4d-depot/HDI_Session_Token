@@ -22,12 +22,6 @@
 				"content": "self {\n  background-color : #ffffffff;\n  color : #666682;\n}",
 				"parentId": null,
 				"id": "DqyTqbssWxMrnZfb5HBFx"
-			},
-			{
-				"name": "cartStyle",
-				"content": "self {\n  background-color : #ffffffff;\n  box-shadow : 0px 0px 6px 0px #00000023;\n  display : flex;\n  flex-direction : column;\n  align-items : start;\n  justify-content : flex-start;\n  gap : 10px;\n  margin-top : 0px;\n  border-width : 1px;\n  border-radius : 20px;\n\t}",
-				"parentId": null,
-				"id": "AoToQjuef17JacX9rEn0v"
 			}
 		],
 		"states": [
@@ -342,7 +336,7 @@
 			"props": {
 				"events": [],
 				"moveable": false,
-				"text": "Email Address",
+				"text": "Email address",
 				"style": {
 					"textAlign": "end",
 					"width": "250px"
@@ -760,6 +754,42 @@
 						"type": "paragraph",
 						"children": [
 							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "This link contains a "
+							},
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "$4DSID",
+								"bold": true
+							},
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " parameter which allows to retrieve THIS Qodly session and to go on with the account creation process. "
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -822,6 +852,18 @@
 								"underlined": false,
 								"strikethrough": false,
 								"text": " If you try to create an already existing account, there is an error message."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
 							}
 						]
 					}
@@ -942,7 +984,8 @@
 					"flexDirection": "column",
 					"justifyContent": "flex-start",
 					"borderWidth": "1px",
-					"marginTop": "30px"
+					"marginTop": "30px",
+					"borderRadius": "15px"
 				}
 			},
 			"displayName": "Stylebox",

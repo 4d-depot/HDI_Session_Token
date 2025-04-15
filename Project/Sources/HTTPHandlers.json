@@ -3,14 +3,12 @@
     "class": "RequestHandler",
     "method": "validateEmail",
     "verbs": "GET",
-    "id": "kCS4vxTocoE5bGPj9fVHEe",
     "regexPattern": "/validateEmail"
   },
   {
     "class": "RequestHandler",
-    "method": "handleCallBack",
+    "method": "handleProducts",
     "verbs": "GET",
-    "id": "7UPhAQwAMSqzW9hPUee9UP",
-    "regexPattern": "/callBack"
+    "regexPattern": "/retrieveProducts"
   }
 ]

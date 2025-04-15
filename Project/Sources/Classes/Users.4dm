@@ -27,13 +27,6 @@ exposed Function create($info : Object) : Text
 		
 		$token:=Session:C1714.createOTP()
 		
-		//$notDropped:=ds.Emails.all().drop()
-		
-		//$mail:=ds.Emails.new()
-		$validationMail:="127.0.0.1/validateEmail?$4DSID="+$token
-		//$mail.subject:="Validate email for "+$info.email
-		//$mail.user:=$user
-		//$status:=$mail.save()
-		return $validationMail
+		return "127.0.0.1/validateEmail?$4DSID="+$token
 	End if 
 	

@@ -43,12 +43,6 @@
 				"content": "self .FdVirtualGrid > div .selected {\n\nbackground-color: #d2e2f9;\n\nborder-radius : 15px;\n\n}",
 				"parentId": null,
 				"id": "UJA4pUXm3HY6nOYgQMcoh"
-			},
-			{
-				"name": "buttonHoverEffect",
-				"content": "self {\n  border: 2px solid currentColor;\n  border-radius: 3rem;\n  color: #226aa4;\n  font-family: roboto;\n  font-size: 1rem;\n  font-weight: 300;\n  overflow: hidden;\n  padding: 1rem 2rem;\n  position: relative;\n  text-decoration: none;\n  transition: .2s transform ease-in-out;\n  will-change: transform;\n  z-index: 0;\n  background-color: transparent;\n}\n\nself::after {\n  background-color: #226aa4;\n\tcolor: white;\n  border-radius: 2rem;\n  content: '';\n  display: block;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  transform: translate(-100%, 0) rotate(10deg);\n  transform-origin: top left;\n  transition: .2s transform ease-out;\n  will-change: transform;\n  z-index: -1;\n}\n\nself:hover::after {\n\n  transform: translate(0, 0);\n}\n\nself:hover {\n\tcolor: white;\n  border: 2px solid transparent;\n  transform: scale(1.05);\n  will-change: transform;\n}",
-				"parentId": null,
-				"id": "A7ydKIaqj-XvU1TecPyol"
 			}
 		],
 		"states": [
@@ -388,7 +382,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "- a link to retrieve products is displayed"
+								"text": "- a link to retrieve the products is displayed"
 							}
 						]
 					},
@@ -418,7 +412,7 @@
 								"text": "http://127.0.0.1"
 							},
 							{
-								"text": "/callBack?state=",
+								"text": "/retrieveProducts?state=",
 								"bold": true
 							},
 							{
@@ -446,7 +440,7 @@
 								"text": "The"
 							},
 							{
-								"text": " /callBack",
+								"text": " /retrieveProducts",
 								"bold": true
 							},
 							{
@@ -457,7 +451,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "handleCallBack"
+								"text": "handleProducts"
 							},
 							{
 								"bold": false,
@@ -501,7 +495,7 @@
 								"bold": true
 							},
 							{
-								"text": " parameter contains the OTP."
+								"text": " parameter given in the link contains the OTP."
 							}
 						]
 					},
@@ -524,7 +518,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "handleCallBack"
+								"text": "handleProducts"
 							},
 							{
 								"bold": false,
@@ -545,7 +539,31 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " singleton is abled to retrieve the session with the stored products."
+								"text": " singleton is able to retrieve the session with the stored products."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Copy this link thanks to the tooltip and paste it in another browser."
 							}
 						]
 					}
@@ -563,7 +581,351 @@
 				"iterableChild": true
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"states:v9xiXGF4cRHDsbrhLNpPCC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "1-",
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " Select some products to add them in the inventory."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "2-"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " Click on the "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "Register"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " button"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "When clicking on this button:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "- the selected products are stored in the "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "session"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "- an OTP corresponding to the session is generated"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "- a link to retrieve the products is displayed"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "This link is: "
+								},
+								{
+									"text": "http://127.0.0.1"
+								},
+								{
+									"text": "/retrieveProducts?state=",
+									"bold": true
+								},
+								{
+									"text": "OTPValue",
+									"italic": true
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "The"
+								},
+								{
+									"text": " /retrieveProducts",
+									"bold": true
+								},
+								{
+									"text": " prefix is handled in the HTTP request handlers of this demo and triggers the "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "handleProducts"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " function of the "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "RequestHandler"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " singleton."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "The "
+								},
+								{
+									"text": "state",
+									"bold": true
+								},
+								{
+									"text": " parameter given in the link contains the OTP."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Thanks to this parameter, the "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "handleProducts"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " function of the "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "RequestHandler"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " singleton is abled to retrieve THIS session with the stored products."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "Copy this link thanks to the tooltip and paste it in a "
+								},
+								{
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "private navigation window"
+								},
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": " of your browser (or in another browser)."
+								}
+							]
+						}
+					],
+					"datasource": ""
+				}
+			},
 			"parent": "wPYJiG6o0V",
 			"hidden": false,
 			"nodes": [],
@@ -687,7 +1049,11 @@
 				"iterableChild": true
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"states:v9xiXGF4cRHDsbrhLNpPCC": {
+					"disabled": true
+				}
+			},
 			"parent": "hWicpcIVPt",
 			"hidden": false,
 			"nodes": [],
@@ -1858,7 +2224,8 @@
 				},
 				"states:v9xiXGF4cRHDsbrhLNpPCC": {
 					"style": {
-						"display": "flex"
+						"display": "flex",
+						"borderRadius": "15px"
 					}
 				}
 			},

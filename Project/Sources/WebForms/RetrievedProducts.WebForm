@@ -3,38 +3,12 @@
 		"v": "1.0",
 		"datasources": [
 			{
-				"id": "products",
-				"type": "entitysel",
-				"dataclass": "Products",
-				"namespace": "",
-				"initialValue": "all",
-				"depth": null,
-				"pageSize": 100
-			},
-			{
-				"id": "theProduct",
-				"type": "entity",
-				"dataclass": "Products",
-				"from": "products",
-				"namespace": "",
-				"initialValue": "first",
-				"depth": null
-			},
-			{
 				"id": "inventory",
 				"type": "entitysel",
 				"dataclass": "Products",
-				"namespace": "",
-				"initialValue": "",
+				"initialValue": "all",
 				"depth": null,
 				"pageSize": 100
-			},
-			{
-				"id": "restoreInventoryLink",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "string",
-				"initialValue": ""
 			}
 		],
 		"styles": [
@@ -43,48 +17,9 @@
 				"content": "self .FdVirtualGrid > div .selected {\n\nbackground-color: #d2e2f9;\n\nborder-radius : 15px;\n\n}",
 				"parentId": null,
 				"id": "UJA4pUXm3HY6nOYgQMcoh"
-			},
-			{
-				"name": "buttonHoverEffect",
-				"content": "self {\n  border: 2px solid currentColor;\n  border-radius: 3rem;\n  color: #226aa4;\n  font-family: roboto;\n  font-size: 1rem;\n  font-weight: 300;\n  overflow: hidden;\n  padding: 1rem 2rem;\n  position: relative;\n  text-decoration: none;\n  transition: .2s transform ease-in-out;\n  will-change: transform;\n  z-index: 0;\n  background-color: transparent;\n}\n\nself::after {\n  background-color: #226aa4;\n\tcolor: white;\n  border-radius: 2rem;\n  content: '';\n  display: block;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  transform: translate(-100%, 0) rotate(10deg);\n  transform-origin: top left;\n  transition: .2s transform ease-out;\n  will-change: transform;\n  z-index: -1;\n}\n\nself:hover::after {\n\n  transform: translate(0, 0);\n}\n\nself:hover {\n\tcolor: white;\n  border: 2px solid transparent;\n  transform: scale(1.05);\n  will-change: transform;\n}",
-				"parentId": null,
-				"id": "A7ydKIaqj-XvU1TecPyol"
 			}
 		],
-		"states": [
-			{
-				"label": "EnableRegistering",
-				"id": "q28TSGDWkFvxahBEkn1sCR",
-				"conditions": {
-					"id": "tXTVCqZrXntxvuvevbJXSz",
-					"type": "datasource",
-					"name": "condition",
-					"value": "",
-					"valueType": "hardCoded",
-					"path": "inventory",
-					"dsType": "entitysel",
-					"op": "notnull"
-				}
-			},
-			{
-				"label": "Default",
-				"id": "r78zff6sk2iX6xqHCc9qKC"
-			},
-			{
-				"label": "RestoreInventory",
-				"id": "v9xiXGF4cRHDsbrhLNpPCC",
-				"conditions": {
-					"id": "fitvt52vjgjC6RZaCmfN6E",
-					"type": "datasource",
-					"name": "condition",
-					"value": "",
-					"valueType": "hardCoded",
-					"path": "restoreInventoryLink",
-					"dsType": "string",
-					"op": "neq"
-				}
-			}
-		],
+		"states": [],
 		"defaultStates": [
 			"r78zff6sk2iX6xqHCc9qKC"
 		]

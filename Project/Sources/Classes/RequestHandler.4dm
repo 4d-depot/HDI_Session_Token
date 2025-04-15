@@ -29,7 +29,7 @@ Function validateEmail() : 4D:C1709.OutgoingMessage
 	return $result
 	
 	
-Function handleCallBack($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
+Function handleProducts($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
 	
 	var $otp : Text
 	var $restore : Boolean
@@ -46,14 +46,6 @@ Function handleCallBack($request : 4D:C1709.IncomingMessage) : 4D:C1709.Outgoing
 	
 	return $result
 	
-	
-Function restoreInventory($request : 4D:C1709.IncomingMessage)
-	var $result:=4D:C1709.OutgoingMessage.new()
-	
-	$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=InventoryReminder")
-	$result.setStatus(302)
-	
-	return $result
 	
 	
 	

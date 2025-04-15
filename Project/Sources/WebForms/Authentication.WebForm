@@ -1,17 +1,7 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [
-			{
-				"id": "getSessionIdCredentials",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "object",
-				"initialValue": {
-					"getSessionId": true
-				}
-			}
-		],
+		"datasources": [],
 		"styles": [
 			{
 				"name": "sign-in",
