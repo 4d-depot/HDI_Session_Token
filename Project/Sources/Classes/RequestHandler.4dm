@@ -37,8 +37,6 @@ Function handleProducts($request : 4D:C1709.IncomingMessage) : 4D:C1709.Outgoing
 	
 	$otp:=$request.urlQuery.state
 	
-	TRACE:C157
-	
 	$restore:=Session:C1714.restore($otp)
 	
 	$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=RetrievedProducts")

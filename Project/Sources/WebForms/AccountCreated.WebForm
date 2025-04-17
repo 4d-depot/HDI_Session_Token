@@ -150,7 +150,8 @@
 				"style": {
 					"width": "600px",
 					"alignItems": "center",
-					"justifyContent": "flex-start"
+					"justifyContent": "flex-start",
+					"height": "fit-content"
 				}
 			},
 			"displayName": "Stylebox",
