@@ -74,7 +74,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Congratulations, your account has been created and your email address has been validated!",
+								"text": "Congratulations! Your account has been created, and your email address has been validated!",
 								"bold": true,
 								"italic": false,
 								"underlined": false,
@@ -228,7 +228,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " parameter contained in the validation email URL the previous Qodly session has been retrieved and the account creation process can be completed."
+								"text": " parameter contained in the validation email URL, the previous Qodly session has been retrieved, and the account creation process can be completed."
 							}
 						]
 					},
@@ -250,7 +250,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Note the session ID is indeed the same."
+								"text": "Note that the session ID is indeed the same."
 							}
 						]
 					}

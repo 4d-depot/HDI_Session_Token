@@ -17,11 +17,11 @@ exposed Function authentify($credentials : Object) : Text
 			End use 
 			$result:="Inventory"
 		Else 
-			Web Form:C1735.setError("Wrong credentials. Be sure your have created an account and validated the email")
+			Web Form:C1735.setError("Wrong credentials. Be sure you have created an account and validated the email")
 			$result:="Authentication"
 		End if 
 	Else 
-		Web Form:C1735.setError("Wrong credentials. Be sure your have created an account and validated the email")
+		Web Form:C1735.setError("Wrong credentials. Be sure you have created an account and validated the email")
 		$result:="Authentication"
 	End if 
 	

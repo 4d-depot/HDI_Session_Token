@@ -258,7 +258,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " Select some products to add them in the inventory."
+								"text": " Select some products to add them to the inventory."
 							}
 						]
 					},
@@ -289,7 +289,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " Click on the "
+								"text": " Click the "
 							},
 							{
 								"bold": true,
@@ -327,7 +327,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "When clicking on this button:"
+								"text": "When you click this button:"
 							}
 						]
 					},
@@ -382,7 +382,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "- a link to retrieve the products is displayed"
+								"text": "- a link to retrieve the products will be displayed"
 							}
 						]
 					},
@@ -444,7 +444,7 @@
 								"bold": true
 							},
 							{
-								"text": " prefix is handled in the HTTP request handlers of this demo and triggers the "
+								"text": " prefix is handled by the HTTP request handlers of this demo and triggers the "
 							},
 							{
 								"bold": true,
@@ -563,7 +563,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Copy this link thanks to the tooltip and paste it in another browser."
+								"text": "Copy this link thanks to the tooltip and paste it into another browser."
 							}
 						]
 					}

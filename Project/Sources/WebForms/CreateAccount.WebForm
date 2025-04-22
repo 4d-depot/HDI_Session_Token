@@ -648,7 +648,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Click on the "
+								"text": "Click the "
 							},
 							{
 								"bold": true,
@@ -734,7 +734,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "An email sending is simulated by displaying the account validation link."
+								"text": "Email sending is simulated by displaying the account validation link."
 							}
 						]
 					},
@@ -808,7 +808,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " of your browser (or in another browser)."
+								"text": " of your browser (or in a different browser)."
 							}
 						]
 					},
@@ -851,7 +851,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": " If you try to create an already existing account, there is an error message."
+								"text": " If you try to create an already existing account, an error message will appear."
 							}
 						]
 					},
@@ -1214,7 +1214,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Go back on authentication",
+								"text": "Go back to authentication",
 								"bold": false,
 								"italic": false,
 								"underlined": false,

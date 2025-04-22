@@ -651,7 +651,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Firstly, try entering credentials and click on the",
+								"text": "First, enter credentials and click the",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -693,7 +693,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "It will fail because you must create an account first by clicking on the"
+								"text": "The login will fail because you need to create an account first by clicking the"
 							},
 							{
 								"bold": true,
@@ -731,7 +731,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Secondly, once the account is created, try to log in again."
+								"text": "Next, once the account is created, go back and try logging in again."
 							}
 						]
 					}

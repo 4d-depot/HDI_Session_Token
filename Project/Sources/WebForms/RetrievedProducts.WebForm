@@ -209,7 +209,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "The products stored in the session have been retrieved!"
+								"text": "The products stored in the session have been successfully retrieved!"
 							}
 						]
 					}
@@ -783,7 +783,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "RETRIEVED PRODUCTS",
+								"text": "SUCCESSFULLY RETRIEVED PRODUCTS",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
