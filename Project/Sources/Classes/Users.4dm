@@ -7,10 +7,6 @@ exposed Function create($info : Object) : Text
 	var $user : cs:C1710.UsersEntity
 	var $status : Object
 	var $token : Text
-	var $notDropped : cs:C1710.EmailsSelection
-	var $mail : cs:C1710.EmailsEntity
-	
-	var $validationMail : Text
 	
 	
 	If (This:C1470.query("email = :1"; $info.email).length>=1)

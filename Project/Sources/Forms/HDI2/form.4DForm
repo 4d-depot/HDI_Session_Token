@@ -62,8 +62,8 @@
 					"left": 60,
 					"width": 1100,
 					"height": 600,
-					"sizingX": "grow",
-					"sizingY": "grow",
+					"sizingX": "fixed",
+					"sizingY": "fixed",
 					"dataSource": "Infos[0].Description",
 					"focusable": false,
 					"fill": "transparent",
@@ -82,32 +82,10 @@
 		},
 		{
 			"objects": {
-				"information5": {
-					"type": "input",
-					"top": 70,
-					"left": 60,
-					"width": 1100,
-					"height": 180,
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"dataSource": "Infos[1].Description",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"styledText": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"class": "description"
-				},
 				"Input20": {
 					"type": "input",
 					"left": 60,
-					"top": 250,
+					"top": 130,
 					"width": 400,
 					"height": 30,
 					"enterable": false,
@@ -127,7 +105,6 @@
 				}
 			},
 			"entryOrder": [
-				"information5",
 				"Input20"
 			]
 		}
@@ -143,5 +120,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2757
+	"geometryStamp": 2772
 }

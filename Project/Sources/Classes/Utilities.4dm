@@ -5,10 +5,9 @@ shared singleton Class constructor()
 	
 exposed Function registerInventory($inventory : cs:C1710.ProductsSelection) : Text
 	
-	var $result; $token : Text
-	var $callBackURL; $callExternalAppURL : Text
-	var $requestObj : Object
-	var $request : 4D:C1709.HTTPRequest
+	var $token : Text
+	var $callBackURL : Text
+	
 	
 	Use (Session:C1714.storage)
 		Session:C1714.storage.inventory:=$inventory
