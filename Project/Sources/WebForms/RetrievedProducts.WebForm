@@ -82,7 +82,7 @@
 			"hidden": false,
 			"nodes": [
 				"wPYJiG6o0V",
-				"-fkFZshh9B"
+				"LSG4yK26Z_"
 			],
 			"linkedNodes": {}
 		},
@@ -121,10 +121,9 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "LSG4yK26Z_",
 			"hidden": false,
 			"nodes": [
-				"NBgWzKD9Ym",
 				"-gDhCGp9Jp"
 			],
 			"linkedNodes": {}
@@ -141,10 +140,11 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "600px",
-					"alignItems": "center",
+					"width": "40%",
+					"alignItems": "start",
 					"justifyContent": "flex-start",
-					"height": "fit-content"
+					"height": "fit-content",
+					"marginTop": "45px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -229,65 +229,6 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "wPYJiG6o0V",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"NBgWzKD9Ym": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Session ID",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": ": "
-							},
-							{
-								"type": "datasource",
-								"datasource": "Authentication:sessionId",
-								"children": [
-									{
-										"bold": false,
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false,
-										"text": "xxxx"
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "Authentication:sessionId",
-				"style": {
-					"paddingLeft": "16px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "-fkFZshh9B",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -827,6 +768,111 @@
 			"nodes": [
 				"Ean4nYyU9g"
 			],
+			"linkedNodes": {}
+		},
+		"LSG4yK26Z_": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"paddingTop": "0px",
+					"width": "50%"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"O6FhwxkS3r",
+				"-fkFZshh9B"
+			],
+			"linkedNodes": {}
+		},
+		"O6FhwxkS3r": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"gap": "30px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "LSG4yK26Z_",
+			"hidden": false,
+			"nodes": [
+				"1MoofZRdl6"
+			],
+			"linkedNodes": {}
+		},
+		"1MoofZRdl6": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Session ID",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ": "
+							},
+							{
+								"type": "datasource",
+								"datasource": "Authentication:sessionId",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "Authentication:sessionId",
+				"style": {
+					"paddingLeft": "8px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "O6FhwxkS3r",
+			"hidden": false,
+			"nodes": [],
 			"linkedNodes": {}
 		}
 	}

@@ -107,14 +107,12 @@
 				"iterableChild": true,
 				"style": {
 					"backgroundImage": "url(https://raw.githubusercontent.com/4d/Web-studio-TIPS/gh-build/groups/login/assets/loginBackground.png)",
-					"width": "80%",
 					"height": "100%",
 					"marginTop": "0px",
 					"marginRight": "0px",
 					"marginBottom": "0px",
 					"marginLeft": "0px",
 					"minWidth": "450px",
-					"maxWidth": "550px",
 					"backgroundSize": "cover",
 					"backgroundRepeat": "no-repeat",
 					"minHeight": "100%",
@@ -195,8 +193,7 @@
 					"minWidth": "450px",
 					"display": "flex",
 					"justifyContent": "center",
-					"alignItems": "center",
-					"maxWidth": "550px"
+					"alignItems": "center"
 				}
 			},
 			"displayName": "Stylebox",
@@ -235,7 +232,7 @@
 					"paddingTop": "40px",
 					"paddingBottom": "40px",
 					"gap": "20px",
-					"width": "90%",
+					"width": "100%",
 					"minWidth": "450px"
 				},
 				"classNames": [
@@ -568,7 +565,7 @@
 				],
 				"style": {
 					"alignItems": "center",
-					"width": "600px",
+					"width": "40%",
 					"height": "fit-content",
 					"marginTop": "45px"
 				}
@@ -911,7 +908,8 @@
 					"flexDirection": "column",
 					"width": "50%",
 					"paddingTop": "0px",
-					"height": "fit-content"
+					"height": "fit-content",
+					"minWidth": "470px"
 				}
 			},
 			"displayName": "Stylebox",

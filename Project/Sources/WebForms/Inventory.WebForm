@@ -124,7 +124,7 @@
 			"hidden": false,
 			"nodes": [
 				"wPYJiG6o0V",
-				"-fkFZshh9B"
+				"7L4fde5Fsp"
 			],
 			"linkedNodes": {}
 		},
@@ -163,10 +163,9 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "7L4fde5Fsp",
 			"hidden": false,
 			"nodes": [
-				"NBgWzKD9Ym",
 				"-gDhCGp9Jp"
 			],
 			"linkedNodes": {}
@@ -183,10 +182,11 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "800px",
+					"width": "40%",
 					"alignItems": "center",
 					"justifyContent": "flex-start",
-					"height": "fit-content"
+					"height": "fit-content",
+					"marginTop": "45px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -927,65 +927,6 @@
 				}
 			},
 			"parent": "wPYJiG6o0V",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"NBgWzKD9Ym": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Session ID",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": ": "
-							},
-							{
-								"type": "datasource",
-								"datasource": "Authentication:sessionId",
-								"children": [
-									{
-										"bold": false,
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false,
-										"text": "xxxx"
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "Authentication:sessionId",
-				"style": {
-					"paddingLeft": "16px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "-fkFZshh9B",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -2399,6 +2340,112 @@
 			"parent": "uxoWJyazv7",
 			"hidden": false,
 			"nodes": [],
+			"linkedNodes": {}
+		},
+		"6cFAh4LTuw": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"gap": "30px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "7L4fde5Fsp",
+			"hidden": false,
+			"nodes": [
+				"jBFekgdcOs"
+			],
+			"linkedNodes": {}
+		},
+		"jBFekgdcOs": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Session ID",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ": "
+							},
+							{
+								"type": "datasource",
+								"datasource": "Authentication:sessionId",
+								"children": [
+									{
+										"bold": false,
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "Authentication:sessionId",
+				"style": {
+					"paddingLeft": "8px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "6cFAh4LTuw",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"7L4fde5Fsp": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"paddingTop": "0px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"6cFAh4LTuw",
+				"-fkFZshh9B"
+			],
 			"linkedNodes": {}
 		}
 	}

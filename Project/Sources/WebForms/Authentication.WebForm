@@ -73,7 +73,6 @@
 				"iterableChild": true,
 				"style": {
 					"backgroundImage": "url(https://raw.githubusercontent.com/4d/Web-studio-TIPS/gh-build/groups/login/assets/loginBackground.png)",
-					"width": "80%",
 					"height": "100%",
 					"marginTop": "0px",
 					"marginRight": "0px",
@@ -87,7 +86,8 @@
 					"borderWidth": "1px",
 					"borderRadius": "20px",
 					"justifyContent": "center",
-					"alignItems": "center"
+					"alignItems": "center",
+					"minWidth": "450px"
 				},
 				"classNames": []
 			},
@@ -120,7 +120,6 @@
 					"marginBottom": "0px",
 					"marginLeft": "0px",
 					"minWidth": "450px",
-					"maxWidth": "550px",
 					"display": "flex",
 					"justifyContent": "center",
 					"alignItems": "center"
@@ -151,8 +150,8 @@
 				"iterableChild": true,
 				"style": {
 					"borderRadius": "20px",
-					"paddingLeft": "70px",
-					"paddingRight": "70px",
+					"paddingLeft": "20px",
+					"paddingRight": "20px",
 					"display": "flex",
 					"justifyContent": "center",
 					"flexDirection": "column",
@@ -161,7 +160,7 @@
 					"marginBottom": "6px",
 					"paddingTop": "40px",
 					"paddingBottom": "40px",
-					"width": "80%",
+					"width": "100%",
 					"minWidth": "450px"
 				},
 				"classNames": [
@@ -562,7 +561,7 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "600px",
+					"width": "30%",
 					"alignItems": "center",
 					"height": "fit-content",
 					"marginTop": "45px"
@@ -743,7 +742,8 @@
 					"display": "flex",
 					"flexDirection": "column",
 					"paddingTop": "0px",
-					"height": "fit-content"
+					"height": "fit-content",
+					"minWidth": "470px"
 				}
 			},
 			"displayName": "Stylebox",
