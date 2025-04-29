@@ -32,7 +32,10 @@
 					}
 				],
 				"airyMode": false,
-				"className": "bg-white h-full w-full px-6"
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"paddingLeft": "10px"
+				}
 			},
 			"displayName": "Page",
 			"custom": {},
