@@ -1,8 +1,8 @@
 # HDI_Template_20
 
-Description (4D 20 Rx)
+Restore a web session with a token (OTP) 
 
-Find more information on the [blog post](https://blog.4d.com/).
+Find more information on the [blog post](https://blog.4d.com/connect-your-web-apps-to-third-party-systems).
 
 ## Installing and Using a 4D Project
 
