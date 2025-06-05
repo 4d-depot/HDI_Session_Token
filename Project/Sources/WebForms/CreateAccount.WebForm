@@ -60,25 +60,7 @@
 			"isCanvas": true,
 			"props": {
 				"classNames": [],
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"oninit"
-						],
-						"id": "ufNJ6WzcfRS5K144GNrKrZ",
-						"method": "Utilities.getSessionId",
-						"params": [],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "Text",
-							"datasource": "Authentication:sessionId"
-						}
-					}
-				],
+				"events": [],
 				"airyMode": false,
 				"className": "bg-white h-full w-full px-6",
 				"style": {
@@ -494,21 +476,31 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "Users",
+						"dataclass": "DataStore",
 						"events": [
 							"onclick"
 						],
-						"id": "xe4HsmqfiD59gnLpScMcHj",
-						"method": "ds.Users.create",
+						"id": "jNaVwXr5tXUktMK3qZeTWd",
+						"method": "ds.authentify",
 						"params": [
 							{
-								"name": "info",
+								"name": "credentials",
 								"type": "Object",
 								"datasource": "Authentication:credentials",
-								"id": "nWHgCBNdpDQJcCTpKR2QfB"
+								"id": "8To4zVndX1srCtiCQxkgBq"
+							},
+							{
+								"name": "what",
+								"type": "Text",
+								"datasource": "",
+								"id": "9vh1s7CJnqw1pedxX7MwKk",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "CreateAccount"
 							}
 						],
 						"datasource": "",
+						"allowedOnHTTPGET": false,
 						"returns": {
 							"name": "result",
 							"type": "Text",
@@ -567,7 +559,7 @@
 					"alignItems": "center",
 					"width": "40%",
 					"height": "fit-content",
-					"marginTop": "45px"
+					"marginTop": "0px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -694,7 +686,21 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "The user account is created and an OTP is generated for this session."
+								"text": "The user account is created and an "
+							},
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "OTP"
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " is generated for this session."
 							}
 						]
 					},
@@ -802,7 +808,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "Copy this link thanks to the tooltip and paste it in a "
+								"text": "Copy this link and paste it in a "
 							},
 							{
 								"bold": true,
@@ -889,7 +895,9 @@
 				"iterableChild": true
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"__t": {}
+			},
 			"parent": "FMmqwD5oqf",
 			"hidden": false,
 			"nodes": [],
@@ -917,7 +925,6 @@
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [
-				"Q0LnvugqqJ",
 				"zvB6phUBKy"
 			],
 			"linkedNodes": {}
@@ -959,8 +966,7 @@
 			"hidden": false,
 			"nodes": [
 				"5iOFUKT2ID",
-				"v0As64Y4s0",
-				"LDkmwYbgrf"
+				"v0As64Y4s0"
 			],
 			"linkedNodes": {}
 		},
@@ -970,19 +976,7 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"events": [
-					{
-						"type": "navigation",
-						"id": "rqBTkbJFSvcdc4KXXKgncG",
-						"events": [
-							"onclick"
-						],
-						"externalLink": true,
-						"parent": "new-tab",
-						"isHardCoded": false,
-						"target": "linkOK"
-					}
-				],
+				"events": [],
 				"iterableChild": true,
 				"doc": [
 					{
@@ -997,7 +991,6 @@
 								"children": [
 									{
 										"italic": false,
-										"underlined": true,
 										"strikethrough": false,
 										"text": "xxx"
 									}
@@ -1017,81 +1010,10 @@
 				}
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"__t": {}
+			},
 			"parent": "7M1oIPjQSE",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"LDkmwYbgrf": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"onclick"
-						],
-						"id": "8r66SjS4e88Vzs1Bor7SJb",
-						"method": "Utilities.copyContent",
-						"params": [
-							{
-								"name": "link",
-								"type": "Text",
-								"datasource": "validationLink",
-								"id": "6RFbsJv7ND9eqeAc9NfMK8"
-							}
-						],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
-						},
-						"feedback": true
-					}
-				],
-				"iterableChild": true,
-				"style": {
-					"backgroundColor": "#226aa4",
-					"width": "40px",
-					"height": "40px",
-					"borderRadius": "50%",
-					"color": "#ffffffff",
-					"display": "flex",
-					"justifyContent": "center",
-					"alignItems": "center"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "7M1oIPjQSE",
-			"hidden": false,
-			"nodes": [
-				"_4him-vFSS"
-			],
-			"linkedNodes": {}
-		},
-		"_4him-vFSS": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"icon": "fa-regular fa-copy",
-				"style": {
-					"fontSize": "20px"
-				}
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"parent": "LDkmwYbgrf",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
@@ -1146,7 +1068,7 @@
 							"name": "target",
 							"type": "scalar",
 							"from": "",
-							"namespace": "Authentication",
+							"namespace": "Navigation",
 							"dataType": "string",
 							"target": "Authentication",
 							"targetNamespace": "",
@@ -1182,86 +1104,6 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "8JtrzsN4fh",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"Q0LnvugqqJ": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"display": "flex",
-					"alignItems": "center"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "SAtBRhjsR_",
-			"hidden": false,
-			"nodes": [
-				"lDIK8HFE0K"
-			],
-			"linkedNodes": {}
-		},
-		"lDIK8HFE0K": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Session ID",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": ": "
-							},
-							{
-								"type": "datasource",
-								"datasource": "Authentication:sessionId",
-								"children": [
-									{
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false,
-										"text": "xxxx"
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "Authentication:sessionId",
-				"style": {
-					"paddingLeft": "8px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "Q0LnvugqqJ",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

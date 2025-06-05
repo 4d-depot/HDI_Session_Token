@@ -3,12 +3,6 @@
     "class": "RequestHandler",
     "method": "validateEmail",
     "verbs": "GET",
-    "regexPattern": "/validateEmail"
-  },
-  {
-    "class": "RequestHandler",
-    "method": "handleProducts",
-    "verbs": "GET",
-    "regexPattern": "/retrieveProducts"
+    "regexPattern": "/validateAccount"
   }
 ]

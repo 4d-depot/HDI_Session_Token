@@ -1,13 +1,6 @@
 {
 	"Authentication": [
 		{
-			"id": "target",
-			"type": "scalar",
-			"namespace": "Authentication",
-			"dataType": "string",
-			"initialValue": "Authentication"
-		},
-		{
 			"id": "credentials",
 			"type": "scalar",
 			"namespace": "Authentication",
@@ -26,6 +19,13 @@
 		}
 	],
 	"Qodly": [
+		{
+			"id": "Title",
+			"dataType": "string",
+			"type": "scalar",
+			"namespace": "Qodly",
+			"initialValue": ""
+		},
 		{
 			"id": "Location",
 			"dataType": "object",
@@ -81,6 +81,15 @@
 					}
 				]
 			}
+		}
+	],
+	"Navigation": [
+		{
+			"id": "target",
+			"type": "scalar",
+			"namespace": "Navigation",
+			"dataType": "string",
+			"initialValue": "Authentication"
 		}
 	]
 }

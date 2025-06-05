@@ -19,6 +19,8 @@ Function validateEmail() : 4D:C1709.OutgoingMessage
 			Session:C1714.storage.status.step:="Email validated"
 		End use 
 		
+		Session:C1714.setPrivileges("")
+		
 		$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=AccountCreated")
 		$result.setStatus(302)
 		
@@ -28,21 +30,6 @@ Function validateEmail() : 4D:C1709.OutgoingMessage
 	
 	return $result
 	
-	
-Function handleProducts($request : 4D:C1709.IncomingMessage) : 4D:C1709.OutgoingMessage
-	
-	var $otp : Text
-	var $restore : Boolean
-	var $result:=4D:C1709.OutgoingMessage.new()
-	
-	$otp:=$request.urlQuery.state
-	
-	$restore:=Session:C1714.restore($otp)
-	
-	$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=RetrievedProducts")
-	$result.setStatus(302)
-	
-	return $result
 	
 	
 	

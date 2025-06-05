@@ -39,7 +39,6 @@
 	<table name="Products" uuid="27029C80535B47ADBE593D55282648F4" id="3">
 		<field name="ID" uuid="26D0FE50090847408413D9D691DF3137" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="name" uuid="758101F7B7574B769A62D617CAAAABF5" type="10" limiting_length="255" never_null="true" id="2"/>
-		<field name="description" uuid="55D20CA37CF342F09BBE9CEEF4609B29" type="10" limiting_length="255" never_null="true" id="3"/>
 		<field name="price" uuid="6DF50E748FB64A2CA54B51309ABE73CF" type="6" never_null="true" id="4"/>
 		<field name="picture" uuid="7D74854963C04A358C1DC1C21BF9F9EC" type="12" never_null="true" id="5"/>
 		<primary_key field_name="ID" field_uuid="26D0FE50090847408413D9D691DF3137"/>

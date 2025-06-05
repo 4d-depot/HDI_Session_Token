@@ -15,19 +15,52 @@
 				"events": [
 					{
 						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"oninit"
+						],
+						"id": "x9sstdofzPForQ3BLyS1RY",
+						"method": "ds.authentify",
+						"params": [
+							{
+								"name": "info",
+								"type": "Variant",
+								"datasource": "Authentication:credentials",
+								"id": "azt8Nq38B9XJeYm4g1enDQ"
+							},
+							{
+								"name": "what",
+								"type": "Text",
+								"datasource": "getSessionId",
+								"id": "ugDfG7mdjYTrFM8JfhxqRC",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "getSessionId"
+							}
+						],
+						"datasource": "",
+						"allowedOnHTTPGET": false,
+						"returns": {
+							"name": "result",
+							"type": "Text",
+							"datasource": "Authentication:sessionId"
+						}
+					},
+					{
+						"type": "method",
 						"dataclass": "Utilities",
 						"events": [
 							"oninit"
 						],
-						"id": "wVRCJxfNj9ivzGwKK1L3jr",
-						"method": "Utilities.getSessionId",
+						"id": "hsAYGrmbmSpELHfJzQ4eJb",
+						"method": "Utilities.whereToNavigate",
 						"params": [],
 						"datasource": "",
 						"methodType": "singleton",
 						"returns": {
 							"name": "result",
 							"type": "Text",
-							"datasource": "Authentication:sessionId"
+							"datasource": "Navigation:target"
 						}
 					}
 				],
@@ -42,6 +75,7 @@
 			"parent": "",
 			"hidden": false,
 			"nodes": [
+				"7Wz_ftBlRa",
 				"l9QjgHomWl"
 			],
 			"linkedNodes": {}
@@ -53,11 +87,125 @@
 			"isCanvas": false,
 			"props": {
 				"events": [],
-				"datasource": "Authentication:target"
+				"datasource": "Navigation:target"
 			},
 			"displayName": "Page Loader",
 			"custom": {},
 			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"7Wz_ftBlRa": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "kpA4WXFMPUQSAbQJ569H5A",
+						"method": "ds.authentify",
+						"params": [
+							{
+								"name": "info",
+								"type": "Variant",
+								"datasource": "Authentication:credentials",
+								"id": "iSJ7XpVd4csHrMctg7vfSw"
+							},
+							{
+								"name": "what",
+								"type": "Text",
+								"datasource": "getSessionId",
+								"id": "jBv4ajv5VmRJDDCzZbnn6e",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "getSessionId"
+							}
+						],
+						"datasource": "",
+						"allowedOnHTTPGET": false,
+						"returns": {
+							"name": "result",
+							"type": "Text",
+							"datasource": "Authentication:sessionId"
+						}
+					}
+				],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"RQyJZAjjj9"
+			],
+			"linkedNodes": {}
+		},
+		"RQyJZAjjj9": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Session ID",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ": "
+							},
+							{
+								"type": "datasource",
+								"datasource": "Authentication:sessionId",
+								"children": [
+									{
+										"italic": false,
+										"underlined": false,
+										"strikethrough": false,
+										"text": "xxxx"
+									}
+								],
+								"dsType": "string",
+								"format": ""
+							},
+							{
+								"text": ""
+							}
+						]
+					}
+				],
+				"datasource": "Authentication:sessionId",
+				"style": {
+					"paddingLeft": "8px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "7Wz_ftBlRa",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

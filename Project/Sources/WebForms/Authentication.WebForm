@@ -25,26 +25,7 @@
 			"isCanvas": true,
 			"props": {
 				"classNames": [],
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "Utilities",
-						"events": [
-							"oninit",
-							"onload"
-						],
-						"id": "jC3cEzfkiDm4rDacMMJEhS",
-						"method": "Utilities.getSessionId",
-						"params": [],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "result",
-							"type": "Text",
-							"datasource": "Authentication:sessionId"
-						}
-					}
-				],
+				"events": [],
 				"airyMode": false,
 				"className": "bg-white h-full w-full px-6",
 				"style": {
@@ -308,13 +289,22 @@
 								"type": "Object",
 								"datasource": "Authentication:credentials",
 								"id": "fc4suadrweWVbth79YgxTa"
+							},
+							{
+								"name": "what",
+								"type": "Text",
+								"datasource": "Authentify",
+								"id": "rUmkEFDiCEdMHK9YxvXBDK",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "Authentify"
 							}
 						],
 						"datasource": "",
 						"returns": {
 							"name": "result",
 							"type": "Text",
-							"datasource": "Authentication:target"
+							"datasource": "Navigation:target"
 						},
 						"feedback": true
 					}
@@ -376,9 +366,9 @@
 							"name": "target",
 							"type": "scalar",
 							"from": "",
-							"namespace": "Authentication",
+							"namespace": "Navigation",
 							"dataType": "string",
-							"target": "crea",
+							"target": "createAcco",
 							"targetNamespace": "",
 							"targetType": "unknown",
 							"set": {
@@ -563,8 +553,7 @@
 				"style": {
 					"width": "30%",
 					"alignItems": "center",
-					"height": "fit-content",
-					"marginTop": "45px"
+					"height": "fit-content"
 				}
 			},
 			"displayName": "Stylebox",
@@ -751,88 +740,7 @@
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [
-				"3d1xTOClEt",
 				"pYVEioxjsu"
-			],
-			"linkedNodes": {}
-		},
-		"1Nxm1rKSPv": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Session ID",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							},
-							{
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": ": "
-							},
-							{
-								"type": "datasource",
-								"datasource": "Authentication:sessionId",
-								"children": [
-									{
-										"italic": false,
-										"underlined": false,
-										"strikethrough": false,
-										"text": "xxxx"
-									}
-								],
-								"dsType": "string",
-								"format": ""
-							},
-							{
-								"text": ""
-							}
-						]
-					}
-				],
-				"datasource": "Authentication:sessionId",
-				"style": {
-					"paddingLeft": "8px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "3d1xTOClEt",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"3d1xTOClEt": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"display": "flex",
-					"alignItems": "center"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"parent": "YnnNjYOBT2",
-			"hidden": false,
-			"nodes": [
-				"1Nxm1rKSPv"
 			],
 			"linkedNodes": {}
 		},

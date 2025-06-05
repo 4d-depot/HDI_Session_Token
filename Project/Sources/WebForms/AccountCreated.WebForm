@@ -32,7 +32,7 @@
 						"events": [
 							"oninit"
 						],
-						"id": "sEjAfpt4WkNjLQ8LeYqUHQ",
+						"id": "7qjeKzMJuFSRZ6TaYHJsmo",
 						"method": "Utilities.getSessionId",
 						"params": [],
 						"datasource": "",
@@ -48,7 +48,7 @@
 				"className": "bg-white h-full w-full px-6",
 				"style": {
 					"display": "flex",
-					"gap": "20px"
+					"flexDirection": "column"
 				}
 			},
 			"displayName": "Page",
@@ -56,8 +56,8 @@
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"wPYJiG6o0V",
-				"t4j2JM309b"
+				"bzWHRUVMqj",
+				"vH954qZZXY"
 			],
 			"linkedNodes": {}
 		},
@@ -108,10 +108,7 @@
 					}
 				],
 				"datasource": "",
-				"style": {
-					"marginLeft": "40px",
-					"marginTop": "40px"
-				}
+				"style": {}
 			},
 			"displayName": "Text",
 			"custom": {
@@ -133,12 +130,13 @@
 				"style": {
 					"display": "flex",
 					"flexDirection": "column",
-					"gap": "30px"
+					"gap": "30px",
+					"width": "fit-content"
 				}
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "t4j2JM309b",
+			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [
 				"NBgWzKD9Ym"
@@ -178,12 +176,12 @@
 					"alignItems": "center",
 					"justifyContent": "flex-start",
 					"height": "fit-content",
-					"marginTop": "45px"
+					"maxWidth": "60%"
 				}
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "ROOT",
+			"parent": "vH954qZZXY",
 			"hidden": false,
 			"nodes": [
 				"52FE2vVjHz",
@@ -371,7 +369,7 @@
 				"style": {
 					"backgroundImage": "url(https://raw.githubusercontent.com/4d/Web-studio-TIPS/gh-build/groups/login/assets/loginBackground.png)",
 					"width": "100%",
-					"height": "50%",
+					"height": "100%",
 					"marginTop": "0px",
 					"marginRight": "0px",
 					"marginBottom": "0px",
@@ -380,11 +378,11 @@
 					"maxWidth": "100%",
 					"backgroundSize": "cover",
 					"backgroundRepeat": "no-repeat",
-					"minHeight": "50%",
-					"maxHeight": "50%",
 					"display": "flex",
 					"borderWidth": "1px",
-					"borderRadius": "20px"
+					"borderRadius": "20px",
+					"justifyContent": "center",
+					"alignItems": "center"
 				},
 				"classNames": []
 			},
@@ -411,10 +409,10 @@
 				"style": {
 					"width": "100%",
 					"height": "100%",
-					"paddingTop": "0px",
-					"paddingRight": "0px",
-					"paddingBottom": "0px",
-					"paddingLeft": "0px",
+					"paddingTop": "8px",
+					"paddingRight": "8px",
+					"paddingBottom": "8px",
+					"paddingLeft": "8px",
 					"marginTop": "0px",
 					"marginRight": "0px",
 					"marginBottom": "0px",
@@ -428,7 +426,8 @@
 					"display": "flex",
 					"flexDirection": "column",
 					"alignItems": "center",
-					"justifyContent": "flex-start"
+					"justifyContent": "center",
+					"gap": "20px"
 				}
 			},
 			"displayName": "Stylebox",
@@ -436,7 +435,8 @@
 			"parent": "aCMEbenzcg",
 			"hidden": false,
 			"nodes": [
-				"xOO79S1WQU"
+				"xOO79S1WQU",
+				"74d0oTnKdA"
 			],
 			"linkedNodes": {}
 		},
@@ -451,8 +451,83 @@
 				"style": {
 					"display": "flex",
 					"flexDirection": "column",
-					"width": "50%",
-					"paddingTop": "0px"
+					"width": "40%",
+					"paddingTop": "0px",
+					"maxWidth": "100%",
+					"gap": "20px",
+					"justifyContent": "center",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "vH954qZZXY",
+			"hidden": false,
+			"nodes": [
+				"aCMEbenzcg"
+			],
+			"linkedNodes": {}
+		},
+		"74d0oTnKdA": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [
+					{
+						"type": "navigation",
+						"id": "qo76uNN6GUWGxNv91xJznu",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "Start",
+						"isHardCoded": true
+					}
+				],
+				"iterableChild": true,
+				"style": {
+					"marginTop": "20px",
+					"textDecorationLine": " underline"
+				},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Go to Products",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": ""
+			},
+			"displayName": "Text",
+			"custom": {
+				"__t": {}
+			},
+			"parent": "IElMrfS4b5",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"vH954qZZXY": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex"
 				}
 			},
 			"displayName": "Stylebox",
@@ -460,8 +535,8 @@
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [
-				"bzWHRUVMqj",
-				"aCMEbenzcg"
+				"wPYJiG6o0V",
+				"t4j2JM309b"
 			],
 			"linkedNodes": {}
 		}

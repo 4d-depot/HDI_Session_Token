@@ -2,11 +2,11 @@ Class extends DataClass
 
 
 
-exposed Function create($info : Object) : Text
+Function create($info : Object) : Text
 	
 	var $user : cs:C1710.UsersEntity
 	var $status : Object
-	var $token : Text
+	var $token; $result : Text
 	
 	
 	If (This:C1470.query("email = :1"; $info.email).length>=1)
@@ -23,6 +23,11 @@ exposed Function create($info : Object) : Text
 		
 		$token:=Session:C1714.createOTP()
 		
-		return "127.0.0.1/validateEmail?$4DSID="+$token
+		$result:="127.0.0.1/validateAccount?$4DSID="+$token
+		
+		SET TEXT TO PASTEBOARD:C523($result)
+		
+		return $result
+		
 	End if 
 	

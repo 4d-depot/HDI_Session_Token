@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
 
 
-var $notDropped : 4D:C1709.EntitySelection
+var $notDropped : cs:C1710.UsersSelection
 
 
 $notDropped:=ds:C1482.Users.all().drop()
