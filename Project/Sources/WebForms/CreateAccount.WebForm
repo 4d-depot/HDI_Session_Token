@@ -557,9 +557,11 @@
 				],
 				"style": {
 					"alignItems": "center",
-					"width": "40%",
+					"width": "500px",
 					"height": "fit-content",
-					"marginTop": "0px"
+					"marginTop": "0px",
+					"minWidth": "500px",
+					"maxWidth": "500px"
 				}
 			},
 			"displayName": "Stylebox",

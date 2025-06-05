@@ -38,7 +38,8 @@
 				"className": "bg-white h-full w-full px-6",
 				"style": {
 					"display": "flex",
-					"gap": "20px"
+					"gap": "20px",
+					"paddingLeft": "5px"
 				}
 			},
 			"displayName": "Page",
@@ -80,10 +81,12 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "40%",
+					"width": "500px",
 					"alignItems": "center",
 					"justifyContent": "flex-start",
-					"height": "fit-content"
+					"height": "fit-content",
+					"minWidth": "500px",
+					"maxWidth": "500px"
 				}
 			},
 			"displayName": "Stylebox",

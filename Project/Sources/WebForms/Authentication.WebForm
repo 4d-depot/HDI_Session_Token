@@ -551,9 +551,11 @@
 					"cartStyle"
 				],
 				"style": {
-					"width": "30%",
+					"width": "500px",
 					"alignItems": "center",
-					"height": "fit-content"
+					"height": "fit-content",
+					"maxWidth": "500px",
+					"minWidth": "500px"
 				}
 			},
 			"displayName": "Stylebox",
