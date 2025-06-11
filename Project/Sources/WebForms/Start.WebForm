@@ -23,10 +23,10 @@
 						"method": "ds.authentify",
 						"params": [
 							{
-								"name": "info",
+								"name": "credentials",
 								"type": "Variant",
 								"datasource": "Authentication:credentials",
-								"id": "azt8Nq38B9XJeYm4g1enDQ"
+								"id": "p5VL6JFA1gXobRdzaogDSH"
 							},
 							{
 								"name": "what",

@@ -19,8 +19,6 @@ Function validateEmail() : 4D:C1709.OutgoingMessage
 			Session:C1714.storage.status.step:="Email validated"
 		End use 
 		
-		Session:C1714.setPrivileges("")
-		
 		$result.setHeader("Location"; "http://127.0.0.1/$lib/renderer/?w=AccountCreated")
 		$result.setStatus(302)
 		

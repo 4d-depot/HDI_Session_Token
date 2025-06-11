@@ -762,16 +762,20 @@
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "rCvYsCBjvL4QzLaqU8F5nD",
+						"type": "simple-action",
+						"id": "wG6PehV9hK1ZABN282gMe1",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "",
-						"parent": "same-tab",
-						"target": "Start",
-						"isHardCoded": true
+						"action": "reset",
+						"actionType": "datasource",
+						"datasource": {
+							"name": "target",
+							"type": "scalar",
+							"from": "",
+							"namespace": "Navigation",
+							"dataType": "string"
+						}
 					}
 				],
 				"iconPosition": "hidden",

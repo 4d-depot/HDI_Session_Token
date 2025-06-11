@@ -2,7 +2,7 @@ Class extends DataStoreImplementation
 
 
 
-exposed Function authentify($info : Variant; $what : Text) : Text
+exposed Function authentify($credentials : Variant; $what : Text) : Text
 	
 	var $user : cs:C1710.UsersEntity
 	var $result : Text
@@ -10,10 +10,10 @@ exposed Function authentify($info : Variant; $what : Text) : Text
 	Case of 
 			
 		: ($what="Authentify")
-			$user:=ds:C1482.Users.query("email == :1 && validated = :2"; $info.email; True:C214).first()
+			$user:=ds:C1482.Users.query("email == :1 && validated = :2"; $credentials.email; True:C214).first()
 			
 			If ($user#Null:C1517)
-				If (Verify password hash:C1534($info.password; $user.password))
+				If (Verify password hash:C1534($credentials.password; $user.password))
 					
 					Use (Session:C1714.storage)
 						Session:C1714.storage.user:=New shared object:C1526("ID"; $user.ID)
@@ -31,38 +31,11 @@ exposed Function authentify($info : Variant; $what : Text) : Text
 				$result:="Authentication"
 			End if 
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 		: ($what="getSessionId")
 			$result:=cs:C1710.Utilities.me.getSessionId()
 			
-			
 		: ($what="CreateAccount")
-			$result:=ds:C1482.Users.create($info)
+			$result:=ds:C1482.Users.create($credentials)
 			
 	End case 
 	
