@@ -759,7 +759,8 @@
 						"actionType": "auth",
 						"datasource": {
 							"name": ""
-						}
+						},
+						"state": {}
 					},
 					{
 						"type": "simple-action",
@@ -775,7 +776,8 @@
 							"from": "",
 							"namespace": "Navigation",
 							"dataType": "string"
-						}
+						},
+						"state": {}
 					}
 				],
 				"iconPosition": "hidden",

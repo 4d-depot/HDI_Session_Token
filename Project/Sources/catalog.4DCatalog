@@ -49,24 +49,6 @@
 			</editor_table_info>
 		</table_extra>
 	</table>
-	<table name="(Emails)" uuid="2346274E703148D59C602D9A5267A2D2" id="4" hide_in_REST="true">
-		<field name="ID" uuid="7EE35C29E95C4E9AA8D27776450CF03D" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
-		<field name="link" uuid="FADD45F627DE42C3A6A55E609C9491F4" type="10" limiting_length="255" never_null="true" id="2"/>
-		<field name="userId" uuid="CFC269CE9D0D4A87A5714754A8EDD5EF" type="4" never_null="true" id="3"/>
-		<field name="subject" uuid="5C55A61C1C294DE88DF518F3069156D6" type="10" limiting_length="255" never_null="true" id="5"/>
-		<primary_key field_name="ID" field_uuid="7EE35C29E95C4E9AA8D27776450CF03D"/>
-		<table_extra trashed="true">
-			<editor_table_info displayable_fields_count="6">
-				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="514" top="45" width="120" height="167.33203125"/>
-			</editor_table_info>
-		</table_extra>
-	</table>
-	<index kind="regular" unique_keys="true" uuid="5510D96923714EF68F41AF58050C8710" type="7">
-		<field_ref uuid="7EE35C29E95C4E9AA8D27776450CF03D" name="ID">
-			<table_ref uuid="2346274E703148D59C602D9A5267A2D2" name="(Emails)"/>
-		</field_ref>
-	</index>
 	<index kind="regular" unique_keys="true" uuid="72429DA4488442AB91FBC920B8260796" type="7">
 		<field_ref uuid="6303E5DC14FD447498C19F69DAF50195" name="ID">
 			<table_ref uuid="778D322260274CD49C60520C2185968F" name="Users"/>

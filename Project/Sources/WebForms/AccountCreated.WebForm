@@ -15,6 +15,12 @@
 				"parentId": null,
 				"id": "chyCpB18gb-6WmyX4Vdkz"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			}
 		]
 	},
 	"components": {
@@ -30,9 +36,9 @@
 						"type": "method",
 						"dataclass": "Utilities",
 						"events": [
-							"oninit"
+							"onload"
 						],
-						"id": "7qjeKzMJuFSRZ6TaYHJsmo",
+						"id": "oczdEdSx7PT7h3bcbejwcY",
 						"method": "Utilities.getSessionId",
 						"params": [],
 						"datasource": "",

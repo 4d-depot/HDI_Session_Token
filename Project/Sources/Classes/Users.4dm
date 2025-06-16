@@ -21,8 +21,6 @@ Function create($credentials : Object) : Text
 			Session:C1714.storage.status:=New shared object:C1526("step"; "Waiting for validation email"; "email"; $user.email; "ID"; $user.ID)
 		End use 
 		
-		Session:C1714.setPrivileges("")
-		
 		$token:=Session:C1714.createOTP()
 		
 		$result:="127.0.0.1/validateAccount?$4DSID="+$token

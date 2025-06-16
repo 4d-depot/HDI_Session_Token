@@ -140,7 +140,8 @@
 				"iterableChild": true,
 				"style": {
 					"display": "flex",
-					"alignItems": "center"
+					"alignItems": "center",
+					"paddingLeft": "20px"
 				}
 			},
 			"displayName": "Stylebox",
